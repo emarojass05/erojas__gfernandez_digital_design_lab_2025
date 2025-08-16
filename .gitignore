@@ -1,0 +1,20 @@
+# Archivos de bloqueo temporales
+*.flock
+*.rdr.*
+
+# Archivos generados por Quartus
+*.qws
+*.qdb
+*.qar
+*.sof
+*.pof
+*.pof.*
+*.jed
+*.jic
+*.rbf
+*.hex
+
+# Otros temporales
+*.bak
+*.log
+*.tmp
