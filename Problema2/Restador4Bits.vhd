@@ -1,13 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Restador completo de 4 bits (usa 4 instancias del de 1 bit para poder crear el de 4 haciendolo en cascada)
 entity Restador4Bits is
     Port (
-        A     : in  STD_LOGIC_VECTOR(3 downto 0); -- Minuendo (4 bits)
-        B     : in  STD_LOGIC_VECTOR(3 downto 0); -- Sustraendo (4 bits)
+        A     : in  STD_LOGIC_VECTOR(3 downto 0); -- Minuendo
+        B     : in  STD_LOGIC_VECTOR(3 downto 0); -- Sustraendo
         Bin   : in  STD_LOGIC;                    -- Préstamo inicial
-        D     : out STD_LOGIC_VECTOR(3 downto 0); -- Diferencia (4 bits)
+        D     : out STD_LOGIC_VECTOR(3 downto 0); -- Diferencia
         Bout  : out STD_LOGIC                     -- Préstamo final
     );
 end Restador4Bits;
