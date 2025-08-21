@@ -1,0 +1,14 @@
+# Archivos temporales y de bloqueo de Quartus
+*.flock
+*.rdr.*
+db/
+*.qpf
+*.qsf
+*.qws
+*.sld
+*.sldinfo
+*.sof
+*.pof
+*.jdi
+*.sdo
+*.pin
