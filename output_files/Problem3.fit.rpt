@@ -1,5 +1,5 @@
 Fitter report for Problem3
-Wed Aug 20 22:59:27 2025
+Wed Aug 20 23:26:47 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Aug 20 22:59:27 2025          ;
+; Fitter Status                   ; Successful - Wed Aug 20 23:26:47 2025          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; Problem3                                       ;
 ; Top-level Entity Name           ; contador6bits                                  ;
@@ -156,9 +156,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processor 3            ;   0.3%      ;
-;     Processor 4            ;   0.3%      ;
+;     Processor 2            ;   0.5%      ;
+;     Processor 3            ;   0.5%      ;
+;     Processor 4            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -233,8 +233,8 @@ The pin-out file can be found in C:/erojas__gfernandez_digital_design_lab_2025/o
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 10 / 4,191         ; < 1 % ;
-;     -- Logic LABs                                           ; 10                 ;       ;
+; Total LABs:  partially or completely used                   ; 9 / 4,191          ; < 1 % ;
+;     -- Logic LABs                                           ; 9                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 116                ;       ;
@@ -313,7 +313,7 @@ The pin-out file can be found in C:/erojas__gfernandez_digital_design_lab_2025/o
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.7% / 0.6% / 0.8% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.3% / 1.3% / 1.5% ;       ;
 ; Maximum fan-out                                             ; 42                 ;       ;
 ; Highest non-global fan-out                                  ; 42                 ;       ;
 ; Total fan-out                                               ; 445                ;       ;
@@ -342,8 +342,8 @@ The pin-out file can be found in C:/erojas__gfernandez_digital_design_lab_2025/o
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 10 / 4191 ( < 1 % )  ; 0 / 4191 ( 0 % )               ;
-;     -- Logic LABs                                           ; 10                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 9 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
+;     -- Logic LABs                                           ; 9                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Combinational ALUT usage for logic                          ; 116                  ; 0                              ;
@@ -413,7 +413,7 @@ The pin-out file can be found in C:/erojas__gfernandez_digital_design_lab_2025/o
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 24                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50 ; A9    ; 8A       ; 34           ; 81           ; 74           ; 24                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[0]   ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]   ; AK4   ; 3B       ; 22           ; 0            ; 51           ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; SW[0]    ; AB30  ; 5B       ; 89           ; 21           ; 3            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -460,7 +460,7 @@ The pin-out file can be found in C:/erojas__gfernandez_digital_design_lab_2025/o
 ; B1L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
 ; B0L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
 ; 3A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 3 / 48 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 2 / 48 ( 4 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 14 / 80 ( 18 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 10 / 16 ( 63 % ) ; 2.5V          ; --           ; 2.5V          ;
@@ -470,7 +470,7 @@ The pin-out file can be found in C:/erojas__gfernandez_digital_design_lab_2025/o
 ; 7B       ; 0 / 22 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7C       ; 0 / 12 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7D       ; 0 / 14 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 0 / 80 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 1 / 80 ( 1 % )   ; 2.5V          ; --           ; 2.5V          ;
 +----------+------------------+---------------+--------------+---------------+
 
 
@@ -486,7 +486,7 @@ The pin-out file can be found in C:/erojas__gfernandez_digital_design_lab_2025/o
 ; A6       ; 487        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A7       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; A8       ; 473        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A9       ; 471        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A9       ; 471        ; 8A             ; CLOCK_50                        ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; A10      ; 465        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A11      ; 463        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A12      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -520,7 +520,7 @@ The pin-out file can be found in C:/erojas__gfernandez_digital_design_lab_2025/o
 ; AA11     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA12     ; 74         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA13     ; 90         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA14     ; 122        ; 3B             ; CLOCK_50                        ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AA14     ; 122        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA15     ; 120        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA16     ; 146        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA17     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1456,12 +1456,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX1[5]  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; HEX1[6]  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; SW[9]    ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; SW[0]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[0]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[1]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[2]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[3]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[1]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; CLOCK_50 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; CLOCK_50 ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[4]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[5]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
@@ -1484,10 +1484,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - q[2]~_emulated        ; 1                 ; 0       ;
 ;      - q[2]~10               ; 1                 ; 0       ;
 ;      - q[3]~_emulated        ; 1                 ; 0       ;
-;      - q[3]~14               ; 0                 ; 0       ;
+;      - q[3]~14               ; 1                 ; 0       ;
 ;      - div_counter[23]       ; 0                 ; 0       ;
 ;      - q[4]~_emulated        ; 1                 ; 0       ;
-;      - q[4]~18               ; 0                 ; 0       ;
+;      - q[4]~18               ; 1                 ; 0       ;
 ;      - q[5]~_emulated        ; 1                 ; 0       ;
 ;      - q[5]~22               ; 1                 ; 0       ;
 ;      - div_counter[22]       ; 0                 ; 0       ;
@@ -1515,13 +1515,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - div_counter[1]        ; 0                 ; 0       ;
 ;      - q[0]~1                ; 1                 ; 0       ;
 ;      - q[1]~5                ; 0                 ; 0       ;
-;      - q[2]~9                ; 1                 ; 0       ;
+;      - q[2]~9                ; 0                 ; 0       ;
 ;      - q[3]~13               ; 0                 ; 0       ;
-;      - q[4]~17               ; 1                 ; 0       ;
+;      - q[4]~17               ; 0                 ; 0       ;
 ;      - q[5]~21               ; 1                 ; 0       ;
 ; SW[0]                        ;                   ;         ;
-;      - q[0]~2                ; 0                 ; 0       ;
-;      - q[0]~1                ; 0                 ; 0       ;
+;      - q[0]~2                ; 1                 ; 0       ;
+;      - q[0]~1                ; 1                 ; 0       ;
 ; SW[1]                        ;                   ;         ;
 ;      - q[1]~6                ; 0                 ; 0       ;
 ;      - q[1]~5                ; 0                 ; 0       ;
@@ -1539,8 +1539,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - q[4]~19               ; 0                 ; 0       ;
 ;      - q[5]~23               ; 0                 ; 0       ;
 ; CLOCK_50                     ;                   ;         ;
-;      - div_counter[23]       ; 0                 ; 0       ;
-;      - CLOCK_50~inputCLKENA0 ; 0                 ; 0       ;
+;      - div_counter[23]       ; 1                 ; 0       ;
+;      - CLOCK_50~inputCLKENA0 ; 1                 ; 0       ;
 ; SW[4]                        ;                   ;         ;
 ;      - q[4]~18               ; 0                 ; 0       ;
 ;      - q[4]~17               ; 0                 ; 0       ;
@@ -1555,8 +1555,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name            ; Location       ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------+----------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50        ; PIN_AA14       ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; CLOCK_50        ; PIN_AA14       ; 23      ; Clock                      ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50        ; PIN_A9         ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50        ; PIN_A9         ; 23      ; Clock                      ; yes    ; Global Clock         ; GCLK13           ; --                        ;
 ; SW[9]           ; PIN_AA30       ; 42      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
 ; div_counter[23] ; FF_X87_Y21_N38 ; 7       ; Clock                      ; no     ; --                   ; --               ; --                        ;
 +-----------------+----------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
@@ -1567,7 +1567,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_AA14 ; 23      ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50 ; PIN_A9   ; 23      ; Global Clock         ; GCLK13           ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1576,14 +1576,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 109 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 11 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 49 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 50 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 119 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 13 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 45 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 67 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 31 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 28 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1639,12 +1639,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 51 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 39 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 41 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 47 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 42 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 64 / 266,960 ( < 1 % )  ;
+; R14 interconnects                           ; 53 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 60 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 76 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 110 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1787,8 +1787,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+----------------------+-------------------+
 ; Source Clock(s)           ; Destination Clock(s) ; Delay Added in ns ;
 +---------------------------+----------------------+-------------------+
-; I/O                       ; CLOCK_50             ; 14.9              ;
-; CLOCK_50                  ; CLOCK_50             ; 9.8               ;
+; CLOCK_50                  ; CLOCK_50             ; 27.8              ;
+; I/O                       ; CLOCK_50             ; 15.6              ;
 ; SW[9],div_counter[23],I/O ; div_counter[23]      ; 8.1               ;
 ; div_counter[23]           ; div_counter[23],I/O  ; 2.0               ;
 +---------------------------+----------------------+-------------------+
@@ -1801,48 +1801,51 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------+-------------------+
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; SW[9]           ; div_counter[11]      ; 7.574             ;
-; div_counter[23] ; div_counter[23]      ; 7.271             ;
-; q[2]~_emulated  ; q[3]~_emulated       ; 0.927             ;
-; q[0]~_emulated  ; q[1]~_emulated       ; 0.879             ;
-; q[4]~_emulated  ; q[5]~_emulated       ; 0.859             ;
-; q[3]~_emulated  ; q[3]~_emulated       ; 0.859             ;
-; q[5]~_emulated  ; q[5]~_emulated       ; 0.853             ;
-; q[1]~_emulated  ; q[1]~_emulated       ; 0.836             ;
-; SW[2]           ; q[3]~_emulated       ; 0.644             ;
-; q[2]~9          ; q[3]~_emulated       ; 0.644             ;
-; SW[3]           ; q[3]~_emulated       ; 0.593             ;
-; q[3]~13         ; q[3]~_emulated       ; 0.593             ;
-; SW[1]           ; q[1]~_emulated       ; 0.568             ;
-; q[1]~5          ; q[1]~_emulated       ; 0.568             ;
-; q[0]~1          ; q[1]~_emulated       ; 0.564             ;
-; SW[0]           ; q[1]~_emulated       ; 0.564             ;
-; SW[5]           ; q[5]~_emulated       ; 0.424             ;
-; SW[4]           ; q[5]~_emulated       ; 0.424             ;
-; q[5]~21         ; q[5]~_emulated       ; 0.424             ;
-; q[4]~17         ; q[5]~_emulated       ; 0.424             ;
-; div_counter[1]  ; div_counter[1]       ; 0.225             ;
-; div_counter[18] ; div_counter[22]      ; 0.160             ;
-; div_counter[10] ; div_counter[22]      ; 0.159             ;
-; div_counter[9]  ; div_counter[22]      ; 0.156             ;
-; div_counter[20] ; div_counter[22]      ; 0.154             ;
-; div_counter[12] ; div_counter[22]      ; 0.154             ;
-; div_counter[6]  ; div_counter[22]      ; 0.154             ;
-; div_counter[11] ; div_counter[22]      ; 0.152             ;
-; div_counter[3]  ; div_counter[22]      ; 0.149             ;
-; div_counter[19] ; div_counter[22]      ; 0.148             ;
-; div_counter[16] ; div_counter[22]      ; 0.146             ;
-; div_counter[17] ; div_counter[22]      ; 0.140             ;
-; div_counter[14] ; div_counter[22]      ; 0.140             ;
-; div_counter[4]  ; div_counter[22]      ; 0.140             ;
-; div_counter[7]  ; div_counter[22]      ; 0.139             ;
-; div_counter[0]  ; div_counter[0]       ; 0.068             ;
-; div_counter[13] ; div_counter[22]      ; 0.044             ;
-; div_counter[8]  ; div_counter[22]      ; 0.044             ;
-; div_counter[21] ; div_counter[22]      ; 0.029             ;
-; div_counter[5]  ; div_counter[22]      ; 0.029             ;
+; div_counter[23] ; div_counter[23]      ; 9.127             ;
+; SW[9]           ; div_counter[11]      ; 7.932             ;
+; div_counter[20] ; div_counter[22]      ; 1.441             ;
+; div_counter[19] ; div_counter[22]      ; 1.372             ;
+; div_counter[21] ; div_counter[22]      ; 1.362             ;
+; div_counter[22] ; div_counter[22]      ; 1.361             ;
+; div_counter[18] ; div_counter[22]      ; 1.302             ;
+; div_counter[17] ; div_counter[22]      ; 1.238             ;
+; div_counter[16] ; div_counter[22]      ; 1.181             ;
+; div_counter[14] ; div_counter[22]      ; 1.049             ;
+; div_counter[12] ; div_counter[22]      ; 0.949             ;
+; div_counter[15] ; div_counter[22]      ; 0.937             ;
+; q[2]~_emulated  ; q[3]~_emulated       ; 0.910             ;
+; q[0]~_emulated  ; q[1]~_emulated       ; 0.897             ;
+; div_counter[13] ; div_counter[22]      ; 0.894             ;
+; div_counter[11] ; div_counter[22]      ; 0.874             ;
+; q[4]~_emulated  ; q[5]~_emulated       ; 0.861             ;
+; q[5]~_emulated  ; q[5]~_emulated       ; 0.854             ;
+; q[1]~_emulated  ; q[1]~_emulated       ; 0.853             ;
+; q[3]~_emulated  ; q[3]~_emulated       ; 0.837             ;
+; div_counter[10] ; div_counter[22]      ; 0.751             ;
+; div_counter[9]  ; div_counter[22]      ; 0.681             ;
+; SW[2]           ; q[3]~_emulated       ; 0.629             ;
+; q[2]~9          ; q[3]~_emulated       ; 0.629             ;
+; SW[3]           ; q[3]~_emulated       ; 0.575             ;
+; q[3]~13         ; q[3]~_emulated       ; 0.575             ;
+; q[0]~1          ; q[1]~_emulated       ; 0.567             ;
+; SW[0]           ; q[1]~_emulated       ; 0.567             ;
+; SW[1]           ; q[1]~_emulated       ; 0.562             ;
+; q[1]~5          ; q[1]~_emulated       ; 0.562             ;
+; div_counter[7]  ; div_counter[22]      ; 0.519             ;
+; div_counter[1]  ; div_counter[22]      ; 0.506             ;
+; div_counter[6]  ; div_counter[22]      ; 0.494             ;
+; div_counter[8]  ; div_counter[22]      ; 0.482             ;
+; SW[4]           ; q[5]~_emulated       ; 0.420             ;
+; q[4]~17         ; q[5]~_emulated       ; 0.420             ;
+; SW[5]           ; q[5]~_emulated       ; 0.419             ;
+; q[5]~21         ; q[5]~_emulated       ; 0.419             ;
+; div_counter[4]  ; div_counter[22]      ; 0.331             ;
+; div_counter[3]  ; div_counter[22]      ; 0.303             ;
+; div_counter[5]  ; div_counter[22]      ; 0.281             ;
+; div_counter[0]  ; div_counter[0]       ; 0.210             ;
+; div_counter[2]  ; div_counter[22]      ; 0.108             ;
 +-----------------+----------------------+-------------------+
-Note: This table only shows the top 40 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 43 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1858,16 +1861,16 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): CLOCK_50~inputCLKENA0 with 23 fanout uses global clock CLKCTRL_G6
+    Info (11162): CLOCK_50~inputCLKENA0 with 23 fanout uses global clock CLKCTRL_G12
         Info (12525): This signal is driven by core routing -- it may be moved during placement to reduce routing delays
 Warning (16406): 1 global input pin(s) will use non-dedicated clock routing
-    Warning (16407): Source REFCLK I/O is not placed onto a dedicated REFCLK input pin for global clock driver CLOCK_50~inputCLKENA0, placed at CLKCTRL_G6
-        Info (179012): Refclk input I/O pad CLOCK_50 is placed onto PIN_AA14
+    Warning (16407): Source REFCLK I/O is not placed onto a dedicated REFCLK input pin for global clock driver CLOCK_50~inputCLKENA0, placed at CLKCTRL_G12
+        Info (179012): Refclk input I/O pad CLOCK_50 is placed onto PIN_A9
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:28
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Warning (335093): The Timing Analyzer is analyzing 6 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Problem3.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
@@ -1876,28 +1879,28 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y11 to location X89_Y22
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X78_Y11 to location X89_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.51 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 0.42 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Info (144001): Generated suppressed messages file C:/erojas__gfernandez_digital_design_lab_2025/output_files/Problem3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6604 megabytes
-    Info: Processing ended: Wed Aug 20 22:59:28 2025
-    Info: Elapsed time: 00:01:03
-    Info: Total CPU time (on all processors): 00:01:20
+    Info: Peak virtual memory: 6603 megabytes
+    Info: Processing ended: Wed Aug 20 23:26:48 2025
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:59
 
 
 +----------------------------+
