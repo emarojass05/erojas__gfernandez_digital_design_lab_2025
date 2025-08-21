@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Aug 20 18:02:11 2025
+Analysis & Synthesis Status : Successful - Wed Aug 20 22:58:24 2025
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Problem3
 Top-level Entity Name : contador6bits
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 8
-Total pins : 24
+Total registers : 30
+Total pins : 27
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
