@@ -1,0 +1,7 @@
+db/
+incremental_db/
+*.rdr.flock
+*.rdr
+*.smsg
+*.sof
+*.qws
