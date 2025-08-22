@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, C:/erojas__gfernandez_digital_design_lab_2025/Problem1.sv
-source_file = 1, C:/erojas__gfernandez_digital_design_lab_2025/Problem1_tb.sv
-source_file = 1, C:/erojas__gfernandez_digital_design_lab_2025/db/Problem1.cbx.xml
+source_file = 1, C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema1/Problem1.sv
+source_file = 1, C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema1/Problem1_tb.sv
+source_file = 1, C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema1/db/Problem1.cbx.xml
 design_name = Problem1
 instance = comp, \a_seg~output , a_seg~output, Problem1, 1
 instance = comp, \b_seg~output , b_seg~output, Problem1, 1

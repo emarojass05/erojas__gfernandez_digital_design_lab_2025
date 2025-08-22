@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema2
-Tue Aug 19 20:53:26 2025
+Thu Aug 21 22:15:15 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Aug 19 20:53:26 2025          ;
+; Analysis & Synthesis Status     ; Successful - Thu Aug 21 22:15:15 2025          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; Problema2                                      ;
 ; Top-level Entity Name           ; TopLevel                                       ;
@@ -166,16 +166,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Restador1Bit.vhd                 ; yes             ; User VHDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Restador1Bit.vhd  ;         ;
-; Restador4Bits.vhd                ; yes             ; User VHDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Restador4Bits.vhd ;         ;
-; Hexa7Seg.vhd                     ; yes             ; User VHDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Hexa7Seg.vhd      ;         ;
-; TopLevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/TopLevel.vhd      ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
+; Restador1Bit.vhd                 ; yes             ; User VHDL File  ; C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Restador1Bit.vhd  ;         ;
+; Restador4Bits.vhd                ; yes             ; User VHDL File  ; C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Restador4Bits.vhd ;         ;
+; Hexa7Seg.vhd                     ; yes             ; User VHDL File  ; C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Hexa7Seg.vhd      ;         ;
+; TopLevel.vhd                     ; yes             ; User VHDL File  ; C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/TopLevel.vhd      ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------+
@@ -269,31 +269,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Tue Aug 19 20:53:15 2025
+    Info: Processing started: Thu Aug 21 22:14:57 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema2 -c Problema2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file restador1bit.vhd
-    Info (12022): Found design unit 1: Restador1Bit-Behavioral File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Restador1Bit.vhd Line: 14
-    Info (12023): Found entity 1: Restador1Bit File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Restador1Bit.vhd Line: 4
+    Info (12022): Found design unit 1: Restador1Bit-Behavioral File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Restador1Bit.vhd Line: 14
+    Info (12023): Found entity 1: Restador1Bit File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Restador1Bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file restador4bits.vhd
-    Info (12022): Found design unit 1: Restador4Bits-Estructura File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Restador4Bits.vhd Line: 14
-    Info (12023): Found entity 1: Restador4Bits File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Restador4Bits.vhd Line: 4
+    Info (12022): Found design unit 1: Restador4Bits-Estructura File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Restador4Bits.vhd Line: 14
+    Info (12023): Found entity 1: Restador4Bits File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Restador4Bits.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hexa7seg.vhd
-    Info (12022): Found design unit 1: Hexa7Seg-Behavioral File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Hexa7Seg.vhd Line: 11
-    Info (12023): Found entity 1: Hexa7Seg File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Hexa7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: Hexa7Seg-Behavioral File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Hexa7Seg.vhd Line: 11
+    Info (12023): Found entity 1: Hexa7Seg File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Hexa7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
-    Info (12022): Found design unit 1: TopLevel-Structural File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/TopLevel.vhd Line: 14
-    Info (12023): Found entity 1: TopLevel File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/TopLevel.vhd Line: 4
+    Info (12022): Found design unit 1: TopLevel-Structural File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/TopLevel.vhd Line: 14
+    Info (12023): Found entity 1: TopLevel File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/TopLevel.vhd Line: 4
 Warning (12019): Can't analyze file -- file tb_Restador4Bits.vhd is missing
 Warning (12019): Can't analyze file -- file Restador.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file tb_toplevel.vhd
-    Info (12022): Found design unit 1: tb_TopLevel-sim File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/tb_TopLevel.vhd Line: 7
-    Info (12023): Found entity 1: tb_TopLevel File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/tb_TopLevel.vhd Line: 4
+    Info (12022): Found design unit 1: tb_TopLevel-sim File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/tb_TopLevel.vhd Line: 7
+    Info (12023): Found entity 1: tb_TopLevel File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/tb_TopLevel.vhd Line: 4
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Info (12128): Elaborating entity "Restador4Bits" for hierarchy "Restador4Bits:U1" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/TopLevel.vhd Line: 35
-Info (12128): Elaborating entity "Restador1Bit" for hierarchy "Restador4Bits:U1|Restador1Bit:R0" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/Restador4Bits.vhd Line: 28
-Info (12128): Elaborating entity "Hexa7Seg" for hierarchy "Hexa7Seg:U2" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller/erojas__gfernandez_digital_design_lab_2025/Problema2/TopLevel.vhd Line: 36
+Info (12128): Elaborating entity "Restador4Bits" for hierarchy "Restador4Bits:U1" File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/TopLevel.vhd Line: 35
+Info (12128): Elaborating entity "Restador1Bit" for hierarchy "Restador4Bits:U1|Restador1Bit:R0" File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/Restador4Bits.vhd Line: 28
+Info (12128): Elaborating entity "Hexa7Seg" for hierarchy "Hexa7Seg:U2" File: C:/erojas__gfernandez_digital_design_lab_2025/Laboratorio1/Problema2/TopLevel.vhd Line: 36
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -303,8 +303,8 @@ Info (21057): Implemented 30 device resources after synthesis - the final resour
     Info (21061): Implemented 13 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4921 megabytes
-    Info: Processing ended: Tue Aug 19 20:53:26 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Processing ended: Thu Aug 21 22:15:15 2025
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:25
 
 
