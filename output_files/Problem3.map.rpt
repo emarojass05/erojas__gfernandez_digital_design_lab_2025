@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problem3
-Wed Aug 20 23:26:11 2025
+Thu Aug 21 20:08:44 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -14,12 +14,13 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |contador6bits
- 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |contador6bits
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,14 +47,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Aug 20 23:26:11 2025          ;
+; Analysis & Synthesis Status     ; Successful - Thu Aug 21 20:08:44 2025          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; Problem3                                       ;
 ; Top-level Entity Name           ; contador6bits                                  ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 30                                             ;
-; Total pins                      ; 27                                             ;
+; Total registers                 ; 6                                              ;
+; Total pins                      ; 30                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -187,31 +188,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 58          ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 115         ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 1           ;
-;     -- 5 input functions                    ; 5           ;
-;     -- 4 input functions                    ; 18          ;
-;     -- <=3 input functions                  ; 91          ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 30          ;
-;                                             ;             ;
-; I/O pins                                    ; 27          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; SW[9]~input ;
-; Maximum fan-out                             ; 42          ;
-; Total fan-out                               ; 444         ;
-; Average fan-out                             ; 2.23        ;
-+---------------------------------------------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                             ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                                     ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 41                                                                                                                        ;
+;                                             ;                                                                                                                           ;
+; Combinational ALUT usage for logic          ; 80                                                                                                                        ;
+;     -- 7 input functions                    ; 0                                                                                                                         ;
+;     -- 6 input functions                    ; 1                                                                                                                         ;
+;     -- 5 input functions                    ; 5                                                                                                                         ;
+;     -- 4 input functions                    ; 12                                                                                                                        ;
+;     -- <=3 input functions                  ; 62                                                                                                                        ;
+;                                             ;                                                                                                                           ;
+; Dedicated logic registers                   ; 6                                                                                                                         ;
+;                                             ;                                                                                                                           ;
+; I/O pins                                    ; 30                                                                                                                        ;
+;                                             ;                                                                                                                           ;
+; Total DSP Blocks                            ; 0                                                                                                                         ;
+;                                             ;                                                                                                                           ;
+; Maximum fan-out node                        ; lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider|add_sub_3_result_int[4]~1 ;
+; Maximum fan-out                             ; 16                                                                                                                        ;
+; Total fan-out                               ; 299                                                                                                                       ;
+; Average fan-out                             ; 2.05                                                                                                                      ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -219,7 +220,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |contador6bits                         ; 115 (57)            ; 30 (30)                   ; 0                 ; 0          ; 27   ; 0            ; |contador6bits                                                                                                 ; contador6bits       ; work         ;
+; |contador6bits                         ; 80 (22)             ; 6 (6)                     ; 0                 ; 0          ; 30   ; 0            ; |contador6bits                                                                                                 ; contador6bits       ; work         ;
 ;    |lpm_divide:Div0|                   ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador6bits|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;       |lpm_divide_3am:auto_generated|  ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador6bits|lpm_divide:Div0|lpm_divide_3am:auto_generated                                                   ; lpm_divide_3am      ; work         ;
 ;          |sign_div_unsign_9kh:divider| ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador6bits|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
@@ -237,14 +238,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 30    ;
+; Total registers                              ; 6     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 30    ;
+; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |contador6bits|count[0]~reg0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -308,29 +318,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 30                          ;
-;     CLR               ; 30                          ;
-; arriav_lcell_comb     ; 117                         ;
-;     arith             ; 51                          ;
+; arriav_ff             ; 6                           ;
+;     ENA CLR           ; 6                           ;
+; arriav_lcell_comb     ; 82                          ;
+;     arith             ; 28                          ;
 ;         0 data inputs ; 8                           ;
-;         1 data inputs ; 26                          ;
-;         2 data inputs ; 5                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 10                          ;
 ;         4 data inputs ; 2                           ;
-;     normal            ; 56                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 16                          ;
+;     normal            ; 44                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 10                          ;
 ;         5 data inputs ; 5                           ;
 ;         6 data inputs ; 1                           ;
 ;     shared            ; 10                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 8                           ;
-; boundary_port         ; 27                          ;
+; boundary_port         ; 30                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.10                        ;
-; Average LUT depth     ; 5.65                        ;
+; Max LUT depth         ; 8.10                        ;
+; Average LUT depth     ; 6.07                        ;
 +-----------------------+-----------------------------+
 
 
@@ -339,7 +349,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -349,26 +359,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Aug 20 23:25:57 2025
+    Info: Processing started: Thu Aug 21 20:08:23 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problem3 -c Problem3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file contador6bits.sv
-    Info (12023): Found entity 1: contador6bits File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 6
+    Info (12023): Found entity 1: contador6bits File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 1
 Warning (12019): Can't analyze file -- file bin2hex.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file tb_contador6.sv
-    Info (12023): Found entity 1: tb_contador6 File: C:/erojas__gfernandez_digital_design_lab_2025/tb_contador6.sv Line: 3
+    Info (12023): Found entity 1: tb_contador6 File: C:/erojas__gfernandez_digital_design_lab_2025/tb_contador6.sv Line: 1
 Warning (12019): Can't analyze file -- file contador6bits_test.sv is missing
 Info (12127): Elaborating entity "contador6bits" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at contador6bits.sv(33): truncated value with size 32 to match size of target (24) File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at contador6bits.sv(47): truncated value with size 32 to match size of target (6) File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 47
-Warning (10230): Verilog HDL assignment warning at contador6bits.sv(55): truncated value with size 32 to match size of target (4) File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at contador6bits.sv(56): truncated value with size 32 to match size of target (4) File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at contador6bits.sv(21): truncated value with size 32 to match size of target (6) File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at contador6bits.sv(32): truncated value with size 32 to match size of target (4) File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at contador6bits.sv(33): truncated value with size 32 to match size of target (4) File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 33
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 55
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 56
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 55
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 55
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 32
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 33
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 32
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 32
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -379,37 +388,25 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/erojas__gfernandez_digital_design_lab_2025/db/sign_div_unsign_9kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
     Info (12023): Found entity 1: alt_u_div_ose File: C:/erojas__gfernandez_digital_design_lab_2025/db/alt_u_div_ose.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 56
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 56
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 33
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 33
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3am.tdf
     Info (12023): Found entity 1: lpm_divide_3am File: C:/erojas__gfernandez_digital_design_lab_2025/db/lpm_divide_3am.tdf Line: 25
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "q[0]" is converted into an equivalent circuit using register "q[0]~_emulated" and latch "q[0]~1" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 46
-    Warning (13310): Register "q[1]" is converted into an equivalent circuit using register "q[1]~_emulated" and latch "q[1]~5" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 46
-    Warning (13310): Register "q[2]" is converted into an equivalent circuit using register "q[2]~_emulated" and latch "q[2]~9" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 46
-    Warning (13310): Register "q[3]" is converted into an equivalent circuit using register "q[3]~_emulated" and latch "q[3]~13" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 46
-    Warning (13310): Register "q[4]" is converted into an equivalent circuit using register "q[4]~_emulated" and latch "q[4]~17" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 46
-    Warning (13310): Register "q[5]" is converted into an equivalent circuit using register "q[5]~_emulated" and latch "q[5]~21" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 46
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 10
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 10
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/erojas__gfernandez_digital_design_lab_2025/contador6bits.sv Line: 11
-Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 115 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 80 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Wed Aug 20 23:26:11 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Processing ended: Thu Aug 21 20:08:44 2025
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:30
 
 

@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/erojas__gfernandez_digital_design_lab_2025/simulation/modelsim
 valtera_arriav_pll
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1755738890
+Z2 !s110 1755828152
 !i10b 1
 !s100 5h]c@?QJf;jn]BQSNfoYR1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ R0
 Z5 w1666749957
 Z6 8c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv
 Z7 Fc:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv
-!i122 0
+!i122 5
 L0 22500 2033
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1755738890.000000
+Z9 !s108 1755828151.000000
 !s107 c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv|
 Z10 !s90 -reportprogress|300|-sv|-work|altera_lnsim_ver|c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv|
 !i113 1
@@ -36,7 +36,7 @@ Z11 o-sv -work altera_lnsim_ver
 Z12 tCvgOpt 0
 valtera_arriavgz_pll
 R1
-Z13 !s110 1755738891
+R2
 !i10b 1
 !s100 dOO_gm1Z3N5Xj3PYgjQMP2
 R3
@@ -47,21 +47,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 24536 2033
 R8
 r1
 !s85 0
 31
 R9
-Z14 !s107 c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv|
+Z13 !s107 c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv|
 R10
 !i113 1
 R11
 R12
 valtera_cyclonev_pll
 R1
-R13
+R2
 !i10b 1
 !s100 P3;E5?H_cN>C=jCAl1NFJ1
 R3
@@ -72,14 +72,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 26572 1380
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -97,21 +97,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 1486 0
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 valtera_iopll
 R1
-R13
+R2
 !i10b 1
 !s100 en`I2bL:DjC6Q_NYT3=W02
 R3
@@ -122,21 +122,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 30840 556
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 valtera_iopll_rotation_lcells
 R1
-R13
+Z14 !s110 1755828153
 !i10b 1
 !s100 X4`V82YcXT@b8h<U;8U^80
 R3
@@ -147,14 +147,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 34133 59
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -172,14 +172,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4 0
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -197,14 +197,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 19197 1262
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -223,14 +223,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 5815 1096
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -248,14 +248,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 6919 1484
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -263,7 +263,7 @@ R12
 valtera_pll
 R1
 Z15 DXx4 work 22 altera_lnsim_functions 0 22 KJ;M<dm2^eNMhK<RaRTnC2
-R13
+R2
 !i10b 1
 !s100 4Sz_XCQDaLBA0Il_fMQko3
 R3
@@ -274,21 +274,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 27965 2636
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 valtera_pll_dps_lcell_comb
 R1
-R13
+R14
 !i10b 1
 !s100 ffR[lR<>LGGXDHgI0f@k20
 R3
@@ -299,14 +299,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 34206 96
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -324,14 +324,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 11302 4906
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -349,14 +349,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 20461 2036
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -374,14 +374,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 16238 2865
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -399,14 +399,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 19104 62
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -424,14 +424,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 9479 301
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -449,14 +449,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 10300 300
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -474,14 +474,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 9087 383
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -499,14 +499,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 8758 321
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -524,14 +524,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 8469 52
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -549,14 +549,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 11150 139
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -574,14 +574,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 9789 236
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -599,14 +599,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 10034 256
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -624,14 +624,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 8529 120
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -649,14 +649,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 8657 92
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -674,14 +674,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 10917 226
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -699,14 +699,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 8411 50
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -724,14 +724,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 10610 300
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -749,14 +749,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 5503 77
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -774,14 +774,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 5241 66
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -800,14 +800,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4579 150
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -825,14 +825,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4496 35
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -850,14 +850,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4539 32
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -876,14 +876,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 2886 1144
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -901,14 +901,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 2767 37
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -926,14 +926,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 2812 63
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -951,14 +951,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4737 67
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -976,21 +976,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4976 78
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 vdprio_init
 R1
-R13
+R2
 !i10b 1
 !s100 PcJ<5fHAoU<RHg^c]9^X61
 R3
@@ -1001,21 +1001,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 30680 78
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 vdps_extra_kick
 R1
-R13
+R2
 !i10b 1
 !s100 dGV7bLS=n;O^>SRDFalMk1
 R3
@@ -1026,21 +1026,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 30601 79
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 vdps_pulse_gen
 R1
-R13
+R2
 !i10b 1
 !s100 ieBY10HNnbnQM3a0;igbB2
 R3
@@ -1051,21 +1051,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 30759 48
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 vdps_pulse_gen_fourteennm_iopll
 R1
-R13
+R2
 !i10b 1
 !s100 4>SgFfce3XjQIDogGSgd@3
 R3
@@ -1076,21 +1076,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 32142 59
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 vdps_pulse_gen_iopll
 R1
-R13
+R2
 !i10b 1
 !s100 ILfkozO`Z>WIM]:=mSLRz2
 R3
@@ -1101,21 +1101,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 31402 59
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 vfourteennm_altera_iopll
 R1
-R13
+R2
 !i10b 1
 !s100 `AYCAWYofDRkENBd0?z>d1
 R3
@@ -1126,14 +1126,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 31619 514
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1141,7 +1141,7 @@ R12
 Xfourteennm_iopll_functions
 R1
 R15
-R13
+R2
 !i10b 1
 !s100 k=7T>1]5@UXf^4IYPNUXh0
 R3
@@ -1152,14 +1152,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 32218 0
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1168,7 +1168,7 @@ vfourteennm_simple_iopll
 R1
 R15
 Z16 DXx4 work 26 fourteennm_iopll_functions 0 22 2^]MzA1Vh21d@>]Z6HHg?0
-R13
+R14
 !i10b 1
 !s100 U3I9Zc7alQj;oPHaN64OI1
 R3
@@ -1179,14 +1179,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 32330 367
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1195,7 +1195,7 @@ vfourteennm_sub_iopll
 R1
 R15
 R16
-R13
+R14
 !i10b 1
 !s100 h8zPiQgS;_lOOl[ag>4ok1
 R3
@@ -1206,14 +1206,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 32697 821
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1232,14 +1232,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 5324 159
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1258,14 +1258,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4812 156
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1284,14 +1284,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 5062 159
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1310,14 +1310,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 2394 359
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1336,14 +1336,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 5597 209
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1361,14 +1361,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4269 212
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1386,14 +1386,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 4038 222
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1411,14 +1411,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 5585 11
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
@@ -1438,21 +1438,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 1605 787
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 viopll_bootstrap
 R1
-R13
+R14
 !i10b 1
 !s100 YmVB:Ha73;]YY4c7@N>iY1
 R3
@@ -1463,21 +1463,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 34306 629
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 vtwentynm_iopll_arlol
 R1
-R13
+R2
 !i10b 1
 !s100 gUi8_MKj@02YG`:89bE:@1
 R3
@@ -1488,21 +1488,21 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 31462 124
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
 R12
 vtwentynm_iopll_ip
 R1
-R13
+R14
 !i10b 1
 !s100 :UZI5NclV>T[izQ1He;>z0
 R3
@@ -1513,14 +1513,14 @@ R0
 R5
 R6
 R7
-!i122 0
+!i122 5
 L0 33519 601
 R8
 r1
 !s85 0
 31
 R9
-R14
+R13
 R10
 !i113 1
 R11
