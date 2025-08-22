@@ -1,0 +1,29 @@
+module contador6bits(
+    input clk,             // reloj de la FPGA
+    input reset_btn,       // botón de reset asincrónico
+    input enable_btn,      // botón para incrementar contador
+    input load_en_btn,     // botón para cargar valor inicial
+    input [5:0] load_sw,   // switches para valor inicial
+    output [6:0] hex0,     // display unidades (bits [3:0])
+    output [6:0] hex1      // display decenas (bits [5:4])
+);
+
+    reg [5:0] q;
+
+    // Contador con reset asincrónico y carga
+    always @(posedge clk or posedge reset_btn) begin
+        if (reset_btn)
+            q <= 6'b0;
+        else if (load_en_btn)
+            q <= load_sw;
+        else if (enable_btn)
+            q <= q + 1;
+    end
+
+    // Decodificación para displays de 7 segmentos
+    // hex0: bits [3:0]
+    bin2hex dec0 (.bin(q[3:0]), .hex(hex0));
+    // hex1: bits [5:4], solo dos bits, se muestran en 0-F como decimal reducido
+    bin2hex dec1 (.bin({4'b00, q[5:4]}), .hex(hex1));
+
+endmodule
