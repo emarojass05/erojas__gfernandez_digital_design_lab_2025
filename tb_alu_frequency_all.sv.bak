@@ -1,0 +1,74 @@
+`timescale 1ns/1ps
+
+module tb_alu_frequency_all;
+
+// Lista de tamaños de ALU
+integer sizes[0:4];
+initial sizes[0]=2; sizes[1]=4; sizes[2]=8; sizes[3]=16; sizes[4]=32;
+
+integer i, j;
+
+// Variables genéricas para ALU
+reg clk;
+reg rst;
+reg [31:0] A, B;      // Usamos 32 bits para cubrir el ALU más grande
+reg [3:0] opcode;      // Supongamos 16 operaciones posibles
+wire [31:0] Y;
+
+// Registros intermedios para medir ruta crítica
+reg [31:0] R1, R2;
+
+// File para guardar resultados
+integer outfile;
+
+// Clock generator
+initial begin
+    clk = 0;
+    forever #5 clk = ~clk; // 100 MHz inicial (periodo 10ns)
+end
+
+// Testbench principal
+initial begin
+    outfile = $fopen("alu_frequency_results.txt", "w");
+    $fwrite(outfile, "WIDTH,OPCODE,A,B,Y\n");
+
+    for (i = 0; i < 5; i = i + 1) begin
+        integer WIDTH;
+        WIDTH = sizes[i];
+
+        // Reset
+        rst = 1;
+        R1 = 0; R2 = 0; A = 0; B = 0; opcode = 0;
+        #10;
+        rst = 0;
+
+        // Instancia dinámica de ALU usando generate (pseudo-conceptual)
+        // En simulación, se mantiene la conexión a 32 bits pero solo se usan WIDTH bits
+        for (j = 0; j < 16; j = j + 1) begin
+            @(posedge clk);
+            opcode = j;
+            A[WIDTH-1:0] = $random;
+            B[WIDTH-1:0] = $random;
+
+            // Actualizar registros paralelos
+            R1[WIDTH-1:0] <= A[WIDTH-1:0];
+            R2[WIDTH-1:0] <= B[WIDTH-1:0];
+
+            @(posedge clk);
+            $fwrite(outfile, "%0d,%0d,%0h,%0h,%0h\n", WIDTH, opcode, A[WIDTH-1:0], B[WIDTH-1:0], Y[WIDTH-1:0]);
+        end
+    end
+
+    $fclose(outfile);
+    $stop;
+end
+
+// Instancia de ALU genérica de 32 bits
+alu #(32) DUT (
+    .A(R1),
+    .B(R2),
+    .opcode(opcode),
+    .Y(Y)
+);
+
+endmodule
