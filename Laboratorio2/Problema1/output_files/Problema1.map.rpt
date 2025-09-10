@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema1
-Wed Aug 27 22:41:59 2025
+Wed Sep 10 00:04:04 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Aug 27 22:41:59 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed Sep 10 00:04:02 2025          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; Problema1                                      ;
 ; Top-level Entity Name           ; top_level                                      ;
@@ -180,25 +180,25 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; fa.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/fa.sv                      ;         ;
-; addsub.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/addsub.sv                  ;         ;
-; mul4x4.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/mul4x4.sv                  ;         ;
-; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv                     ;         ;
-; top_level.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/top_level.sv               ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                                                  ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                                                 ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                             ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                                  ;         ;
-; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/db/lpm_divide_1am.tdf      ;         ;
-; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/db/sign_div_unsign_7kh.tdf ;         ;
-; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/db/alt_u_div_kse.tdf       ;         ;
-; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/db/lpm_divide_42m.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; fa.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/fa.sv                      ;         ;
+; addsub.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/addsub.sv                  ;         ;
+; mul4x4.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/mul4x4.sv                  ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv                     ;         ;
+; top_level.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/top_level.sv               ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                            ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                           ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                       ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                            ;         ;
+; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/db/lpm_divide_1am.tdf      ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/db/sign_div_unsign_7kh.tdf ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/db/alt_u_div_kse.tdf       ;         ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/db/lpm_divide_42m.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -480,7 +480,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -490,67 +490,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Aug 27 22:41:36 2025
+    Info: Processing started: Wed Sep 10 00:03:33 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema1 -c Problema1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file fa.sv
-    Info (12023): Found entity 1: fa File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/fa.sv Line: 6
+    Info (12023): Found entity 1: fa File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/fa.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file addsub.sv
-    Info (12023): Found entity 1: addsub File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/addsub.sv Line: 3
+    Info (12023): Found entity 1: addsub File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/addsub.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mul4x4.sv
-    Info (12023): Found entity 1: mul4x4 File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/mul4x4.sv Line: 4
+    Info (12023): Found entity 1: mul4x4 File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/mul4x4.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_alu.sv
-    Info (12023): Found entity 1: tb_alu File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/tb_alu.sv Line: 3
+    Info (12023): Found entity 1: tb_alu File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/tb_alu.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file top_level.sv
-    Info (12023): Found entity 1: top_level File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/top_level.sv Line: 1
+    Info (12023): Found entity 1: top_level File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/top_level.sv Line: 1
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_i" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/top_level.sv Line: 25
-Info (12128): Elaborating entity "addsub" for hierarchy "ALU:alu_i|addsub:u_add" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 10
-Info (12128): Elaborating entity "fa" for hierarchy "ALU:alu_i|addsub:u_add|fa:G[0].u_fa" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/addsub.sv Line: 18
-Info (12128): Elaborating entity "mul4x4" for hierarchy "ALU:alu_i|mul4x4:u_mul" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 15
-Info (12128): Elaborating entity "addsub" for hierarchy "ALU:alu_i|mul4x4:u_mul|addsub:add1" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/mul4x4.sv Line: 23
-Info (12128): Elaborating entity "addsub" for hierarchy "ALU:alu_i|mul4x4:u_mul|addsub:add2" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/mul4x4.sv Line: 32
-Info (12128): Elaborating entity "addsub" for hierarchy "ALU:alu_i|mul4x4:u_mul|addsub:add3" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/mul4x4.sv Line: 41
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_i" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/top_level.sv Line: 25
+Info (12128): Elaborating entity "addsub" for hierarchy "ALU:alu_i|addsub:u_add" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 10
+Info (12128): Elaborating entity "fa" for hierarchy "ALU:alu_i|addsub:u_add|fa:G[0].u_fa" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/addsub.sv Line: 18
+Info (12128): Elaborating entity "mul4x4" for hierarchy "ALU:alu_i|mul4x4:u_mul" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 15
+Info (12128): Elaborating entity "addsub" for hierarchy "ALU:alu_i|mul4x4:u_mul|addsub:add1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/mul4x4.sv Line: 23
+Info (12128): Elaborating entity "addsub" for hierarchy "ALU:alu_i|mul4x4:u_mul|addsub:add2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/mul4x4.sv Line: 32
+Info (12128): Elaborating entity "addsub" for hierarchy "ALU:alu_i|mul4x4:u_mul|addsub:add3" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/mul4x4.sv Line: 41
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu_i|Div0" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 23
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu_i|Mod0" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 24
-Info (12130): Elaborated megafunction instantiation "ALU:alu_i|lpm_divide:Div0" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 23
-Info (12133): Instantiated megafunction "ALU:alu_i|lpm_divide:Div0" with the following parameter: File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu_i|Div0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu_i|Mod0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 24
+Info (12130): Elaborated megafunction instantiation "ALU:alu_i|lpm_divide:Div0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 23
+Info (12133): Instantiated megafunction "ALU:alu_i|lpm_divide:Div0" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 23
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
-    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/db/lpm_divide_1am.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/db/lpm_divide_1am.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/db/sign_div_unsign_7kh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/db/sign_div_unsign_7kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
-    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/db/alt_u_div_kse.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "ALU:alu_i|lpm_divide:Mod0" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 24
-Info (12133): Instantiated megafunction "ALU:alu_i|lpm_divide:Mod0" with the following parameter: File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv Line: 24
+    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/db/alt_u_div_kse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ALU:alu_i|lpm_divide:Mod0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 24
+Info (12133): Instantiated megafunction "ALU:alu_i|lpm_divide:Mod0" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv Line: 24
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
-    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/db/lpm_divide_42m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/db/lpm_divide_42m.tdf Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/top_level.sv Line: 3
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/top_level.sv Line: 3
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/top_level.sv Line: 3
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/top_level.sv Line: 3
 Info (21057): Implemented 129 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 104 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Wed Aug 27 22:42:00 2025
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Wed Sep 10 00:04:04 2025
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:30
 
 

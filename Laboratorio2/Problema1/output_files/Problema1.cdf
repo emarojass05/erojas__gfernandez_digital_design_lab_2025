@@ -4,9 +4,9 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Ign)
-		Device PartName(5CSXFC6D6F31) MfrSpec(OpMask(0) FullPath("C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/output_files/Problema1.sof"));
+		Device PartName(5CSXFC6D6F31) MfrSpec(OpMask(0) FullPath("C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/output_files/Problema1.sof"));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/output_files/") File("Problema1.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/output_files/") File("Problema1.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

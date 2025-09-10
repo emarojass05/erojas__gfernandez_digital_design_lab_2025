@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition"
 
-// DATE "08/27/2025 22:43:17"
+// DATE "09/10/2025 00:06:14"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -34,10 +34,10 @@ module top_level (
 	KEY,
 	HEX0,
 	LEDR);
-input 	[9:0] SW;
-input 	[3:0] KEY;
-output 	[6:0] HEX0;
-output 	[3:0] LEDR;
+input 	logic [9:0] SW ;
+input 	logic [3:0] KEY ;
+output 	logic [6:0] HEX0 ;
+output 	logic [3:0] LEDR ;
 
 // Design Ports Information
 // KEY[2]	=>  Location: PIN_AA14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
