@@ -45,13 +45,13 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/fa.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/addsub.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/mul4x4.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/alu.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/top_level.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/fa.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/addsub.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/mul4x4.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/alu.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/top_level.sv}
 
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/tb_alu.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio2/Problema1/tb_alu.sv}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_alu
 

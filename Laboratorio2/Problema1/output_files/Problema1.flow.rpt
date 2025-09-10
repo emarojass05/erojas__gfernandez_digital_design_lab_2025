@@ -1,5 +1,5 @@
 Flow report for Problema1
-Wed Sep 10 00:06:14 2025
+Wed Sep 10 01:37:50 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -38,29 +38,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Flow Summary                                                                     ;
-+---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Sep 10 00:06:14 2025          ;
-; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                   ; Problema1                                      ;
-; Top-level Entity Name           ; top_level                                      ;
-; Family                          ; Cyclone V                                      ;
-; Device                          ; 5CSXFC6D6F31C6                                 ;
-; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 62 / 41,910 ( < 1 % )                          ;
-; Total registers                 ; 0                                              ;
-; Total pins                      ; 25 / 499 ( 5 % )                               ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                          ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                                ;
-; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                                  ;
-; Total PLLs                      ; 0 / 15 ( 0 % )                                 ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
-+---------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++-----------------------------+------------------------------------------------+
+; Flow Status                 ; Successful - Wed Sep 10 01:37:50 2025          ;
+; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name               ; Problema1                                      ;
+; Top-level Entity Name       ; top_level                                      ;
+; Family                      ; Cyclone V                                      ;
+; Device                      ; 5CSXFC6D6F31C6                                 ;
+; Timing Models               ; Final                                          ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
+; Total registers             ; N/A until Partition Merge                      ;
+; Total pins                  ; N/A until Partition Merge                      ;
+; Total virtual pins          ; N/A until Partition Merge                      ;
+; Total block memory bits     ; N/A until Partition Merge                      ;
+; Total PLLs                  ; N/A until Partition Merge                      ;
+; Total DLLs                  ; N/A until Partition Merge                      ;
++-----------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/10/2025 00:03:34 ;
+; Start date & time ; 09/10/2025 01:37:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Problema1           ;
 +-------------------+---------------------+
@@ -79,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 141037560558409.175748421431180        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 141037560558409.175748985131632        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_alu                            ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -105,41 +100,29 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4853 MB             ; 00:00:30                           ;
-; Fitter               ; 00:01:28     ; 1.0                     ; 6569 MB             ; 00:01:30                           ;
-; Assembler            ; 00:00:17     ; 1.0                     ; 5237 MB             ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:11     ; 1.1                     ; 5355 MB             ; 00:00:08                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4759 MB             ; 00:00:02                           ;
-; Total                ; 00:02:24     ; --                      ; --                  ; 00:02:20                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:21     ; 1.0                     ; 4791 MB             ; 00:00:24                           ;
+; Total                  ; 00:00:21     ; --                      ; --                  ; 00:00:24                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Fabiana          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Fabiana          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Fabiana          ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Fabiana          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Fabiana          ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; Fabiana          ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Problema1 -c Problema1
-quartus_fit --read_settings_files=off --write_settings_files=off Problema1 -c Problema1
-quartus_asm --read_settings_files=off --write_settings_files=off Problema1 -c Problema1
-quartus_sta Problema1 -c Problema1
-quartus_eda --read_settings_files=off --write_settings_files=off Problema1 -c Problema1
+quartus_map --read_settings_files=on --write_settings_files=off Problema1 -c Problema1 --analysis_and_elaboration
 
 
 
