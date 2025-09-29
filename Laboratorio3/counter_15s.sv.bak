@@ -1,0 +1,23 @@
+module counter_15s(
+    input  logic clk,
+    input  logic rst,
+    input  logic tick_1s,      // viene de tick_1hz
+    output logic [3:0] value,  // valor actual (0–15)
+    output logic      zero     // llega a 0
+);
+
+    logic [3:0] cnt;
+
+    always_ff @(posedge clk) begin
+        if (rst) begin
+            cnt <= 4'd15;
+        end else if (tick_1s) begin
+            if (cnt > 0)
+                cnt <= cnt - 1;
+        end
+    end
+
+    assign value = cnt;
+    assign zero  = (cnt == 0);
+
+endmodule
