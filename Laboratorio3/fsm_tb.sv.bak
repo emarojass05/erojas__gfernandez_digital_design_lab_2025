@@ -1,0 +1,81 @@
+`timescale 1ns/1ps
+
+module fsm_tb;
+
+  // Señales
+  logic clk, rst;
+  logic start, timeout, pos1, pos2, reveal1_done, reveal2_done, match, nomatch, update_done, allfound, reset_game;
+  logic [3:0] state;
+
+  // Instancia de la FSM
+  fsm dut (
+    .clk(clk),
+    .rst(rst),
+    .start(start),
+    .timeout(timeout),
+    .pos1(pos1),
+    .pos2(pos2),
+    .reveal1_done(reveal1_done),
+    .reveal2_done(reveal2_done),
+    .match(match),
+    .nomatch(nomatch),
+    .update_done(update_done),
+    .allfound(allfound),
+    .reset_game(reset_game),
+    .state(state)
+  );
+
+  // Clock 10 ns
+  always #5 clk = ~clk;
+
+  // Estímulos
+  initial begin
+    // Inicialización
+    clk = 0;
+    rst = 1;
+    start = 0;
+    timeout = 0;
+    pos1 = 0;
+    pos2 = 0;
+    reveal1_done = 0;
+    reveal2_done = 0;
+    match = 0;
+    nomatch = 0;
+    update_done = 0;
+    allfound = 0;
+    reset_game = 0;
+
+    #20 rst = 0; // quitamos reset
+    #20 start = 1; // iniciar juego
+    #20 start = 0;
+
+    // Simulamos primera selección
+    #40 pos1 = 1; #10 pos1 = 0;
+    #20 reveal1_done = 1; #10 reveal1_done = 0;
+
+    // Simulamos segunda selección
+    #40 pos2 = 1; #10 pos2 = 0;
+    #20 reveal2_done = 1; #10 reveal2_done = 0;
+
+    // Caso de match
+    #30 match = 1; #10 match = 0;
+    #20 update_done = 1; #10 update_done = 0;
+
+    // Simulamos allfound → fin de juego
+    #50 allfound = 1; #10 allfound = 0;
+
+    // Reset del juego
+    #50 reset_game = 1; #10 reset_game = 0;
+
+    #100 $finish;
+  end
+
+  // Monitoreo
+  initial begin
+    $dumpfile("fsm_tb.vcd");
+    $dumpvars(0, fsm_tb);
+    $display("Tiempo\tEstado");
+    $monitor("%0t\tEstado=%0d", $time, state);
+  end
+
+endmodule

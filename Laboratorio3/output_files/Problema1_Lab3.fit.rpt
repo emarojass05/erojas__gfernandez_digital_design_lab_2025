@@ -1,5 +1,5 @@
 Fitter report for Problema1_Lab3
-Mon Sep 29 14:56:13 2025
+Tue Sep 30 18:00:33 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Mon Sep 29 14:56:13 2025          ;
+; Fitter Status                   ; Successful - Tue Sep 30 18:00:33 2025          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; Problema1_Lab3                                 ;
 ; Top-level Entity Name           ; top_lab3_avance                                ;
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CSXFC6D6F31C6                                 ;
 ; Timing Models                   ; Final                                          ;
 ; Logic utilization (in ALMs)     ; 124 / 41,910 ( < 1 % )                         ;
-; Total registers                 ; 58                                             ;
+; Total registers                 ; 61                                             ;
 ; Total pins                      ; 58 / 499 ( 12 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                          ;
@@ -93,6 +93,8 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                             ; Setting                               ; Default Value                         ;
 +--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 ; Device                                                             ; 5CSXFC6D6F31C6                        ;                                       ;
+; Minimum Core Junction Temperature                                  ; 0                                     ;                                       ;
+; Maximum Core Junction Temperature                                  ; 85                                    ;                                       ;
 ; Use smart compilation                                              ; Off                                   ; Off                                   ;
 ; Enable parallel Assembler and Timing Analyzer during compilation   ; On                                    ; On                                    ;
 ; Enable compact report table                                        ; Off                                   ; Off                                   ;
@@ -157,9 +159,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
-;     Processor 3            ;   0.5%      ;
-;     Processor 4            ;   0.5%      ;
+;     Processor 2            ;   0.8%      ;
+;     Processor 3            ;   0.7%      ;
+;     Processor 4            ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -169,10 +171,13 @@ https://fpgasoftware.intel.com/eula.
 ; Node                    ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                  ; Destination Port ; Destination Port Name ;
 +-------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------+------------------+-----------------------+
 ; clk~inputCLKENA0        ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                   ;                  ;                       ;
-; tick_1hz:u_tick|cnt[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[1]~DUPLICATE  ;                  ;                       ;
-; tick_1hz:u_tick|cnt[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[3]~DUPLICATE  ;                  ;                       ;
+; tick_1hz:u_tick|cnt[0]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[0]~DUPLICATE  ;                  ;                       ;
+; tick_1hz:u_tick|cnt[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[4]~DUPLICATE  ;                  ;                       ;
+; tick_1hz:u_tick|cnt[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[6]~DUPLICATE  ;                  ;                       ;
+; tick_1hz:u_tick|cnt[16] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[16]~DUPLICATE ;                  ;                       ;
 ; tick_1hz:u_tick|cnt[18] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[18]~DUPLICATE ;                  ;                       ;
-; tick_1hz:u_tick|cnt[21] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[21]~DUPLICATE ;                  ;                       ;
+; tick_1hz:u_tick|cnt[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[19]~DUPLICATE ;                  ;                       ;
+; tick_1hz:u_tick|cnt[22] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; tick_1hz:u_tick|cnt[22]~DUPLICATE ;                  ;                       ;
 +-------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------+------------------+-----------------------+
 
 
@@ -257,7 +262,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Problema1_Lab3.pin.
+The pin-out file can be found in C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/output_files/Problema1_Lab3.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -267,12 +272,12 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 124 / 41,910       ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 124                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 129 / 41,910       ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 20                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 102                ;       ;
-;         [c] ALMs used for registers                         ; 7                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 134 / 41,910       ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 18                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 106                ;       ;
+;         [c] ALMs used for registers                         ; 10                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 41,910         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 10 / 41,910        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41,910         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -291,19 +296,19 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ;     -- 5 input functions                                    ; 6                  ;       ;
 ;     -- 4 input functions                                    ; 33                 ;       ;
 ;     -- <=3 input functions                                  ; 175                ;       ;
-; Combinational ALUT usage for route-throughs                 ; 1                  ;       ;
+; Combinational ALUT usage for route-throughs                 ; 7                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 58                 ;       ;
+; Dedicated logic registers                                   ; 61                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 54 / 83,820        ; < 1 % ;
-;         -- Secondary logic registers                        ; 4 / 83,820         ; < 1 % ;
+;         -- Secondary logic registers                        ; 7 / 83,820         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 54                 ;       ;
-;         -- Routing optimization registers                   ; 4                  ;       ;
+;         -- Routing optimization registers                   ; 7                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 58 / 499           ; 12 %  ;
-;     -- Clock pins                                           ; 3 / 11             ; 27 %  ;
+;     -- Clock pins                                           ; 2 / 11             ; 18 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 39             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; Hard processor system peripheral utilization                ;                    ;       ;
@@ -361,11 +366,11 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.6% / 1.8% / 1.1% ;       ;
-; Maximum fan-out                                             ; 40                 ;       ;
-; Highest non-global fan-out                                  ; 40                 ;       ;
-; Total fan-out                                               ; 981                ;       ;
-; Average fan-out                                             ; 2.41               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.6% / 1.8% / 1.0% ;       ;
+; Maximum fan-out                                             ; 43                 ;       ;
+; Highest non-global fan-out                                  ; 43                 ;       ;
+; Total fan-out                                               ; 999                ;       ;
+; Average fan-out                                             ; 2.40               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -376,12 +381,12 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 124 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 124                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 129 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 20                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 102                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 7                     ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 134 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 18                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 106                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 10                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 10 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41910 ( 0 % )     ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -400,7 +405,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ;     -- 5 input functions                                    ; 6                     ; 0                              ;
 ;     -- 4 input functions                                    ; 33                    ; 0                              ;
 ;     -- <=3 input functions                                  ; 175                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 1                     ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 7                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
@@ -408,10 +413,10 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 54 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 4 / 83820 ( < 1 % )   ; 0 / 83820 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 7 / 83820 ( < 1 % )   ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 54                    ; 0                              ;
-;         -- Routing optimization registers                   ; 4                     ; 0                              ;
+;         -- Routing optimization registers                   ; 7                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -428,7 +433,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 995                   ; 0                              ;
+;     -- Total Connections                                    ; 1013                  ; 0                              ;
 ;     -- Registered Connections                               ; 215                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
@@ -461,21 +466,21 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; KEY[0] ; AF19  ; 4A       ; 62           ; 0            ; 0            ; 40                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; KEY[1] ; AA24  ; 5A       ; 89           ; 11           ; 43           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; KEY[2] ; AC23  ; 4A       ; 86           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; KEY[3] ; AJ2   ; 3A       ; 14           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; KEY[0] ; AF19  ; 4A       ; 62           ; 0            ; 0            ; 43                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; KEY[1] ; AG1   ; 3A       ; 10           ; 0            ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; KEY[2] ; AF28  ; 5A       ; 89           ; 13           ; 54           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; KEY[3] ; AG12  ; 3B       ; 26           ; 0            ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; SW[0]  ; AB30  ; 5B       ; 89           ; 21           ; 3            ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; SW[1]  ; D7    ; 8A       ; 18           ; 81           ; 91           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; SW[2]  ; AA20  ; 4A       ; 84           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; SW[3]  ; AH2   ; 3A       ; 10           ; 0            ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; SW[4]  ; AG15  ; 3B       ; 38           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; SW[5]  ; E6    ; 8A       ; 4            ; 81           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; SW[6]  ; AK7   ; 3B       ; 28           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; SW[7]  ; AB27  ; 5B       ; 89           ; 23           ; 20           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; SW[8]  ; AF8   ; 3A       ; 10           ; 0            ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; SW[9]  ; C13   ; 8A       ; 38           ; 81           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; clk    ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 38                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; SW[1]  ; AE13  ; 3B       ; 22           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; SW[2]  ; A5    ; 8A       ; 26           ; 81           ; 91           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; SW[3]  ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; SW[4]  ; F8    ; 8A       ; 2            ; 81           ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; SW[5]  ; AF5   ; 3A       ; 8            ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; SW[6]  ; AD24  ; 4A       ; 88           ; 0            ; 35           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; SW[7]  ; H13   ; 8A       ; 20           ; 81           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; SW[8]  ; AH2   ; 3A       ; 10           ; 0            ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; SW[9]  ; AA21  ; 4A       ; 88           ; 0            ; 1            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; clk    ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 41                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -538,11 +543,11 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; B2L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
 ; B1L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
 ; B0L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
-; 3A       ; 3 / 32 ( 9 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 4 / 32 ( 13 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 3B       ; 3 / 48 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 46 / 80 ( 57 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 1 / 32 ( 3 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 2 / 16 ( 13 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 1 / 16 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7A       ; 0 / 19 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -561,7 +566,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; A2       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A3       ; 493        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A4       ; 491        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A5       ; 489        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A5       ; 489        ; 8A             ; SW[2]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; A6       ; 487        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A7       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; A8       ; 473        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -605,11 +610,11 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AA17     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA18     ; 168        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA19     ; 176        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA20     ; 200        ; 4A             ; SW[2]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA21     ; 210        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA20     ; 200        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA21     ; 210        ; 4A             ; SW[9]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA22     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA23     ;            ; --             ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
-; AA24     ; 228        ; 5A             ; KEY[1]                          ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AA24     ; 228        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA25     ; 224        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA26     ; 252        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA27     ;            ; 5B             ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -642,7 +647,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AB24     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB25     ; 230        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB26     ; 226        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AB27     ; 254        ; 5B             ; SW[7]                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AB27     ; 254        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB28     ; 249        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB29     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB30     ; 248        ; 5B             ; SW[0]                           ; input  ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
@@ -668,7 +673,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AC20     ; 186        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC21     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC22     ; 207        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AC23     ; 205        ; 4A             ; KEY[2]                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AC23     ; 205        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC24     ;            ; 5A             ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC25     ; 215        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC26     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -699,7 +704,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AD21     ; 197        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD22     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD23     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AD24     ; 211        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD24     ; 211        ; 4A             ; SW[6]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AD25     ; 213        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD26     ; 240        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -717,8 +722,8 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AE9      ; 53         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE10     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE11     ; 59         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE12     ; 52         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE13     ; 95         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE12     ; 52         ; 3A             ; SW[3]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE13     ; 95         ; 3B             ; SW[1]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE14     ; 96         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE15     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE16     ; 139        ; 4A             ; HEX1[2]                         ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -740,10 +745,10 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AF2      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF4      ; 66         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF5      ; 64         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF5      ; 64         ; 3A             ; SW[5]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF6      ; 75         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF7      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AF8      ; 70         ; 3A             ; SW[8]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF8      ; 70         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF9      ; 67         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF10     ; 57         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF11     ; 87         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -763,10 +768,10 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AF25     ; 206        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF26     ; 204        ; 4A             ; vga_r[5]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AF27     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AF28     ; 235        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AF28     ; 235        ; 5A             ; KEY[2]                          ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AF29     ; 237        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AF30     ; 239        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AG1      ; 71         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG1      ; 71         ; 3A             ; KEY[1]                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG2      ; 83         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG3      ; 63         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG4      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -777,10 +782,10 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AG9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG10     ; 86         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG11     ; 85         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG12     ; 103        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG12     ; 103        ; 3B             ; KEY[3]                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG13     ; 101        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG14     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AG15     ; 127        ; 3B             ; SW[4]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG15     ; 127        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG16     ; 134        ; 4A             ; HEX0[3]                         ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG17     ; 132        ; 4A             ; HEX0[2]                         ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG18     ; 150        ; 4A             ; HEX0[5]                         ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -797,7 +802,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AG29     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AG30     ; 243        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AH2      ; 69         ; 3A             ; SW[3]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH2      ; 69         ; 3A             ; SW[8]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH3      ; 81         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH4      ; 61         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH5      ; 76         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -827,7 +832,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AH29     ; 218        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH30     ; 241        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AJ1      ; 79         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ2      ; 77         ; 3A             ; KEY[3]                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ2      ; 77         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AJ4      ; 94         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ5      ; 99         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -861,7 +866,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; AK4      ; 92         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK5      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AK6      ; 97         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK7      ; 107        ; 3B             ; SW[6]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK7      ; 107        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK8      ; 105        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK9      ; 108        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK10     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -926,7 +931,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; C10      ; 483        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C11      ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; C12      ; 467        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; C13      ; 462        ; 8A             ; SW[9]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C13      ; 462        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C14      ; 448        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C15      ; 453        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C16      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -950,7 +955,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; D4       ; 521        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D5       ; 499        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D6       ; 495        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; D7       ; 505        ; 8A             ; SW[1]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; D7       ; 505        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D8       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D9       ; 480        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D10      ; 472        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -979,7 +984,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; E3       ; 523        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E4       ; 519        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E5       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; E6       ; 533        ; 8A             ; SW[5]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; E6       ; 533        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E7       ; 531        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E8       ; 503        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E9       ; 478        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1011,7 +1016,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; F5       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F6       ; 537        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F7       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; F8       ; 536        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; F8       ; 536        ; 8A             ; SW[4]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; F9       ; 534        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F10      ; 528        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F11      ; 502        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1076,7 +1081,7 @@ The pin-out file can be found in C:/Users/fabia/Desktop/Lab3/output_files/Proble
 ; H10      ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H11      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H12      ; 500        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H13      ; 498        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H13      ; 498        ; 8A             ; SW[7]                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; H14      ; 482        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H15      ; 458        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H16      ;            ; 7D             ; VCCIO7D_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1542,21 +1547,21 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top_lab3_avance                          ; 124.0 (0.5)          ; 129.0 (0.5)                      ; 5.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 231 (1)             ; 58 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 58   ; 0            ; |top_lab3_avance                                                                                                                ; top_lab3_avance     ; work         ;
-;    |counter_15s:u_cnt|                    ; 5.5 (5.5)            ; 5.5 (5.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt                                                                                              ; counter_15s         ; work         ;
+; |top_lab3_avance                          ; 124.0 (0.5)          ; 133.0 (0.5)                      ; 9.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 231 (1)             ; 61 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 58   ; 0            ; |top_lab3_avance                                                                                                                ; top_lab3_avance     ; work         ;
+;    |counter_15s:u_cnt|                    ; 5.3 (5.3)            ; 5.3 (5.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt                                                                                              ; counter_15s         ; work         ;
 ;    |gen_pixclk:u_pix|                     ; 1.5 (1.5)            ; 2.0 (2.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|gen_pixclk:u_pix                                                                                               ; gen_pixclk          ; work         ;
 ;    |hex7seg:u_hex_units|                  ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|hex7seg:u_hex_units                                                                                            ; hex7seg             ; work         ;
-;    |tick_1hz:u_tick|                      ; 17.0 (17.0)          ; 17.5 (17.5)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (30)             ; 30 (30)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|tick_1hz:u_tick                                                                                                ; tick_1hz            ; work         ;
-;    |vga_timing_640x480:u_ctrl|            ; 20.0 (20.0)          ; 20.0 (20.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (30)             ; 20 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|vga_timing_640x480:u_ctrl                                                                                      ; vga_timing_640x480  ; work         ;
-;    |videoGen:u_vid|                       ; 75.3 (14.3)          ; 80.0 (17.5)                      ; 4.8 (3.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 153 (29)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid                                                                                                 ; videoGen            ; work         ;
-;       |lpm_divide:Mod0|                   ; 31.5 (0.0)           ; 32.5 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 64 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_k3m:auto_generated|  ; 31.5 (0.0)           ; 32.5 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 64 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 31.5 (0.0)           ; 32.5 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 64 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
-;                |alt_u_div_kve:divider|    ; 31.5 (31.5)          ; 32.5 (32.5)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 64 (64)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
-;       |lpm_divide:Mod1|                   ; 29.5 (0.0)           ; 30.0 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 60 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_k3m:auto_generated|  ; 29.5 (0.0)           ; 30.0 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 60 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 29.5 (0.0)           ; 30.0 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 60 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
-;                |alt_u_div_kve:divider|    ; 29.5 (29.5)          ; 30.0 (30.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 60 (60)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;    |tick_1hz:u_tick|                      ; 17.0 (17.0)          ; 18.2 (18.2)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (30)             ; 33 (33)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|tick_1hz:u_tick                                                                                                ; tick_1hz            ; work         ;
+;    |vga_timing_640x480:u_ctrl|            ; 20.3 (20.3)          ; 23.8 (23.8)                      ; 3.6 (3.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (30)             ; 20 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|vga_timing_640x480:u_ctrl                                                                                      ; vga_timing_640x480  ; work         ;
+;    |videoGen:u_vid|                       ; 75.8 (14.4)          ; 79.7 (17.2)                      ; 3.9 (2.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 153 (29)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid                                                                                                 ; videoGen            ; work         ;
+;       |lpm_divide:Mod0|                   ; 32.0 (0.0)           ; 32.5 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 64 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 32.0 (0.0)           ; 32.5 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 64 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 32.0 (0.0)           ; 32.5 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 64 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 32.0 (32.0)          ; 32.5 (32.5)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 64 (64)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Mod1|                   ; 29.3 (0.0)           ; 30.0 (0.0)                       ; 0.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 60 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 29.3 (0.0)           ; 30.0 (0.0)                       ; 0.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 60 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 29.3 (0.0)           ; 30.0 (0.0)                       ; 0.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 60 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 29.3 (29.3)          ; 30.0 (30.0)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 60 (60)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1646,16 +1651,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; KEY[3]                                     ;                   ;         ;
 ; KEY[0]                                     ;                   ;         ;
 ;      - counter_15s:u_cnt|timeout           ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[20]             ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[9]              ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[10]             ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[11]             ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[21]             ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[22]             ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[6]              ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[19]             ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[24]             ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[23]             ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[12]             ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[13]             ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[14]             ; 1                 ; 0       ;
@@ -1663,14 +1658,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - tick_1hz:u_tick|cnt[16]             ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[17]             ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[18]             ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[19]             ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[8]              ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[7]              ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[20]             ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[21]             ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[22]             ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[23]             ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[24]             ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[5]              ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[4]              ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[3]              ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[2]              ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[1]              ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[0]              ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[11]             ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[10]             ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[9]              ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[7]              ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[6]              ; 1                 ; 0       ;
 ;      - gen_pixclk:u_pix|clk_pix            ; 1                 ; 0       ;
 ;      - counter_15s:u_cnt|val[0]            ; 1                 ; 0       ;
 ;      - counter_15s:u_cnt|val[1]            ; 1                 ; 0       ;
@@ -1678,13 +1683,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - counter_15s:u_cnt|val[2]            ; 1                 ; 0       ;
 ;      - gen_pixclk:u_pix|cnt[-1]            ; 1                 ; 0       ;
 ;      - vga_timing_640x480:u_ctrl|hcnt[0]~0 ; 1                 ; 0       ;
-;      - vga_timing_640x480:u_ctrl|vcnt[5]~0 ; 1                 ; 0       ;
+;      - vga_timing_640x480:u_ctrl|vcnt[7]~0 ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|tick_1s             ; 1                 ; 0       ;
 ;      - gen_pixclk:u_pix|cnt~0              ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[21]~DUPLICATE   ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[22]~DUPLICATE   ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[6]~DUPLICATE    ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[16]~DUPLICATE   ; 1                 ; 0       ;
 ;      - tick_1hz:u_tick|cnt[18]~DUPLICATE   ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[3]~DUPLICATE    ; 1                 ; 0       ;
-;      - tick_1hz:u_tick|cnt[1]~DUPLICATE    ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[19]~DUPLICATE   ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[4]~DUPLICATE    ; 1                 ; 0       ;
+;      - tick_1hz:u_tick|cnt[0]~DUPLICATE    ; 1                 ; 0       ;
 ; clk                                        ;                   ;         ;
 ;      - gen_pixclk:u_pix|clk_pix            ; 0                 ; 0       ;
 ; SW[0]                                      ;                   ;         ;
@@ -1701,13 +1709,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; KEY[0]                              ; PIN_AF19           ; 40      ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; KEY[0]                              ; PIN_AF19           ; 43      ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
 ; clk                                 ; PIN_AF14           ; 2       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; clk                                 ; PIN_AF14           ; 37      ; Clock                     ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; gen_pixclk:u_pix|clk_pix            ; FF_X62_Y2_N26      ; 22      ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; tick_1hz:u_tick|Equal0~4            ; LABCELL_X51_Y2_N27 ; 30      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vga_timing_640x480:u_ctrl|hcnt[0]~0 ; LABCELL_X60_Y2_N42 ; 20      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; vga_timing_640x480:u_ctrl|vcnt[5]~0 ; LABCELL_X61_Y2_N21 ; 10      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; clk                                 ; PIN_AF14           ; 40      ; Clock                     ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; gen_pixclk:u_pix|clk_pix            ; FF_X55_Y1_N20      ; 22      ; Clock                     ; no     ; --                   ; --               ; --                        ;
+; tick_1hz:u_tick|Equal0~4            ; LABCELL_X62_Y4_N6  ; 33      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; vga_timing_640x480:u_ctrl|hcnt[0]~0 ; LABCELL_X56_Y2_N33 ; 20      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; vga_timing_640x480:u_ctrl|vcnt[7]~0 ; LABCELL_X56_Y3_N21 ; 10      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1716,7 +1724,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_AF14 ; 37      ; Global Clock         ; GCLK6            ; --                        ;
+; clk  ; PIN_AF14 ; 40      ; Global Clock         ; GCLK6            ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1725,14 +1733,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 298 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 284 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 4 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 61 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 33 / 56,300 ( < 1 % )   ;
+; C2 interconnects                            ; 40 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 28 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 101 / 289,320 ( < 1 % ) ;
+; Direct links                                ; 96 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1788,12 +1796,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 89 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 96 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 17 / 12,676 ( < 1 % )   ;
+; R14 interconnects                           ; 16 / 12,676 ( < 1 % )   ;
 ; R14/C12 interconnect drivers                ; 19 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 106 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 88 / 266,960 ( < 1 % )  ;
+; R3 interconnects                            ; 85 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 94 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1967,8 +1975,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------+--------------------------+-------------------+
 ; Source Clock(s)          ; Destination Clock(s)     ; Delay Added in ns ;
 +--------------------------+--------------------------+-------------------+
-; clk                      ; clk                      ; 14.7              ;
-; gen_pixclk:u_pix|clk_pix ; gen_pixclk:u_pix|clk_pix ; 11.1              ;
+; clk                      ; clk                      ; 16.8              ;
+; gen_pixclk:u_pix|clk_pix ; gen_pixclk:u_pix|clk_pix ; 7.5               ;
 +--------------------------+--------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1979,61 +1987,62 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------------------------+-----------------------------------+-------------------+
 ; Source Register                   ; Destination Register              ; Delay Added in ns ;
 +-----------------------------------+-----------------------------------+-------------------+
-; gen_pixclk:u_pix|clk_pix          ; gen_pixclk:u_pix|clk_pix          ; 6.384             ;
-; gen_pixclk:u_pix|cnt[0]           ; gen_pixclk:u_pix|clk_pix          ; 3.168             ;
-; gen_pixclk:u_pix|cnt[-1]          ; gen_pixclk:u_pix|clk_pix          ; 3.168             ;
-; vga_timing_640x480:u_ctrl|hcnt[8] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.866             ;
-; vga_timing_640x480:u_ctrl|hcnt[4] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.839             ;
-; vga_timing_640x480:u_ctrl|hcnt[0] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.836             ;
-; vga_timing_640x480:u_ctrl|hcnt[1] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.835             ;
-; vga_timing_640x480:u_ctrl|hcnt[9] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.790             ;
-; vga_timing_640x480:u_ctrl|hcnt[7] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.780             ;
-; vga_timing_640x480:u_ctrl|hcnt[2] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.755             ;
-; vga_timing_640x480:u_ctrl|hcnt[3] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.753             ;
-; vga_timing_640x480:u_ctrl|hcnt[6] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.695             ;
-; vga_timing_640x480:u_ctrl|hcnt[5] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.670             ;
-; vga_timing_640x480:u_ctrl|vcnt[9] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.664             ;
-; vga_timing_640x480:u_ctrl|vcnt[7] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.662             ;
-; vga_timing_640x480:u_ctrl|vcnt[0] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.644             ;
-; vga_timing_640x480:u_ctrl|vcnt[8] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.641             ;
-; vga_timing_640x480:u_ctrl|vcnt[6] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.637             ;
-; vga_timing_640x480:u_ctrl|vcnt[5] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.607             ;
-; vga_timing_640x480:u_ctrl|vcnt[3] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.590             ;
-; vga_timing_640x480:u_ctrl|vcnt[2] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.585             ;
-; vga_timing_640x480:u_ctrl|vcnt[4] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.533             ;
-; vga_timing_640x480:u_ctrl|vcnt[1] ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.498             ;
-; counter_15s:u_cnt|val[0]          ; counter_15s:u_cnt|val[3]          ; 0.467             ;
-; counter_15s:u_cnt|val[1]          ; counter_15s:u_cnt|val[2]          ; 0.463             ;
-; counter_15s:u_cnt|val[2]          ; counter_15s:u_cnt|val[3]          ; 0.434             ;
+; gen_pixclk:u_pix|clk_pix          ; gen_pixclk:u_pix|clk_pix          ; 6.382             ;
+; gen_pixclk:u_pix|cnt[0]           ; gen_pixclk:u_pix|clk_pix          ; 3.085             ;
+; gen_pixclk:u_pix|cnt[-1]          ; gen_pixclk:u_pix|clk_pix          ; 3.085             ;
+; vga_timing_640x480:u_ctrl|hcnt[9] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.737             ;
+; vga_timing_640x480:u_ctrl|hcnt[4] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.717             ;
+; vga_timing_640x480:u_ctrl|vcnt[9] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.716             ;
+; vga_timing_640x480:u_ctrl|hcnt[3] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.668             ;
+; vga_timing_640x480:u_ctrl|hcnt[0] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.655             ;
+; vga_timing_640x480:u_ctrl|hcnt[2] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.651             ;
+; vga_timing_640x480:u_ctrl|hcnt[1] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.647             ;
+; vga_timing_640x480:u_ctrl|hcnt[5] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.627             ;
+; vga_timing_640x480:u_ctrl|vcnt[6] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.625             ;
+; vga_timing_640x480:u_ctrl|vcnt[0] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.625             ;
+; vga_timing_640x480:u_ctrl|hcnt[6] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.624             ;
+; vga_timing_640x480:u_ctrl|vcnt[5] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.623             ;
+; vga_timing_640x480:u_ctrl|hcnt[7] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.612             ;
+; vga_timing_640x480:u_ctrl|vcnt[1] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.609             ;
+; vga_timing_640x480:u_ctrl|hcnt[8] ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.606             ;
+; vga_timing_640x480:u_ctrl|vcnt[3] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.594             ;
+; vga_timing_640x480:u_ctrl|vcnt[7] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.587             ;
+; vga_timing_640x480:u_ctrl|vcnt[2] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.560             ;
+; vga_timing_640x480:u_ctrl|vcnt[4] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.521             ;
+; vga_timing_640x480:u_ctrl|vcnt[8] ; vga_timing_640x480:u_ctrl|vcnt[1] ; 0.513             ;
+; counter_15s:u_cnt|val[0]          ; counter_15s:u_cnt|val[3]          ; 0.470             ;
+; counter_15s:u_cnt|val[1]          ; counter_15s:u_cnt|val[2]          ; 0.466             ;
+; counter_15s:u_cnt|val[2]          ; counter_15s:u_cnt|val[3]          ; 0.437             ;
+; tick_1hz:u_tick|cnt[6]            ; tick_1hz:u_tick|tick_1s           ; 0.414             ;
 ; counter_15s:u_cnt|val[3]          ; counter_15s:u_cnt|val[2]          ; 0.406             ;
-; KEY[0]                            ; vga_timing_640x480:u_ctrl|vcnt[9] ; 0.279             ;
-; tick_1hz:u_tick|cnt[24]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[22]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[21]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[20]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[19]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[23]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[17]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[16]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[15]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[14]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[12]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[11]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[10]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[9]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[18]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[8]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[6]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[7]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[5]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[4]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[3]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[2]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[0]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[1]            ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
-; tick_1hz:u_tick|cnt[13]           ; tick_1hz:u_tick|tick_1s           ; 0.170             ;
+; tick_1hz:u_tick|cnt[4]            ; tick_1hz:u_tick|tick_1s           ; 0.348             ;
+; KEY[0]                            ; vga_timing_640x480:u_ctrl|hcnt[9] ; 0.292             ;
+; tick_1hz:u_tick|tick_1s           ; counter_15s:u_cnt|timeout         ; 0.270             ;
+; tick_1hz:u_tick|cnt[3]            ; tick_1hz:u_tick|tick_1s           ; 0.234             ;
+; tick_1hz:u_tick|cnt[11]           ; tick_1hz:u_tick|tick_1s           ; 0.213             ;
+; tick_1hz:u_tick|cnt[1]            ; tick_1hz:u_tick|tick_1s           ; 0.173             ;
+; tick_1hz:u_tick|cnt[10]           ; tick_1hz:u_tick|tick_1s           ; 0.161             ;
+; tick_1hz:u_tick|cnt[8]            ; tick_1hz:u_tick|tick_1s           ; 0.148             ;
+; tick_1hz:u_tick|cnt[0]            ; tick_1hz:u_tick|tick_1s           ; 0.141             ;
+; tick_1hz:u_tick|cnt[9]            ; tick_1hz:u_tick|tick_1s           ; 0.129             ;
+; tick_1hz:u_tick|cnt[7]            ; tick_1hz:u_tick|tick_1s           ; 0.129             ;
+; tick_1hz:u_tick|cnt[23]           ; tick_1hz:u_tick|tick_1s           ; 0.117             ;
+; tick_1hz:u_tick|cnt[24]           ; tick_1hz:u_tick|tick_1s           ; 0.117             ;
+; tick_1hz:u_tick|cnt[5]            ; tick_1hz:u_tick|tick_1s           ; 0.117             ;
+; tick_1hz:u_tick|cnt[2]            ; tick_1hz:u_tick|tick_1s           ; 0.117             ;
+; tick_1hz:u_tick|cnt[17]           ; tick_1hz:u_tick|cnt[23]           ; 0.109             ;
+; tick_1hz:u_tick|cnt[21]           ; tick_1hz:u_tick|tick_1s           ; 0.093             ;
+; tick_1hz:u_tick|cnt[20]           ; tick_1hz:u_tick|tick_1s           ; 0.093             ;
+; tick_1hz:u_tick|cnt[19]           ; tick_1hz:u_tick|tick_1s           ; 0.093             ;
+; tick_1hz:u_tick|cnt[18]           ; tick_1hz:u_tick|tick_1s           ; 0.093             ;
+; tick_1hz:u_tick|cnt[22]           ; tick_1hz:u_tick|cnt[23]           ; 0.091             ;
+; tick_1hz:u_tick|cnt[15]           ; tick_1hz:u_tick|cnt[23]           ; 0.088             ;
+; tick_1hz:u_tick|cnt[13]           ; tick_1hz:u_tick|cnt[23]           ; 0.085             ;
+; tick_1hz:u_tick|cnt[16]           ; tick_1hz:u_tick|cnt[23]           ; 0.081             ;
+; tick_1hz:u_tick|cnt[14]           ; tick_1hz:u_tick|tick_1s           ; 0.024             ;
+; tick_1hz:u_tick|cnt[12]           ; tick_1hz:u_tick|tick_1s           ; 0.024             ;
 +-----------------------------------+-----------------------------------+-------------------+
-Note: This table only shows the top 53 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 54 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2042,8 +2051,8 @@ Note: This table only shows the top 53 path(s) that have the largest delay added
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device 5CSXFC6D6F31C6 for design "Problema1_Lab3"
-Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
-Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
@@ -2062,37 +2071,37 @@ Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "rst_n" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:12
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X56_Y0 to location X66_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.71 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.10 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/fabia/Desktop/Lab3/output_files/Problema1_Lab3.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/output_files/Problema1_Lab3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 6604 megabytes
-    Info: Processing ended: Mon Sep 29 14:56:14 2025
-    Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:01:13
+    Info: Peak virtual memory: 6613 megabytes
+    Info: Processing ended: Tue Sep 30 18:00:34 2025
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:01:50
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/fabia/Desktop/Lab3/output_files/Problema1_Lab3.fit.smsg.
+The suppressed messages can be found in C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/output_files/Problema1_Lab3.fit.smsg.
 
 

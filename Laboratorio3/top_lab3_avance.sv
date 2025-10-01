@@ -1,7 +1,8 @@
-// top_lab3_avance.sv — Top con VGA + contador + HEX display
+// top_lab3_avance.sv — Top con VGA + contador + FSM (solo para visualizar) + HEX display
+
 module top_lab3_avance(
   input  logic        clk,          // clock 50 MHz
-  input  logic [9:0]  SW,           // switches (SW0 inicia contador/pausa)
+  input  logic [9:0]  SW,           // switches (SW0 inicia contador)
   input  logic [3:0]  KEY,          // botones (KEY0 = reset)
   output logic        hsync,
   output logic        vsync,
@@ -59,15 +60,29 @@ module top_lab3_avance(
     .tick_1s(tick_1s)
   );
 
+  // ===== Señales FSM (solo para visualizar estados) =====
+  logic fsm_start;
+  logic black_screen;
+  logic timeout;
+
+  fsm u_fsm (
+    .clk         (clk),
+    .rst         (rst),
+    .startSW     (SW[0]),      // conectado, pero no usado en lógica
+    .timeout     (timeout),    // conectado, pero no usado en lógica
+    .fsm_start   (fsm_start),  // no afecta
+    .black_screen(black_screen),// no afecta
+    .state_out   ()            // no necesitamos observarlo en top
+  );
+
   // ===== Contador 15s =====
   logic [3:0] tens, units;
-  logic timeout;
 
   counter_15s u_cnt (
     .clk    (clk),
     .rst    (rst),
     .tick_1s(tick_1s),
-    .start  (SW[0]),   // Switch 0 inicia/pausa
+    .start  (SW[0]),    // 🔑 volvemos al switch directamente
     .timeout(timeout),
     .tens   (tens),
     .units  (units)
@@ -78,7 +93,7 @@ module top_lab3_avance(
     .x(x),
     .y(y),
     .visible(visible),
-    .timeout(timeout),
+    .timeout(timeout),   // sigue apagando pantalla en 0
     .r(vga_r),
     .g(vga_g),
     .b(vga_b)
