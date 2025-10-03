@@ -2,57 +2,78 @@
 
 module fsm_tb;
 
-    // Señales de prueba
-    logic clk;
-    logic rst;
-    logic startSW;
-    logic timeout;
-    logic fsm_start;
-    logic black_screen;
-    logic [4:0] state_out;
+  // Señales de prueba
+  logic clk;
+  logic rst;
+  logic startSW;
+  logic timeout;
+  logic fsm_start;
+  logic black_screen;
+  logic [4:0] state_out;
 
-    // Instancia de la FSM
-    fsm uut (
-        .clk        (clk),
-        .rst        (rst),
-        .startSW    (startSW),
-        .timeout    (timeout),
-        .fsm_start  (fsm_start),
-        .black_screen(black_screen),
-        .state_out  (state_out)
-    );
+  // Señales del contador
+  logic [3:0] tens, units;
+  logic tick_1s;
 
-    // Generador de clock
-    initial clk = 0;
-    always #5 clk = ~clk;   // periodo 10 ns → 100 MHz
+  // ====== Generador de clock ======
+  initial clk = 0;
+  always #10 clk = ~clk; // periodo 20ns → 50 MHz
 
-    // Estímulos
-    initial begin
-        // Inicialización
-        rst      = 1;
-        startSW  = 0;
-        timeout  = 0;
+  // ====== DUT: FSM ======
+  fsm uut_fsm (
+    .clk        (clk),
+    .rst        (rst),
+    .startSW    (startSW),
+    .timeout    (timeout),
+    .fsm_start  (fsm_start),
+    .black_screen(black_screen),
+    .state_out  (state_out)
+  );
 
-        // Liberar reset
-        #20 rst = 0;
+  // ====== DUT: Tick de 1 Hz (simulación más rápido) ======
+  tick_1hz #(
+    .SYS_CLK_HZ(100)   // ⚡ reducimos para simular rápido
+  ) u_tick (
+    .clk    (clk),
+    .rst    (rst),
+    .tick_1s(tick_1s)
+  );
 
-        // Activar el switch de inicio
-        #20 startSW = 1;
-        #20 startSW = 0;
+  // ====== DUT: Contador ======
+  counter_15s uut_cnt (
+    .clk    (clk),
+    .rst    (rst),
+    .tick_1s(tick_1s),
+    .start  (fsm_start),
+    .timeout(timeout),
+    .tens   (tens),
+    .units  (units)
+  );
 
-        // Dejar correr algunos ciclos
-        #200;
+  // ====== Estímulos ======
+  initial begin
+    $display("==== INICIO DE SIMULACION ====");
+    $monitor("t=%0t | rst=%0b startSW=%0b | FSM state=%0d fsm_start=%0b black_screen=%0b | contador=%0d%d timeout=%0b",
+             $time, rst, startSW, state_out, fsm_start, black_screen, tens, units, timeout);
 
-        // Simular un timeout
-        timeout = 1;
-        #20 timeout = 0;
+    // Reset inicial
+    rst = 1;
+    startSW = 0;
+    #50;
+    rst = 0;
 
-        // Otro ciclo de reset
-        #50 rst = 1;
-        #20 rst = 0;
+    // Simular arranque con SW
+    #50 startSW = 1;
+    #100 startSW = 0;
 
-        // Terminar simulación
-        #500 $stop;
-    end
+    // Dejar correr para que baje el contador
+    #2000;
+
+    // Forzar timeout
+    #1000;
+
+    $display("==== FIN DE SIMULACION ====");
+    $stop;
+  end
 
 endmodule

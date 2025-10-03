@@ -127,7 +127,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE tick_1hz.sv
 set_global_assignment -name SYSTEMVERILOG_FILE counter_15s.sv
 set_global_assignment -name SYSTEMVERILOG_FILE digit_rom.sv
 set_location_assignment PIN_AB30 -to SW[0]
-set_location_assignment PIN_AJ4 -to rst_n
 set_global_assignment -name SYSTEMVERILOG_FILE hex7seg.sv
 set_location_assignment PIN_W17 -to HEX0[0]
 set_location_assignment PIN_V18 -to HEX0[1]
@@ -155,4 +154,18 @@ set_global_assignment -name EDA_TEST_BENCH_NAME fsm_tb -section_id eda_simulatio
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id fsm_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME fsm_tb -section_id fsm_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE fsm_tb.sv -section_id fsm_tb
+set_global_assignment -name SYSTEMVERILOG_FILE card_selector.sv
+set_location_assignment PIN_Y27 -to SW[1]
+set_location_assignment PIN_AB28 -to SW[2]
+set_location_assignment PIN_AC30 -to SW[3]
+set_location_assignment PIN_W25 -to SW[4]
+set_location_assignment PIN_V25 -to SW[5]
+set_location_assignment PIN_AC28 -to SW[6]
+set_location_assignment PIN_AD30 -to SW[7]
+set_location_assignment PIN_AC29 -to SW[8]
+set_location_assignment PIN_AA30 -to SW[9]
+set_location_assignment PIN_AJ4 -to KEY[0]
+set_location_assignment PIN_AK4 -to KEY[1]
+set_location_assignment PIN_AA14 -to KEY[2]
+set_location_assignment PIN_AA15 -to KEY[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

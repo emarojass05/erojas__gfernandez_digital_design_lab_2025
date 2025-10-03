@@ -1,9 +1,8 @@
-// top_lab3_avance.sv — Top con VGA + contador + FSM (solo para visualizar) + HEX display
-
+// top_lab3_avance.sv — Top con VGA + contador + FSM + HEX + Card Selector
 module top_lab3_avance(
   input  logic        clk,          // clock 50 MHz
-  input  logic [9:0]  SW,           // switches (SW0 inicia contador)
-  input  logic [3:0]  KEY,          // botones (KEY0 = reset)
+  input  logic [9:0]  SW,           // switches (SW0 elige mitad, SW1–SW8 cartas)
+  input  logic [3:0]  KEY,          // botones (KEY0 = start, KEY1 = reset)
   output logic        hsync,
   output logic        vsync,
   output logic        vga_clk,
@@ -17,8 +16,9 @@ module top_lab3_avance(
 );
 
   // ===== Reset global =====
-  logic rst;
-  assign rst = ~KEY[0];   // KEY0 presionado → rst=1
+  logic rst, start_btn;
+  assign rst       = ~KEY[1];   // KEY1 reinicia
+  assign start_btn = ~KEY[0];   // KEY0 arranca contador
 
   // ===== Pixel clock =====
   logic vgaclk;
@@ -60,32 +60,27 @@ module top_lab3_avance(
     .tick_1s(tick_1s)
   );
 
-  // ===== Señales FSM (solo para visualizar estados) =====
-  logic fsm_start;
-  logic black_screen;
-  logic timeout;
-
-  fsm u_fsm (
-    .clk         (clk),
-    .rst         (rst),
-    .startSW     (SW[0]),      // conectado, pero no usado en lógica
-    .timeout     (timeout),    // conectado, pero no usado en lógica
-    .fsm_start   (fsm_start),  // no afecta
-    .black_screen(black_screen),// no afecta
-    .state_out   ()            // no necesitamos observarlo en top
-  );
-
   // ===== Contador 15s =====
   logic [3:0] tens, units;
+  logic timeout;
 
   counter_15s u_cnt (
     .clk    (clk),
     .rst    (rst),
     .tick_1s(tick_1s),
-    .start  (SW[0]),    // vuelve al switch directamente
+    .start  (start_btn),   // KEY0 inicia
     .timeout(timeout),
     .tens   (tens),
     .units  (units)
+  );
+
+  // ===== Selector de cartas =====
+  logic [15:0] selected_cards;
+
+  card_selector u_sel (
+    .sw_row  (SW[0]),
+    .sw_cards(SW[8:1]),
+    .selected(selected_cards)
   );
 
   // ===== Video VGA =====
@@ -93,7 +88,8 @@ module top_lab3_avance(
     .x(x),
     .y(y),
     .visible(visible),
-    .timeout(timeout),   // sigue apagando pantalla en 0
+    .timeout(timeout),
+    .selected(selected_cards),
     .r(vga_r),
     .g(vga_g),
     .b(vga_b)
