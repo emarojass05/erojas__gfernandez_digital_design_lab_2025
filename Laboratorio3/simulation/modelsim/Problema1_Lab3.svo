@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition"
 
-// DATE "09/30/2025 18:00:57"
+// DATE "10/01/2025 10:03:19"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -43,19 +43,19 @@ module top_lab3_avance (
 	vga_b,
 	HEX0,
 	HEX1);
-input 	logic clk ;
-input 	logic [9:0] SW ;
-input 	logic [3:0] KEY ;
-output 	logic hsync ;
-output 	logic vsync ;
-output 	logic vga_clk ;
-output 	logic vga_blank_n ;
-output 	logic vga_sync_n ;
-output 	logic [7:0] vga_r ;
-output 	logic [7:0] vga_g ;
-output 	logic [7:0] vga_b ;
-output 	logic [6:0] HEX0 ;
-output 	logic [6:0] HEX1 ;
+input 	clk;
+input 	[9:0] SW;
+input 	[3:0] KEY;
+output 	hsync;
+output 	vsync;
+output 	vga_clk;
+output 	vga_blank_n;
+output 	vga_sync_n;
+output 	[7:0] vga_r;
+output 	[7:0] vga_g;
+output 	[7:0] vga_b;
+output 	[6:0] HEX0;
+output 	[6:0] HEX1;
 
 // Design Ports Information
 // SW[1]	=>  Location: PIN_AE13,	 I/O Standard: 2.5 V,	 Current Strength: Default

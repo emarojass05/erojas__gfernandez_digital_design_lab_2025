@@ -121,7 +121,7 @@ module digit_rom(
     logic [10:0] idx;
 
      always_comb begin
-        // 🔑 valor por defecto → evita inferir latches
+        // valor por defecto → evita inferir latches
         pixel = 1'b0;
         idx   = 0;
 

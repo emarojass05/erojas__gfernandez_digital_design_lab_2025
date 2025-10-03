@@ -82,7 +82,7 @@ module top_lab3_avance(
     .clk    (clk),
     .rst    (rst),
     .tick_1s(tick_1s),
-    .start  (SW[0]),    // 🔑 volvemos al switch directamente
+    .start  (SW[0]),    // vuelve al switch directamente
     .timeout(timeout),
     .tens   (tens),
     .units  (units)

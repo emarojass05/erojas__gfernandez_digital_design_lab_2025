@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Problema1_Lab3
-Tue Sep 30 18:01:53 2025
+Analysis & Synthesis report for Problema1_Lab3
+Wed Oct  1 10:01:52 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -7,14 +7,27 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: gen_pixclk:u_pix
-  5. Parameter Settings for User Entity Instance: vga_timing_640x480:u_ctrl
-  6. Parameter Settings for User Entity Instance: tick_1hz:u_tick
-  7. Analysis & Elaboration Settings
-  8. Port Connectivity Checks: "fsm:u_fsm"
-  9. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top_lab3_avance|fsm:u_fsm|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: gen_pixclk:u_pix
+ 15. Parameter Settings for User Entity Instance: vga_timing_640x480:u_ctrl
+ 16. Parameter Settings for User Entity Instance: tick_1hz:u_tick
+ 17. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod0
+ 18. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod1
+ 19. Port Connectivity Checks: "fsm:u_fsm"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -38,82 +51,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Sep 30 18:01:53 2025          ;
-; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                 ; Problema1_Lab3                                 ;
-; Top-level Entity Name         ; top_lab3_avance                                ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: gen_pixclk:u_pix ;
-+----------------+----------+-----------------------------------+
-; Parameter Name ; Value    ; Type                              ;
-+----------------+----------+-----------------------------------+
-; SYS_CLK_HZ     ; 50000000 ; Signed Integer                    ;
-; PIX_CLK_HZ     ; 25000000 ; Signed Integer                    ;
-+----------------+----------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: vga_timing_640x480:u_ctrl ;
-+----------------+------------+------------------------------------------+
-; Parameter Name ; Value      ; Type                                     ;
-+----------------+------------+------------------------------------------+
-; HACTIVE        ; 1010000000 ; Unsigned Binary                          ;
-; HFP            ; 0000010000 ; Unsigned Binary                          ;
-; HSYN           ; 0001100000 ; Unsigned Binary                          ;
-; HBP            ; 0000110000 ; Unsigned Binary                          ;
-; HMAX           ; 1100100000 ; Unsigned Binary                          ;
-; VACTIVE        ; 0111100000 ; Unsigned Binary                          ;
-; VFP            ; 0000001010 ; Unsigned Binary                          ;
-; VSYN           ; 0000000010 ; Unsigned Binary                          ;
-; VBP            ; 0000100001 ; Unsigned Binary                          ;
-; VMAX           ; 1000001101 ; Unsigned Binary                          ;
-+----------------+------------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: tick_1hz:u_tick ;
-+----------------+----------+----------------------------------+
-; Parameter Name ; Value    ; Type                             ;
-+----------------+----------+----------------------------------+
-; SYS_CLK_HZ     ; 50000000 ; Signed Integer                   ;
-+----------------+----------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Oct  1 10:01:52 2025          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; Problema1_Lab3                                 ;
+; Top-level Entity Name           ; top_lab3_avance                                ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 54                                             ;
+; Total pins                      ; 58                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -199,6 +161,289 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; vga_timing_640x480.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv      ;         ;
+; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv                ;         ;
+; top_lab3_avance.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv         ;         ;
+; gen_pixclk.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv              ;         ;
+; tick_1hz.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv                ;         ;
+; counter_15s.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv             ;         ;
+; hex7seg.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv                 ;         ;
+; fsm.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                                                  ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                                                 ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                             ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                                  ;         ;
+; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/lpm_divide_k3m.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/alt_u_div_kve.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 124          ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 230          ;
+;     -- 7 input functions                    ; 3            ;
+;     -- 6 input functions                    ; 14           ;
+;     -- 5 input functions                    ; 6            ;
+;     -- 4 input functions                    ; 33           ;
+;     -- <=3 input functions                  ; 174          ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 54           ;
+;                                             ;              ;
+; I/O pins                                    ; 58           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 36           ;
+; Total fan-out                               ; 963          ;
+; Average fan-out                             ; 2.41         ;
++---------------------------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                       ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |top_lab3_avance                          ; 230 (0)             ; 54 (0)                    ; 0                 ; 0          ; 58   ; 0            ; |top_lab3_avance                                                                                                                ; top_lab3_avance     ; work         ;
+;    |counter_15s:u_cnt|                    ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt                                                                                              ; counter_15s         ; work         ;
+;    |gen_pixclk:u_pix|                     ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|gen_pixclk:u_pix                                                                                               ; gen_pixclk          ; work         ;
+;    |hex7seg:u_hex_units|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|hex7seg:u_hex_units                                                                                            ; hex7seg             ; work         ;
+;    |tick_1hz:u_tick|                      ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|tick_1hz:u_tick                                                                                                ; tick_1hz            ; work         ;
+;    |vga_timing_640x480:u_ctrl|            ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|vga_timing_640x480:u_ctrl                                                                                      ; vga_timing_640x480  ; work         ;
+;    |videoGen:u_vid|                       ; 153 (29)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid                                                                                                 ; videoGen            ; work         ;
+;       |lpm_divide:Mod0|                   ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Mod1|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_lab3_avance|fsm:u_fsm|state                                                                                                                                                 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+
+; Name      ; state.Q15 ; state.Q14 ; state.Q13 ; state.Q12 ; state.Q11 ; state.Q10 ; state.Q9 ; state.Q8 ; state.Q7 ; state.Q6 ; state.Q5 ; state.Q4 ; state.Q3 ; state.Q2 ; state.Q1 ; state.Q16 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+
+; state.Q1  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ;
+; state.Q2  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ; 0         ;
+; state.Q3  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ; 0         ;
+; state.Q4  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q5  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q6  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q7  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q8  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q9  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q10 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q11 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q12 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q13 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q14 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q15 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ;
+; state.Q16 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; fsm:u_fsm|state~4                      ; Lost fanout                            ;
+; fsm:u_fsm|state~5                      ; Lost fanout                            ;
+; fsm:u_fsm|state~6                      ; Lost fanout                            ;
+; fsm:u_fsm|state~7                      ; Lost fanout                            ;
+; fsm:u_fsm|state.Q13                    ; Stuck at GND due to stuck port data_in ;
+; fsm:u_fsm|state.Q16                    ; Lost fanout                            ;
+; fsm:u_fsm|state.Q1                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q2                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q3                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q4                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q5                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q6                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q7                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q8                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q9                     ; Lost fanout                            ;
+; fsm:u_fsm|state.Q10                    ; Lost fanout                            ;
+; fsm:u_fsm|state.Q11                    ; Lost fanout                            ;
+; fsm:u_fsm|state.Q12                    ; Lost fanout                            ;
+; fsm:u_fsm|state.Q14                    ; Lost fanout                            ;
+; fsm:u_fsm|state.Q15                    ; Lost fanout                            ;
+; counter_15s:u_cnt|val[4]               ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 21 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                              ;
++-------------------+--------------------+---------------------------------------------------------------------------------+
+; Register name     ; Reason for Removal ; Registers Removed due to This Register                                          ;
++-------------------+--------------------+---------------------------------------------------------------------------------+
+; fsm:u_fsm|state~4 ; Lost Fanouts       ; fsm:u_fsm|state.Q5, fsm:u_fsm|state.Q6, fsm:u_fsm|state.Q7, fsm:u_fsm|state.Q9, ;
+;                   ;                    ; fsm:u_fsm|state.Q11, fsm:u_fsm|state.Q15                                        ;
+; fsm:u_fsm|state~5 ; Lost Fanouts       ; fsm:u_fsm|state.Q10, fsm:u_fsm|state.Q12, fsm:u_fsm|state.Q14                   ;
++-------------------+--------------------+---------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 54    ;
+; Number of registers using Synchronous Clear  ; 47    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 31    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; counter_15s:u_cnt|val[2]               ; 13      ;
+; counter_15s:u_cnt|val[3]               ; 13      ;
+; counter_15s:u_cnt|val[1]               ; 13      ;
+; counter_15s:u_cnt|val[0]               ; 12      ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|hcnt[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_lab3_avance|gen_pixclk:u_pix|cnt[0]           ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|vcnt[7] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|fsm:u_fsm|next_state.Q2           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gen_pixclk:u_pix ;
++----------------+----------+-----------------------------------+
+; Parameter Name ; Value    ; Type                              ;
++----------------+----------+-----------------------------------+
+; SYS_CLK_HZ     ; 50000000 ; Signed Integer                    ;
+; PIX_CLK_HZ     ; 25000000 ; Signed Integer                    ;
++----------------+----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_timing_640x480:u_ctrl ;
++----------------+------------+------------------------------------------+
+; Parameter Name ; Value      ; Type                                     ;
++----------------+------------+------------------------------------------+
+; HACTIVE        ; 1010000000 ; Unsigned Binary                          ;
+; HFP            ; 0000010000 ; Unsigned Binary                          ;
+; HSYN           ; 0001100000 ; Unsigned Binary                          ;
+; HBP            ; 0000110000 ; Unsigned Binary                          ;
+; HMAX           ; 1100100000 ; Unsigned Binary                          ;
+; VACTIVE        ; 0111100000 ; Unsigned Binary                          ;
+; VFP            ; 0000001010 ; Unsigned Binary                          ;
+; VSYN           ; 0000000010 ; Unsigned Binary                          ;
+; VBP            ; 0000100001 ; Unsigned Binary                          ;
+; VMAX           ; 1000001101 ; Unsigned Binary                          ;
++----------------+------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tick_1hz:u_tick ;
++----------------+----------+----------------------------------+
+; Parameter Name ; Value    ; Type                             ;
++----------------+----------+----------------------------------+
+; SYS_CLK_HZ     ; 50000000 ; Signed Integer                   ;
++----------------+----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "fsm:u_fsm"                                                                                  ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -210,14 +455,61 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 54                          ;
+;     CLR               ; 6                           ;
+;     CLR SCLR          ; 25                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 12                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 235                         ;
+;     arith             ; 123                         ;
+;         0 data inputs ; 12                          ;
+;         1 data inputs ; 69                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 12                          ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 93                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 21                          ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 14                          ;
+;     shared            ; 16                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 14                          ;
+; boundary_port         ; 58                          ;
+;                       ;                             ;
+; Max LUT depth         ; 10.90                       ;
+; Average LUT depth     ; 6.92                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Tue Sep 30 18:01:39 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema1_Lab3 -c Problema1_Lab3 --analysis_and_elaboration
+    Info: Processing started: Wed Oct  1 10:01:34 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema1_Lab3 -c Problema1_Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga_timing_640x480.sv
@@ -260,10 +552,57 @@ Warning (10230): Verilog HDL assignment warning at videoGen.sv(56): truncated va
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(58): truncated value with size 32 to match size of target (10) File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 58
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(59): truncated value with size 32 to match size of target (10) File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 59
 Info (12128): Elaborating entity "hex7seg" for hierarchy "hex7seg:u_hex_units" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 106
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Tue Sep 30 18:01:53 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:36
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod0" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 58
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod1" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 59
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod0" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 58
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod0" with the following parameter: File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 58
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k3m.tdf
+    Info (12023): Found entity 1: lpm_divide_k3m File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/lpm_divide_k3m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/sign_div_unsign_nlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/alt_u_div_kve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod1" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 59
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod1" with the following parameter: File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 59
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "vga_sync_n" is stuck at VCC File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 11
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 17
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 17
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 17
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 5
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 6
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 6
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 6
+Info (21057): Implemented 289 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 43 output pins
+    Info (21061): Implemented 231 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Wed Oct  1 10:01:52 2025
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:39
 
 
