@@ -1,0 +1,16 @@
+// turn_manager.sv — Controla el turno entre dos jugadores
+module turn_manager(
+    input  logic clk,
+    input  logic rst,
+    input  logic timeout,          // viene del contador
+    output logic current_turn      // 0 = Jugador 1, 1 = Jugador 2
+);
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            current_turn <= 1'b0;           // empieza Jugador 1
+        else if (timeout)
+            current_turn <= ~current_turn;  // alterna turno cada timeout
+    end
+
+endmodule
