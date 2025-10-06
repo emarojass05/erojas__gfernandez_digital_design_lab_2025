@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(5CSXFC6D6) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/output_files/") File("Problema1_Lab3.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/output_files/") File("Problema1_Lab3.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

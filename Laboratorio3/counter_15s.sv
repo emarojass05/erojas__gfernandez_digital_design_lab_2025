@@ -1,34 +1,38 @@
-// counter_15s.sv — cuenta regresiva de 15 segundos, salida BCD
-// Controlado por FSM, con reset en KEY0
-
+// counter_15s.sv — cuenta regresiva de 15 segundos con auto-reset
 module counter_15s(
-    input  logic clk,          // clock del sistema (50 MHz)
-    input  logic rst,          // reset activo en alto (KEY0)
-    input  logic tick_1s,      // pulso de 1 Hz proveniente de tick_1hz
-    input  logic start,        // habilitado por FSM
-    output logic timeout,      // llega a 0 → 1
-    output logic [3:0] tens,   // decenas en BCD
-    output logic [3:0] units   // unidades en BCD
+    input  logic clk,
+    input  logic rst,
+    input  logic tick_1s,
+    input  logic start,
+    output logic timeout,
+    output logic [3:0] tens,
+    output logic [3:0] units
 );
 
-    // contador principal (valor en segundos)
     logic [4:0] val;
+    logic active;
 
     always_ff @(posedge clk or posedge rst) begin
         if (rst) begin
-            val     <= 15;   // reset → vuelve a 15
+            val     <= 15;
             timeout <= 0;
-        end 
-        else if (start && tick_1s) begin
-            if (val > 0) begin
-                val <= val - 1;
-            end else begin
-                timeout <= 1; // se acabó el tiempo
+            active  <= 0;
+        end else begin
+            timeout <= 0;
+            if (start)
+                active <= 1;
+            if (active && tick_1s) begin
+                if (val > 0)
+                    val <= val - 1;
+                else begin
+                    timeout <= 1;
+                    val <= 15;
+                    active <= 0;
+                end
             end
         end
     end
 
-    // convertir a BCD
     always_comb begin
         tens  = (val >= 10) ? 1 : 0;
         units = (val >= 10) ? (val - 10) : val;

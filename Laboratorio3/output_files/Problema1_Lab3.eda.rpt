@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Problema1_Lab3
-Fri Oct  3 00:22:22 2025
+Mon Oct  6 01:07:47 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Oct  3 00:22:22 2025 ;
+; EDA Netlist Writer Status ; Successful - Mon Oct  6 01:07:47 2025 ;
 ; Revision Name             ; Problema1_Lab3                        ;
 ; Top-level Entity Name     ; top_lab3_avance                       ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+--------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                                            ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                                                       ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/simulation/modelsim/Problema1_Lab3.svo ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                            ;
++-----------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                       ;
++-----------------------------------------------------------------------------------------------------------------------+
+; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/simulation/modelsim/Problema1_Lab3.svo ;
++-----------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Fri Oct  3 00:22:20 2025
+    Info: Processing started: Mon Oct  6 01:07:45 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Problema1_Lab3 -c Problema1_Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Problema1_Lab3.svo in folder "C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Problema1_Lab3.svo in folder "C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4758 megabytes
-    Info: Processing ended: Fri Oct  3 00:22:22 2025
+    Info: Processing ended: Mon Oct  6 01:07:47 2025
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
