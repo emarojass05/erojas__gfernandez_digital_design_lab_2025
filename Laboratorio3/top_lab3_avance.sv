@@ -166,10 +166,12 @@ module top_lab3_avance(
     .turn(turn),
     .flash(valid_pulse),
     .game_over(game_over),
+    .score_p1(score_p1),   // NUEVO
+    .score_p2(score_p2),   // NUEVO
     .r(vga_r),
     .g(vga_g),
     .b(vga_b)
-  );
+);
 
   // ====== Displays ======
   hex7seg u_hex_units (.bcd(units), .seg(HEX0));   // segundos unidades

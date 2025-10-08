@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema1_Lab3
-Wed Oct  8 16:13:21 2025
+Wed Oct  8 17:22:25 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -15,29 +15,31 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. State Machine - |top_lab3_avance|fsm_game:u_fsm|state
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: tick_1hz:u_tick
- 15. Parameter Settings for User Entity Instance: gen_pixclk:u_pix
- 16. Parameter Settings for User Entity Instance: vga_timing_640x480:u_ctrl
- 17. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod0
- 18. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod1
- 19. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Div0
- 20. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod2
- 21. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Div2
- 22. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Div3
- 23. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Div1
- 24. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod3
- 25. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod4
- 26. Parameter Settings for Inferred Entity Instance: counter_15s:u_cnt|lpm_divide:Mod0
- 27. Parameter Settings for Inferred Entity Instance: counter_15s:u_cnt|lpm_divide:Div0
- 28. Port Connectivity Checks: "fsm_game:u_fsm"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
- 32. Analysis & Synthesis Suppressed Messages
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: tick_1hz:u_tick
+ 16. Parameter Settings for User Entity Instance: gen_pixclk:u_pix
+ 17. Parameter Settings for User Entity Instance: vga_timing_640x480:u_ctrl
+ 18. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod0
+ 19. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod1
+ 20. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Div0
+ 21. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod2
+ 22. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Div2
+ 23. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Div3
+ 24. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Div1
+ 25. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod3
+ 26. Parameter Settings for Inferred Entity Instance: videoGen:u_vid|lpm_divide:Mod4
+ 27. Parameter Settings for Inferred Entity Instance: counter_15s:u_cnt|lpm_divide:Mod0
+ 28. Parameter Settings for Inferred Entity Instance: counter_15s:u_cnt|lpm_divide:Div0
+ 29. Port Connectivity Checks: "videoGen:u_vid|textROM:fontROM"
+ 30. Port Connectivity Checks: "fsm_game:u_fsm"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
+ 34. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -64,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct  8 16:13:21 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct  8 17:22:25 2025          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; Problema1_Lab3                                 ;
 ; Top-level Entity Name           ; top_lab3_avance                                ;
@@ -204,6 +206,7 @@ https://fpgasoftware.intel.com/eula.
 ; hex7seg.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv                 ;         ;
 ; card_selector.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv           ;         ;
 ; fsm_game.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv                ;         ;
+; textROM.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv                 ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                  ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                 ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                             ;         ;
@@ -238,14 +241,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 959       ;
+; Estimate of Logic utilization (ALMs needed) ; 1043      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1845      ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 67        ;
-;     -- 5 input functions                    ; 59        ;
-;     -- 4 input functions                    ; 358       ;
-;     -- <=3 input functions                  ; 1359      ;
+; Combinational ALUT usage for logic          ; 1980      ;
+;     -- 7 input functions                    ; 6         ;
+;     -- 6 input functions                    ; 97        ;
+;     -- 5 input functions                    ; 98        ;
+;     -- 4 input functions                    ; 384       ;
+;     -- <=3 input functions                  ; 1395      ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 133       ;
 ;                                             ;           ;
@@ -255,8 +258,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 113       ;
-; Total fan-out                               ; 6141      ;
-; Average fan-out                             ; 2.89      ;
+; Total fan-out                               ; 6742      ;
+; Average fan-out                             ; 2.99      ;
 +---------------------------------------------+-----------+
 
 
@@ -265,8 +268,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top_lab3_avance                          ; 1845 (17)           ; 133 (10)                  ; 0                 ; 1          ; 72   ; 0            ; |top_lab3_avance                                                                                                                ; top_lab3_avance     ; work         ;
-;    |card_selector:u_sel|                  ; 52 (52)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|card_selector:u_sel                                                                                            ; card_selector       ; work         ;
+; |top_lab3_avance                          ; 1980 (17)           ; 133 (10)                  ; 0                 ; 1          ; 72   ; 0            ; |top_lab3_avance                                                                                                                ; top_lab3_avance     ; work         ;
+;    |card_selector:u_sel|                  ; 55 (55)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|card_selector:u_sel                                                                                            ; card_selector       ; work         ;
 ;    |counter_15s:u_cnt|                    ; 967 (44)            ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt                                                                                              ; counter_15s         ; work         ;
 ;       |lpm_divide:Div0|                   ; 459 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt|lpm_divide:Div0                                                                              ; lpm_divide          ; work         ;
 ;          |lpm_divide_bpo:auto_generated|  ; 459 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo      ; work         ;
@@ -286,7 +289,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |hex7seg:u_hex_units|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|hex7seg:u_hex_units                                                                                            ; hex7seg             ; work         ;
 ;    |tick_1hz:u_tick|                      ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|tick_1hz:u_tick                                                                                                ; tick_1hz            ; work         ;
 ;    |vga_timing_640x480:u_ctrl|            ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|vga_timing_640x480:u_ctrl                                                                                      ; vga_timing_640x480  ; work         ;
-;    |videoGen:u_vid|                       ; 707 (105)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid                                                                                                 ; videoGen            ; work         ;
+;    |videoGen:u_vid|                       ; 839 (178)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid                                                                                                 ; videoGen            ; work         ;
 ;       |lpm_divide:Div0|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_hbm:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
 ;             |sign_div_unsign_nlh:divider| ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
@@ -323,6 +326,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_a2m:auto_generated|  ; 58 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod4|lpm_divide_a2m:auto_generated                                                   ; lpm_divide_a2m      ; work         ;
 ;             |sign_div_unsign_dkh:divider| ; 58 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod4|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
 ;                |alt_u_div_0te:divider|    ; 58 (58)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod4|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_0te:divider ; alt_u_div_0te       ; work         ;
+;       |textROM:fontROM|                   ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|textROM:fontROM                                                                                 ; textROM             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -352,6 +356,19 @@ Encoding Type:  One-Hot
 ; state.AUTO_MOVE   ; 0         ; 1               ; 0                ; 0                 ; 0                ; 1          ;
 ; state.WIN         ; 1         ; 0               ; 0                ; 0                 ; 0                ; 1          ;
 +-------------------+-----------+-----------------+------------------+-------------------+------------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++----------------------------------------------------+----------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------------+------------------------+
+; videoGen:u_vid|font_row_index[0]                   ; videoGen:u_vid|font_row_index[1] ; yes                    ;
+; videoGen:u_vid|font_row_index[1]                   ; videoGen:u_vid|font_row_index[1] ; yes                    ;
+; videoGen:u_vid|font_row_index[2]                   ; videoGen:u_vid|font_row_index[1] ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                                  ;                        ;
++----------------------------------------------------+----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------------+
@@ -399,10 +416,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|hcnt[7]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_bottom[7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|hcnt[9]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[7]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_bottom[6] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_bottom[5] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[5]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[4]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[3]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[2]    ;
@@ -410,10 +427,12 @@ Encoding Type:  One-Hot
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[0]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_lab3_avance|gen_pixclk:u_pix|cnt[0]              ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|vcnt[9]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|g[0]                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|r                     ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|r[0]                  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|b[4]                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|r[4]                  ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|card_selector:u_sel|i2               ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|b[6]                  ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|r[6]                  ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|selected_now          ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_lab3_avance|fsm_game:u_fsm|next.WIN              ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |top_lab3_avance|fsm_game:u_fsm|next.WAIT_START       ;
@@ -713,6 +732,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------+
+; Port Connectivity Checks: "videoGen:u_vid|textROM:fontROM" ;
++--------------+-------+----------+--------------------------+
+; Port         ; Type  ; Severity ; Details                  ;
++--------------+-------+----------+--------------------------+
+; char_code[7] ; Input ; Info     ; Stuck at GND             ;
++--------------+-------+----------+--------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "fsm_game:u_fsm"                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -735,23 +763,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 12                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 1850                        ;
-;     arith             ; 932                         ;
-;         0 data inputs ; 186                         ;
+; arriav_lcell_comb     ; 1985                        ;
+;     arith             ; 937                         ;
+;         0 data inputs ; 187                         ;
 ;         1 data inputs ; 187                         ;
-;         2 data inputs ; 98                          ;
+;         2 data inputs ; 102                         ;
 ;         3 data inputs ; 227                         ;
 ;         4 data inputs ; 234                         ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 847                         ;
+;     extend            ; 6                           ;
+;         7 data inputs ; 6                           ;
+;     normal            ; 973                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 451                         ;
-;         3 data inputs ; 145                         ;
-;         4 data inputs ; 120                         ;
-;         5 data inputs ; 59                          ;
-;         6 data inputs ; 67                          ;
+;         2 data inputs ; 462                         ;
+;         3 data inputs ; 165                         ;
+;         4 data inputs ; 146                         ;
+;         5 data inputs ; 98                          ;
+;         6 data inputs ; 97                          ;
 ;     shared            ; 69                          ;
 ;         0 data inputs ; 10                          ;
 ;         1 data inputs ; 52                          ;
@@ -761,7 +789,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 72                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 52.30                       ;
-; Average LUT depth     ; 30.71                       ;
+; Average LUT depth     ; 29.89                       ;
 +-----------------------+-----------------------------+
 
 
@@ -770,7 +798,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -780,14 +808,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Oct  8 16:12:49 2025
+    Info: Processing started: Wed Oct  8 17:22:08 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema1_Lab3 -c Problema1_Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga_timing_640x480.sv
     Info (12023): Found entity 1: vga_timing_640x480 File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
-    Info (12023): Found entity 1: videoGen File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 7
+    Info (12023): Found entity 1: videoGen File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file top_lab3_avance.sv
     Info (12023): Found entity 1: top_lab3_avance File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file gen_pixclk.sv
@@ -814,6 +842,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file random_
     Info (12023): Found entity 1: random_gen File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/random_gen.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_game.sv
     Info (12023): Found entity 1: fsm_game File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file textrom.sv
+    Info (12023): Found entity 1: textROM File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv Line: 8
 Info (12127): Elaborating entity "top_lab3_avance" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at top_lab3_avance.sv(125): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 125
 Warning (10230): Verilog HDL assignment warning at top_lab3_avance.sv(127): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 127
@@ -826,31 +856,48 @@ Info (12128): Elaborating entity "card_selector" for hierarchy "card_selector:u_
 Info (12128): Elaborating entity "fsm_game" for hierarchy "fsm_game:u_fsm" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 105
 Info (12128): Elaborating entity "gen_pixclk" for hierarchy "gen_pixclk:u_pix" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 137
 Info (12128): Elaborating entity "vga_timing_640x480" for hierarchy "vga_timing_640x480:u_ctrl" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 152
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:u_vid" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 172
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(67): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 67
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(68): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 68
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(72): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 72
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(73): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 73
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(74): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 74
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(75): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 75
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(76): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 76
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(80): truncated value with size 10 to match size of target (1) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 80
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(82): truncated value with size 32 to match size of target (1) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 82
-Info (12128): Elaborating entity "hex7seg" for hierarchy "hex7seg:u_hex_units" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 175
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:u_vid" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 174
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(94): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 94
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(95): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 95
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(128): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 128
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(129): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 129
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(148): truncated value with size 32 to match size of target (3) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 148
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(157): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 157
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(158): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 158
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(177): truncated value with size 32 to match size of target (3) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 177
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(190): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 190
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(191): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 191
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(192): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 192
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(193): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 193
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(194): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 194
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(198): truncated value with size 10 to match size of target (1) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 198
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(200): truncated value with size 32 to match size of target (1) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 200
+Warning (10240): Verilog HDL Always Construct warning at videoGen.sv(93): inferring latch(es) for variable "font_row_index", which holds its previous value in one or more paths through the always construct File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 93
+Warning (10240): Verilog HDL Always Construct warning at videoGen.sv(93): inferring latch(es) for variable "bit_index", which holds its previous value in one or more paths through the always construct File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 93
+Warning (10240): Verilog HDL Always Construct warning at videoGen.sv(93): inferring latch(es) for variable "col", which holds its previous value in one or more paths through the always construct File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 93
+Warning (10240): Verilog HDL Always Construct warning at videoGen.sv(93): inferring latch(es) for variable "row", which holds its previous value in one or more paths through the always construct File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 93
+Warning (10240): Verilog HDL Always Construct warning at videoGen.sv(93): inferring latch(es) for variable "lx", which holds its previous value in one or more paths through the always construct File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 93
+Warning (10240): Verilog HDL Always Construct warning at videoGen.sv(93): inferring latch(es) for variable "ly", which holds its previous value in one or more paths through the always construct File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 93
+Warning (10240): Verilog HDL Always Construct warning at videoGen.sv(93): inferring latch(es) for variable "card_id", which holds its previous value in one or more paths through the always construct File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 93
+Info (10041): Inferred latch for "font_row_index[0]" at videoGen.sv(118) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
+Info (10041): Inferred latch for "font_row_index[1]" at videoGen.sv(118) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
+Info (10041): Inferred latch for "font_row_index[2]" at videoGen.sv(118) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
+Info (12128): Elaborating entity "textROM" for hierarchy "videoGen:u_vid|textROM:fontROM" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 71
+Info (12128): Elaborating entity "hex7seg" for hierarchy "hex7seg:u_hex_units" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 177
 Info (278001): Inferred 11 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 74
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 75
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Div0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 72
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 81
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Div2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 82
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Div3" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 82
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Div1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 73
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod3" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 84
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod4" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 86
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 192
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 193
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Div0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 190
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 199
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Div2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 200
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Div3" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 200
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Div1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 191
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod3" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 202
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod4" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 204
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "counter_15s:u_cnt|Mod0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv Line: 34
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "counter_15s:u_cnt|Div0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv Line: 33
-Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 74
-Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod0" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 74
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 192
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod0" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 192
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -861,22 +908,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
     Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/alt_u_div_kve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 75
-Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod1" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 75
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 193
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod1" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 193
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Div0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 72
-Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Div0" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 72
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Div0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 190
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Div0" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 190
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
     Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/lpm_divide_hbm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 81
-Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod2" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 81
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 199
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod2" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 199
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -887,8 +934,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_ckh File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/sign_div_unsign_ckh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_use.tdf
     Info (12023): Found entity 1: alt_u_div_use File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/alt_u_div_use.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Div2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 82
-Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Div2" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 82
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Div2" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 200
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Div2" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 200
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -899,14 +946,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/sign_div_unsign_akh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qse.tdf
     Info (12023): Found entity 1: alt_u_div_qse File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/alt_u_div_qse.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Div1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 73
-Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Div1" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 73
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Div1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 191
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Div1" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 191
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod3" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 84
-Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod3" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 84
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod3" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 202
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod3" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 202
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -917,8 +964,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
     Info (12023): Found entity 1: alt_u_div_qve File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/alt_u_div_qve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod4" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 86
-Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod4" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 86
+Info (12130): Elaborated megafunction instantiation "videoGen:u_vid|lpm_divide:Mod4" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 204
+Info (12133): Instantiated megafunction "videoGen:u_vid|lpm_divide:Mod4" with the following parameter: File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 204
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -955,6 +1002,12 @@ Info (12133): Instantiated megafunction "counter_15s:u_cnt|lpm_divide:Div0" with
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
     Info (12023): Found entity 1: lpm_divide_bpo File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/lpm_divide_bpo.tdf Line: 25
+Warning (13012): Latch videoGen:u_vid|font_row_index[0] has unsafe behavior File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_timing_640x480:u_ctrl|vcnt[9] File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 28
+Warning (13012): Latch videoGen:u_vid|font_row_index[1] has unsafe behavior File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_timing_640x480:u_ctrl|vcnt[9] File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 28
+Warning (13012): Latch videoGen:u_vid|font_row_index[2] has unsafe behavior File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_timing_640x480:u_ctrl|vcnt[9] File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "vga_sync_n" is stuck at VCC File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 19
 Info (286030): Timing-Driven Synthesis is running
@@ -965,16 +1018,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 13
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 14
-Info (21057): Implemented 1939 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2074 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 1866 logic cells
+    Info (21061): Implemented 2001 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4900 megabytes
-    Info: Processing ended: Wed Oct  8 16:13:21 2025
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Wed Oct  8 17:22:25 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
