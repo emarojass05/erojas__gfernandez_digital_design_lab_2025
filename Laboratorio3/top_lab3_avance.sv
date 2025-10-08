@@ -2,10 +2,11 @@
 // top_lab3_avance.sv — Juego de memoria digital completo con FSM
 // ------------------------------------------------------------
 // Funcionalidades:
-// - FSM controla el flujo del juego (sin "case" explícito en top)
+// - FSM controla el flujo del juego
 // - Contador 15s controlado por FSM
-// - Mantiene turno al acertar (sin saltos erráticos)
-// - Cambio de turno correcto al timeout o fallo
+// - Mantiene turno al acertar
+// - Cambia turno al fallar o por timeout
+// - Pantalla final con ganador
 // ============================================================
 
 module top_lab3_avance(
@@ -47,9 +48,9 @@ module top_lab3_avance(
 
   counter_15s u_cnt(
     .clk(clk),
-    .rst(rst_manual | reset_counter),   // FSM puede reiniciar el contador
+    .rst(rst_manual | reset_counter),
     .tick_1s(tick_1s),
-    .start(enable_counter),             // FSM habilita conteo
+    .start(enable_counter),
     .timeout(timeout),
     .tens(tens),
     .units(units)
@@ -59,7 +60,7 @@ module top_lab3_avance(
   logic [7:0] selected_top, selected_bottom;
   logic [7:0] stored_top, stored_bottom;
   logic row_sel;
-  logic valid_pair_raw;
+  logic valid_pair_raw, invalid_pair_raw;
 
   card_selector u_sel(
     .clk(clk),
@@ -71,38 +72,46 @@ module top_lab3_avance(
     .stored_top(stored_top),
     .stored_bottom(stored_bottom),
     .row_sel(row_sel),
-    .valid_pair(valid_pair_raw)
+    .valid_pair(valid_pair_raw),
+    .invalid_pair(invalid_pair_raw)
   );
 
-  // ====== Sincronización del pulso valid_pair ======
-  logic valid_d, valid_pulse;
-  always_ff @(posedge clk or posedge rst_manual)
-    if (rst_manual)
-      valid_d <= 1'b0;
-    else
-      valid_d <= valid_pair_raw;
+  // ====== Sincronización de pulsos ======
+  logic valid_d, invalid_d;
+  logic valid_pulse, invalid_pulse;
 
-  // pulso limpio, 1 ciclo exacto
-  assign valid_pulse = valid_pair_raw & ~valid_d;
+  always_ff @(posedge clk or posedge rst_manual) begin
+    if (rst_manual) begin
+      valid_d   <= 0;
+      invalid_d <= 0;
+    end else begin
+      valid_d   <= valid_pair_raw;
+      invalid_d <= invalid_pair_raw;
+    end
+  end
+
+  assign valid_pulse   = valid_pair_raw & ~valid_d;
+  assign invalid_pulse = invalid_pair_raw & ~invalid_d;
 
   // ====== FSM principal ======
   logic all_pairs_done;
   assign all_pairs_done = (&stored_top) && (&stored_bottom);
 
   fsm_game u_fsm(
-  .clk(clk),
-  .rst(rst_manual),
-  .start_btn(start_btn),
-  .timeout(timeout),
-  .valid_pair(valid_pulse),
-  .all_pairs_done(all_pairs_done),
-  .enable_input(enable_input),
-  .enable_counter(enable_counter),
-  .reset_counter(reset_counter),
-  .change_turn(change_turn),
-  .black_screen(black_screen),
-  .game_over(game_over)
-);
+    .clk(clk),
+    .rst(rst_manual),
+    .start_btn(start_btn),
+    .timeout(timeout),
+    .valid_pair(valid_pulse),
+    .invalid_pair(invalid_pulse),
+    .all_pairs_done(all_pairs_done),
+    .enable_input(enable_input),
+    .enable_counter(enable_counter),
+    .reset_counter(reset_counter),
+    .change_turn(change_turn),
+    .black_screen(black_screen),
+    .game_over(game_over)
+  );
 
   // ====== Turnos ======
   logic turn;
@@ -166,16 +175,14 @@ module top_lab3_avance(
     .turn(turn),
     .flash(valid_pulse),
     .game_over(game_over),
-    .score_p1(score_p1),   // NUEVO
-    .score_p2(score_p2),   // NUEVO
     .r(vga_r),
     .g(vga_g),
     .b(vga_b)
-);
+  );
 
-  // ====== Displays ======
-  hex7seg u_hex_units (.bcd(units), .seg(HEX0));   // segundos unidades
-  hex7seg u_hex_tens  (.bcd(tens),  .seg(HEX1));   // segundos decenas
+  // ====== Displays de 7 segmentos ======
+  hex7seg u_hex_units (.bcd(units), .seg(HEX0));    // segundos unidades
+  hex7seg u_hex_tens  (.bcd(tens),  .seg(HEX1));    // segundos decenas
   hex7seg u_hex_p1    (.bcd(score_p1), .seg(HEX2)); // puntaje jugador 1
   hex7seg u_hex_p2    (.bcd(score_p2), .seg(HEX3)); // puntaje jugador 2
 

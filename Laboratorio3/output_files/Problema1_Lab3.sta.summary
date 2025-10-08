@@ -3,179 +3,179 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -4.610
-TNS   : -306.360
+Slack : -4.438
+TNS   : -279.418
 
 Type  : Slow 1100mV 85C Model Setup 'fsm_game:u_fsm|state.INIT'
-Slack : -2.562
-TNS   : -7.582
+Slack : -2.863
+TNS   : -8.108
 
 Type  : Slow 1100mV 85C Model Setup 'gen_pixclk:u_pix|clk_pix'
-Slack : -2.237
-TNS   : -43.355
+Slack : -2.234
+TNS   : -42.893
+
+Type  : Slow 1100mV 85C Model Hold 'fsm_game:u_fsm|state.INIT'
+Slack : 0.201
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
 Slack : 0.374
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'fsm_game:u_fsm|state.INIT'
-Slack : 0.551
-TNS   : 0.000
-
 Type  : Slow 1100mV 85C Model Hold 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.847
+Slack : 0.873
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'clk'
-Slack : -0.902
-TNS   : -45.438
+Slack : -1.360
+TNS   : -49.068
 
 Type  : Slow 1100mV 85C Model Removal 'clk'
-Slack : 1.013
+Slack : 0.678
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.454
-TNS   : -78.335
+Slack : -0.394
+TNS   : -71.484
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'gen_pixclk:u_pix|clk_pix'
 Slack : -0.394
-TNS   : -10.713
+TNS   : -10.665
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fsm_game:u_fsm|state.INIT'
-Slack : 0.385
+Slack : 0.294
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -4.632
-TNS   : -298.655
+Slack : -4.533
+TNS   : -274.705
 
 Type  : Slow 1100mV 0C Model Setup 'fsm_game:u_fsm|state.INIT'
-Slack : -2.519
-TNS   : -7.445
+Slack : -2.863
+TNS   : -8.112
 
 Type  : Slow 1100mV 0C Model Setup 'gen_pixclk:u_pix|clk_pix'
-Slack : -2.317
-TNS   : -43.164
+Slack : -2.277
+TNS   : -42.823
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.351
+Slack : 0.091
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'fsm_game:u_fsm|state.INIT'
-Slack : 0.445
+Slack : 0.109
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.833
+Slack : 0.853
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'clk'
-Slack : -0.830
-TNS   : -41.151
+Slack : -1.307
+TNS   : -47.212
 
 Type  : Slow 1100mV 0C Model Removal 'clk'
-Slack : 0.954
+Slack : 0.611
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.465
-TNS   : -84.092
+Slack : -0.423
+TNS   : -76.440
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'gen_pixclk:u_pix|clk_pix'
 Slack : -0.394
-TNS   : -10.566
+TNS   : -10.550
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fsm_game:u_fsm|state.INIT'
-Slack : 0.405
+Slack : 0.322
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.509
-TNS   : -127.780
+Slack : -3.275
+TNS   : -116.558
 
 Type  : Fast 1100mV 85C Model Setup 'fsm_game:u_fsm|state.INIT'
-Slack : -1.196
-TNS   : -3.497
+Slack : -1.356
+TNS   : -3.812
 
 Type  : Fast 1100mV 85C Model Setup 'gen_pixclk:u_pix|clk_pix'
-Slack : -0.999
-TNS   : -19.911
+Slack : -1.043
+TNS   : -18.187
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.182
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'fsm_game:u_fsm|state.INIT'
-Slack : 0.381
+Slack : 0.182
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.435
+Slack : 0.451
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'clk'
-Slack : -0.170
-TNS   : -7.486
+Slack : -0.401
+TNS   : -13.149
 
 Type  : Fast 1100mV 85C Model Removal 'clk'
-Slack : 0.577
+Slack : 0.409
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.467
-TNS   : -13.366
+Slack : -0.442
+TNS   : -12.210
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.095
+Slack : 0.093
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fsm_game:u_fsm|state.INIT'
-Slack : 0.378
+Slack : 0.352
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -2.958
-TNS   : -108.152
+Slack : -2.757
+TNS   : -99.450
 
 Type  : Fast 1100mV 0C Model Setup 'fsm_game:u_fsm|state.INIT'
-Slack : -1.063
-TNS   : -3.102
+Slack : -1.237
+TNS   : -3.483
 
 Type  : Fast 1100mV 0C Model Setup 'gen_pixclk:u_pix|clk_pix'
-Slack : -0.869
-TNS   : -17.023
+Slack : -0.928
+TNS   : -16.151
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
 Slack : 0.172
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'fsm_game:u_fsm|state.INIT'
-Slack : 0.345
+Slack : 0.175
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.400
+Slack : 0.406
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'clk'
-Slack : -0.084
-TNS   : -3.193
+Slack : -0.325
+TNS   : -9.596
 
 Type  : Fast 1100mV 0C Model Removal 'clk'
-Slack : 0.520
+Slack : 0.350
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.461
-TNS   : -13.241
+Slack : -0.455
+TNS   : -12.072
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.105
+Slack : 0.111
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fsm_game:u_fsm|state.INIT'
-Slack : 0.398
+Slack : 0.377
 TNS   : 0.000
 
 ------------------------------------------------------------

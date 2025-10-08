@@ -1,5 +1,5 @@
 Timing Analyzer report for Problema1_Lab3
-Wed Oct  8 17:23:43 2025
+Wed Oct  8 17:52:49 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -102,14 +102,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.35        ;
+; Average used               ; 1.48        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  11.7%      ;
-;     Processor 3            ;  11.6%      ;
-;     Processor 4            ;  11.5%      ;
+;     Processor 2            ;  16.3%      ;
+;     Processor 3            ;  16.2%      ;
+;     Processor 4            ;  16.0%      ;
 +----------------------------+-------------+
 
 
@@ -129,8 +129,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+--------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
 +------------+-----------------+--------------------------+------+
-; 178.25 MHz ; 178.25 MHz      ; clk                      ;      ;
-; 308.93 MHz ; 308.93 MHz      ; gen_pixclk:u_pix|clk_pix ;      ;
+; 183.89 MHz ; 183.89 MHz      ; clk                      ;      ;
+; 309.21 MHz ; 309.21 MHz      ; gen_pixclk:u_pix|clk_pix ;      ;
 +------------+-----------------+--------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -146,9 +146,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -4.610 ; -306.360      ;
-; fsm_game:u_fsm|state.INIT ; -2.562 ; -7.582        ;
-; gen_pixclk:u_pix|clk_pix  ; -2.237 ; -43.355       ;
+; clk                       ; -4.438 ; -279.418      ;
+; fsm_game:u_fsm|state.INIT ; -2.863 ; -8.108        ;
+; gen_pixclk:u_pix|clk_pix  ; -2.234 ; -42.893       ;
 +---------------------------+--------+---------------+
 
 
@@ -157,9 +157,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------+-------+---------------+
 ; Clock                     ; Slack ; End Point TNS ;
 +---------------------------+-------+---------------+
+; fsm_game:u_fsm|state.INIT ; 0.201 ; 0.000         ;
 ; clk                       ; 0.374 ; 0.000         ;
-; fsm_game:u_fsm|state.INIT ; 0.551 ; 0.000         ;
-; gen_pixclk:u_pix|clk_pix  ; 0.847 ; 0.000         ;
+; gen_pixclk:u_pix|clk_pix  ; 0.873 ; 0.000         ;
 +---------------------------+-------+---------------+
 
 
@@ -168,7 +168,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -0.902 ; -45.438               ;
+; clk   ; -1.360 ; -49.068               ;
 +-------+--------+-----------------------+
 
 
@@ -177,7 +177,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 1.013 ; 0.000                 ;
+; clk   ; 0.678 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -186,9 +186,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.454 ; -78.335       ;
-; gen_pixclk:u_pix|clk_pix  ; -0.394 ; -10.713       ;
-; fsm_game:u_fsm|state.INIT ; 0.385  ; 0.000         ;
+; clk                       ; -0.394 ; -71.484       ;
+; gen_pixclk:u_pix|clk_pix  ; -0.394 ; -10.665       ;
+; fsm_game:u_fsm|state.INIT ; 0.294  ; 0.000         ;
 +---------------------------+--------+---------------+
 
 
@@ -203,8 +203,8 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
 +------------+-----------------+--------------------------+------+
-; 177.56 MHz ; 177.56 MHz      ; clk                      ;      ;
-; 301.48 MHz ; 301.48 MHz      ; gen_pixclk:u_pix|clk_pix ;      ;
+; 180.73 MHz ; 180.73 MHz      ; clk                      ;      ;
+; 305.16 MHz ; 305.16 MHz      ; gen_pixclk:u_pix|clk_pix ;      ;
 +------------+-----------------+--------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -214,9 +214,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -4.632 ; -298.655      ;
-; fsm_game:u_fsm|state.INIT ; -2.519 ; -7.445        ;
-; gen_pixclk:u_pix|clk_pix  ; -2.317 ; -43.164       ;
+; clk                       ; -4.533 ; -274.705      ;
+; fsm_game:u_fsm|state.INIT ; -2.863 ; -8.112        ;
+; gen_pixclk:u_pix|clk_pix  ; -2.277 ; -42.823       ;
 +---------------------------+--------+---------------+
 
 
@@ -225,9 +225,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------+-------+---------------+
 ; Clock                     ; Slack ; End Point TNS ;
 +---------------------------+-------+---------------+
-; clk                       ; 0.351 ; 0.000         ;
-; fsm_game:u_fsm|state.INIT ; 0.445 ; 0.000         ;
-; gen_pixclk:u_pix|clk_pix  ; 0.833 ; 0.000         ;
+; clk                       ; 0.091 ; 0.000         ;
+; fsm_game:u_fsm|state.INIT ; 0.109 ; 0.000         ;
+; gen_pixclk:u_pix|clk_pix  ; 0.853 ; 0.000         ;
 +---------------------------+-------+---------------+
 
 
@@ -236,7 +236,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clk   ; -0.830 ; -41.151              ;
+; clk   ; -1.307 ; -47.212              ;
 +-------+--------+----------------------+
 
 
@@ -245,7 +245,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.954 ; 0.000                ;
+; clk   ; 0.611 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -254,9 +254,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.465 ; -84.092       ;
-; gen_pixclk:u_pix|clk_pix  ; -0.394 ; -10.566       ;
-; fsm_game:u_fsm|state.INIT ; 0.405  ; 0.000         ;
+; clk                       ; -0.423 ; -76.440       ;
+; gen_pixclk:u_pix|clk_pix  ; -0.394 ; -10.550       ;
+; fsm_game:u_fsm|state.INIT ; 0.322  ; 0.000         ;
 +---------------------------+--------+---------------+
 
 
@@ -271,9 +271,9 @@ No synchronizer chains to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -3.509 ; -127.780      ;
-; fsm_game:u_fsm|state.INIT ; -1.196 ; -3.497        ;
-; gen_pixclk:u_pix|clk_pix  ; -0.999 ; -19.911       ;
+; clk                       ; -3.275 ; -116.558      ;
+; fsm_game:u_fsm|state.INIT ; -1.356 ; -3.812        ;
+; gen_pixclk:u_pix|clk_pix  ; -1.043 ; -18.187       ;
 +---------------------------+--------+---------------+
 
 
@@ -282,9 +282,9 @@ No synchronizer chains to report.
 +---------------------------+-------+---------------+
 ; Clock                     ; Slack ; End Point TNS ;
 +---------------------------+-------+---------------+
-; clk                       ; 0.182 ; 0.000         ;
-; fsm_game:u_fsm|state.INIT ; 0.381 ; 0.000         ;
-; gen_pixclk:u_pix|clk_pix  ; 0.435 ; 0.000         ;
+; clk                       ; 0.181 ; 0.000         ;
+; fsm_game:u_fsm|state.INIT ; 0.182 ; 0.000         ;
+; gen_pixclk:u_pix|clk_pix  ; 0.451 ; 0.000         ;
 +---------------------------+-------+---------------+
 
 
@@ -293,7 +293,7 @@ No synchronizer chains to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -0.170 ; -7.486                ;
+; clk   ; -0.401 ; -13.149               ;
 +-------+--------+-----------------------+
 
 
@@ -302,7 +302,7 @@ No synchronizer chains to report.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 0.577 ; 0.000                 ;
+; clk   ; 0.409 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -311,9 +311,9 @@ No synchronizer chains to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.467 ; -13.366       ;
-; gen_pixclk:u_pix|clk_pix  ; 0.095  ; 0.000         ;
-; fsm_game:u_fsm|state.INIT ; 0.378  ; 0.000         ;
+; clk                       ; -0.442 ; -12.210       ;
+; gen_pixclk:u_pix|clk_pix  ; 0.093  ; 0.000         ;
+; fsm_game:u_fsm|state.INIT ; 0.352  ; 0.000         ;
 +---------------------------+--------+---------------+
 
 
@@ -328,9 +328,9 @@ No synchronizer chains to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -2.958 ; -108.152      ;
-; fsm_game:u_fsm|state.INIT ; -1.063 ; -3.102        ;
-; gen_pixclk:u_pix|clk_pix  ; -0.869 ; -17.023       ;
+; clk                       ; -2.757 ; -99.450       ;
+; fsm_game:u_fsm|state.INIT ; -1.237 ; -3.483        ;
+; gen_pixclk:u_pix|clk_pix  ; -0.928 ; -16.151       ;
 +---------------------------+--------+---------------+
 
 
@@ -340,8 +340,8 @@ No synchronizer chains to report.
 ; Clock                     ; Slack ; End Point TNS ;
 +---------------------------+-------+---------------+
 ; clk                       ; 0.172 ; 0.000         ;
-; fsm_game:u_fsm|state.INIT ; 0.345 ; 0.000         ;
-; gen_pixclk:u_pix|clk_pix  ; 0.400 ; 0.000         ;
+; fsm_game:u_fsm|state.INIT ; 0.175 ; 0.000         ;
+; gen_pixclk:u_pix|clk_pix  ; 0.406 ; 0.000         ;
 +---------------------------+-------+---------------+
 
 
@@ -350,7 +350,7 @@ No synchronizer chains to report.
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clk   ; -0.084 ; -3.193               ;
+; clk   ; -0.325 ; -9.596               ;
 +-------+--------+----------------------+
 
 
@@ -359,7 +359,7 @@ No synchronizer chains to report.
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.520 ; 0.000                ;
+; clk   ; 0.350 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -368,9 +368,9 @@ No synchronizer chains to report.
 +---------------------------+--------+---------------+
 ; Clock                     ; Slack  ; End Point TNS ;
 +---------------------------+--------+---------------+
-; clk                       ; -0.461 ; -13.241       ;
-; gen_pixclk:u_pix|clk_pix  ; 0.105  ; 0.000         ;
-; fsm_game:u_fsm|state.INIT ; 0.398  ; 0.000         ;
+; clk                       ; -0.455 ; -12.072       ;
+; gen_pixclk:u_pix|clk_pix  ; 0.111  ; 0.000         ;
+; fsm_game:u_fsm|state.INIT ; 0.377  ; 0.000         ;
 +---------------------------+--------+---------------+
 
 
@@ -385,14 +385,14 @@ No synchronizer chains to report.
 +----------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                      ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack           ; -4.632   ; 0.172 ; -0.902   ; 0.520   ; -0.467              ;
-;  clk                       ; -4.632   ; 0.172 ; -0.902   ; 0.520   ; -0.467              ;
-;  fsm_game:u_fsm|state.INIT ; -2.562   ; 0.345 ; N/A      ; N/A     ; 0.378               ;
-;  gen_pixclk:u_pix|clk_pix  ; -2.317   ; 0.400 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS            ; -357.297 ; 0.0   ; -45.438  ; 0.0     ; -94.658             ;
-;  clk                       ; -306.360 ; 0.000 ; -45.438  ; 0.000   ; -84.092             ;
-;  fsm_game:u_fsm|state.INIT ; -7.582   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  gen_pixclk:u_pix|clk_pix  ; -43.355  ; 0.000 ; N/A      ; N/A     ; -10.713             ;
+; Worst-case Slack           ; -4.533   ; 0.091 ; -1.360   ; 0.350   ; -0.455              ;
+;  clk                       ; -4.533   ; 0.091 ; -1.360   ; 0.350   ; -0.455              ;
+;  fsm_game:u_fsm|state.INIT ; -2.863   ; 0.109 ; N/A      ; N/A     ; 0.294               ;
+;  gen_pixclk:u_pix|clk_pix  ; -2.277   ; 0.406 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS            ; -330.419 ; 0.0   ; -49.068  ; 0.0     ; -86.99              ;
+;  clk                       ; -279.418 ; 0.000 ; -49.068  ; 0.000   ; -76.440             ;
+;  fsm_game:u_fsm|state.INIT ; -8.112   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  gen_pixclk:u_pix|clk_pix  ; -42.893  ; 0.000 ; N/A      ; N/A     ; -10.665             ;
 +----------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -470,17 +470,17 @@ No synchronizer chains to report.
 ; KEY[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[6]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[6]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +--------+--------------+-----------------+-----------------+
 
 
@@ -749,8 +749,8 @@ No synchronizer chains to report.
 +---------------------------+---------------------------+----------+----------+----------+----------+
 ; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------+---------------------------+----------+----------+----------+----------+
-; clk                       ; clk                       ; 4329     ; 0        ; 0        ; 0        ;
-; fsm_game:u_fsm|state.INIT ; clk                       ; 4        ; 4        ; 0        ; 0        ;
+; clk                       ; clk                       ; 3764     ; 0        ; 0        ; 0        ;
+; fsm_game:u_fsm|state.INIT ; clk                       ; 1        ; 1        ; 0        ; 0        ;
 ; gen_pixclk:u_pix|clk_pix  ; clk                       ; 1        ; 1        ; 0        ; 0        ;
 ; gen_pixclk:u_pix|clk_pix  ; fsm_game:u_fsm|state.INIT ; 0        ; 0        ; 33       ; 0        ;
 ; gen_pixclk:u_pix|clk_pix  ; gen_pixclk:u_pix|clk_pix  ; 410      ; 0        ; 0        ; 0        ;
@@ -763,8 +763,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------+---------------------------+----------+----------+----------+----------+
 ; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------+---------------------------+----------+----------+----------+----------+
-; clk                       ; clk                       ; 4329     ; 0        ; 0        ; 0        ;
-; fsm_game:u_fsm|state.INIT ; clk                       ; 4        ; 4        ; 0        ; 0        ;
+; clk                       ; clk                       ; 3764     ; 0        ; 0        ; 0        ;
+; fsm_game:u_fsm|state.INIT ; clk                       ; 1        ; 1        ; 0        ; 0        ;
 ; gen_pixclk:u_pix|clk_pix  ; clk                       ; 1        ; 1        ; 0        ; 0        ;
 ; gen_pixclk:u_pix|clk_pix  ; fsm_game:u_fsm|state.INIT ; 0        ; 0        ; 33       ; 0        ;
 ; gen_pixclk:u_pix|clk_pix  ; gen_pixclk:u_pix|clk_pix  ; 410      ; 0        ; 0        ; 0        ;
@@ -777,7 +777,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 102      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 126      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -787,7 +787,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 102      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 126      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -812,9 +812,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 12    ; 12   ;
-; Unconstrained Input Port Paths  ; 454   ; 454  ;
+; Unconstrained Input Port Paths  ; 449   ; 449  ;
 ; Unconstrained Output Ports      ; 56    ; 56   ;
-; Unconstrained Output Port Paths ; 2238  ; 2238 ;
+; Unconstrained Output Port Paths ; 1893  ; 1893 ;
 +---------------------------------+-------+------+
 
 
@@ -1003,7 +1003,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Oct  8 17:23:32 2025
+    Info: Processing started: Wed Oct  8 17:52:41 2025
 Info: Command: quartus_sta Problema1_Lab3 -c Problema1_Lab3
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1023,132 +1023,132 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.610
+Info (332146): Worst-case setup slack is -4.438
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.610            -306.360 clk 
-    Info (332119):    -2.562              -7.582 fsm_game:u_fsm|state.INIT 
-    Info (332119):    -2.237             -43.355 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case hold slack is 0.374
+    Info (332119):    -4.438            -279.418 clk 
+    Info (332119):    -2.863              -8.108 fsm_game:u_fsm|state.INIT 
+    Info (332119):    -2.234             -42.893 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case hold slack is 0.201
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.201               0.000 fsm_game:u_fsm|state.INIT 
     Info (332119):     0.374               0.000 clk 
-    Info (332119):     0.551               0.000 fsm_game:u_fsm|state.INIT 
-    Info (332119):     0.847               0.000 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case recovery slack is -0.902
+    Info (332119):     0.873               0.000 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case recovery slack is -1.360
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.902             -45.438 clk 
-Info (332146): Worst-case removal slack is 1.013
+    Info (332119):    -1.360             -49.068 clk 
+Info (332146): Worst-case removal slack is 0.678
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.013               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.454
+    Info (332119):     0.678               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.454             -78.335 clk 
-    Info (332119):    -0.394             -10.713 gen_pixclk:u_pix|clk_pix 
-    Info (332119):     0.385               0.000 fsm_game:u_fsm|state.INIT 
+    Info (332119):    -0.394             -71.484 clk 
+    Info (332119):    -0.394             -10.665 gen_pixclk:u_pix|clk_pix 
+    Info (332119):     0.294               0.000 fsm_game:u_fsm|state.INIT 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.632
+Info (332146): Worst-case setup slack is -4.533
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.632            -298.655 clk 
-    Info (332119):    -2.519              -7.445 fsm_game:u_fsm|state.INIT 
-    Info (332119):    -2.317             -43.164 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case hold slack is 0.351
+    Info (332119):    -4.533            -274.705 clk 
+    Info (332119):    -2.863              -8.112 fsm_game:u_fsm|state.INIT 
+    Info (332119):    -2.277             -42.823 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case hold slack is 0.091
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.351               0.000 clk 
-    Info (332119):     0.445               0.000 fsm_game:u_fsm|state.INIT 
-    Info (332119):     0.833               0.000 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case recovery slack is -0.830
+    Info (332119):     0.091               0.000 clk 
+    Info (332119):     0.109               0.000 fsm_game:u_fsm|state.INIT 
+    Info (332119):     0.853               0.000 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case recovery slack is -1.307
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.830             -41.151 clk 
-Info (332146): Worst-case removal slack is 0.954
+    Info (332119):    -1.307             -47.212 clk 
+Info (332146): Worst-case removal slack is 0.611
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.954               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.465
+    Info (332119):     0.611               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.423
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.465             -84.092 clk 
-    Info (332119):    -0.394             -10.566 gen_pixclk:u_pix|clk_pix 
-    Info (332119):     0.405               0.000 fsm_game:u_fsm|state.INIT 
+    Info (332119):    -0.423             -76.440 clk 
+    Info (332119):    -0.394             -10.550 gen_pixclk:u_pix|clk_pix 
+    Info (332119):     0.322               0.000 fsm_game:u_fsm|state.INIT 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.509
+Info (332146): Worst-case setup slack is -3.275
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.509            -127.780 clk 
-    Info (332119):    -1.196              -3.497 fsm_game:u_fsm|state.INIT 
-    Info (332119):    -0.999             -19.911 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case hold slack is 0.182
+    Info (332119):    -3.275            -116.558 clk 
+    Info (332119):    -1.356              -3.812 fsm_game:u_fsm|state.INIT 
+    Info (332119):    -1.043             -18.187 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case hold slack is 0.181
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.182               0.000 clk 
-    Info (332119):     0.381               0.000 fsm_game:u_fsm|state.INIT 
-    Info (332119):     0.435               0.000 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case recovery slack is -0.170
+    Info (332119):     0.181               0.000 clk 
+    Info (332119):     0.182               0.000 fsm_game:u_fsm|state.INIT 
+    Info (332119):     0.451               0.000 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case recovery slack is -0.401
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.170              -7.486 clk 
-Info (332146): Worst-case removal slack is 0.577
+    Info (332119):    -0.401             -13.149 clk 
+Info (332146): Worst-case removal slack is 0.409
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.577               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.467
+    Info (332119):     0.409               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.442
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.467             -13.366 clk 
-    Info (332119):     0.095               0.000 gen_pixclk:u_pix|clk_pix 
-    Info (332119):     0.378               0.000 fsm_game:u_fsm|state.INIT 
+    Info (332119):    -0.442             -12.210 clk 
+    Info (332119):     0.093               0.000 gen_pixclk:u_pix|clk_pix 
+    Info (332119):     0.352               0.000 fsm_game:u_fsm|state.INIT 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.958
+Info (332146): Worst-case setup slack is -2.757
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.958            -108.152 clk 
-    Info (332119):    -1.063              -3.102 fsm_game:u_fsm|state.INIT 
-    Info (332119):    -0.869             -17.023 gen_pixclk:u_pix|clk_pix 
+    Info (332119):    -2.757             -99.450 clk 
+    Info (332119):    -1.237              -3.483 fsm_game:u_fsm|state.INIT 
+    Info (332119):    -0.928             -16.151 gen_pixclk:u_pix|clk_pix 
 Info (332146): Worst-case hold slack is 0.172
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.172               0.000 clk 
-    Info (332119):     0.345               0.000 fsm_game:u_fsm|state.INIT 
-    Info (332119):     0.400               0.000 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case recovery slack is -0.084
+    Info (332119):     0.175               0.000 fsm_game:u_fsm|state.INIT 
+    Info (332119):     0.406               0.000 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case recovery slack is -0.325
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.084              -3.193 clk 
-Info (332146): Worst-case removal slack is 0.520
+    Info (332119):    -0.325              -9.596 clk 
+Info (332146): Worst-case removal slack is 0.350
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.520               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.461
+    Info (332119):     0.350               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.455
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.461             -13.241 clk 
-    Info (332119):     0.105               0.000 gen_pixclk:u_pix|clk_pix 
-    Info (332119):     0.398               0.000 fsm_game:u_fsm|state.INIT 
+    Info (332119):    -0.455             -12.072 clk 
+    Info (332119):     0.111               0.000 gen_pixclk:u_pix|clk_pix 
+    Info (332119):     0.377               0.000 fsm_game:u_fsm|state.INIT 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 5387 megabytes
-    Info: Processing ended: Wed Oct  8 17:23:43 2025
-    Info: Elapsed time: 00:00:11
+    Info: Processing ended: Wed Oct  8 17:52:49 2025
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:10
 
 

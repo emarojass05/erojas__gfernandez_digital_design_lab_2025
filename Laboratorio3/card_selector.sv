@@ -1,4 +1,12 @@
-// card_selector.sv — Detecta pares correctos y guarda solo si coinciden (filas independientes)
+// ============================================================
+// card_selector.sv
+// Detecta pares correctos e incorrectos y guarda solo si coinciden
+// (filas independientes: superior e inferior).
+// Ahora genera dos señales:
+//  - valid_pair: 1 si las cartas coinciden.
+//  - invalid_pair: 1 si NO coinciden.
+// ============================================================
+
 module card_selector(
   input  logic        clk,
   input  logic        rst,
@@ -9,7 +17,8 @@ module card_selector(
   output logic [7:0]  stored_top,
   output logic [7:0]  stored_bottom,
   output logic        row_sel,
-  output logic        valid_pair
+  output logic        valid_pair,
+  output logic        invalid_pair       // 🔹 nueva salida
 );
 
   logic [7:0] new_sel;
@@ -23,11 +32,14 @@ module card_selector(
       stored_bottom   <= 0;
       row_sel         <= 0;
       valid_pair      <= 0;
-    end else begin
+      invalid_pair    <= 0;  // 🔹 reset nuevo
+    end 
+    else begin
       row_sel <= sw[8];
       new_sel = sw[7:0];
       count = 0; i1 = -1; i2 = -1;
 
+      // Contar cuántas cartas están seleccionadas
       for (int i = 0; i < 8; i++) begin
         if (new_sel[i]) begin
           count++;
@@ -35,7 +47,7 @@ module card_selector(
         end
       end
 
-      // Guarda selección según fila
+      // Guarda selección según fila actual
       if (count <= 2) begin
         if (row_sel)
           selected_top <= new_sel;
@@ -43,10 +55,14 @@ module card_selector(
           selected_bottom <= new_sel;
       end
 
-      // Verifica par válido solo en la fila actual
-      valid_pair <= 1'b0;
+      // Reiniciar las señales por defecto
+      valid_pair   <= 1'b0;
+      invalid_pair <= 1'b0;
+
+      // Verifica si hay dos cartas seleccionadas
       if (store_btn && count == 2 && i1 >= 0 && i2 >= 0) begin
         if (i1/2 == i2/2) begin
+          // ✅ Par correcto
           if (row_sel) begin
             stored_top[i1] <= 1;
             stored_top[i2] <= 1;
@@ -55,6 +71,10 @@ module card_selector(
             stored_bottom[i2] <= 1;
           end
           valid_pair <= 1'b1;
+        end 
+        else begin
+          // ❌ Par incorrecto
+          invalid_pair <= 1'b1;
         end
       end
     end

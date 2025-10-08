@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema1_Lab3
-Wed Oct  8 17:22:25 2025
+Wed Oct  8 17:51:34 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -35,11 +35,12 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
  27. Parameter Settings for Inferred Entity Instance: counter_15s:u_cnt|lpm_divide:Mod0
  28. Parameter Settings for Inferred Entity Instance: counter_15s:u_cnt|lpm_divide:Div0
  29. Port Connectivity Checks: "videoGen:u_vid|textROM:fontROM"
- 30. Port Connectivity Checks: "fsm_game:u_fsm"
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
- 34. Analysis & Synthesis Suppressed Messages
+ 30. Port Connectivity Checks: "videoGen:u_vid"
+ 31. Port Connectivity Checks: "fsm_game:u_fsm"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,13 +67,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct  8 17:22:25 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct  8 17:51:34 2025          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; Problema1_Lab3                                 ;
 ; Top-level Entity Name           ; top_lab3_avance                                ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 133                                            ;
+; Total registers                 ; 136                                            ;
 ; Total pins                      ; 72                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -241,25 +242,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1043      ;
+; Estimate of Logic utilization (ALMs needed) ; 1031      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1980      ;
+; Combinational ALUT usage for logic          ; 1941      ;
 ;     -- 7 input functions                    ; 6         ;
-;     -- 6 input functions                    ; 97        ;
-;     -- 5 input functions                    ; 98        ;
-;     -- 4 input functions                    ; 384       ;
-;     -- <=3 input functions                  ; 1395      ;
+;     -- 6 input functions                    ; 111       ;
+;     -- 5 input functions                    ; 67        ;
+;     -- 4 input functions                    ; 387       ;
+;     -- <=3 input functions                  ; 1370      ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 133       ;
+; Dedicated logic registers                   ; 136       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 72        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 1         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 113       ;
-; Total fan-out                               ; 6742      ;
-; Average fan-out                             ; 2.99      ;
+; Maximum fan-out                             ; 116       ;
+; Total fan-out                               ; 6632      ;
+; Average fan-out                             ; 2.98      ;
 +---------------------------------------------+-----------+
 
 
@@ -268,8 +269,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top_lab3_avance                          ; 1980 (17)           ; 133 (10)                  ; 0                 ; 1          ; 72   ; 0            ; |top_lab3_avance                                                                                                                ; top_lab3_avance     ; work         ;
-;    |card_selector:u_sel|                  ; 55 (55)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|card_selector:u_sel                                                                                            ; card_selector       ; work         ;
+; |top_lab3_avance                          ; 1941 (15)           ; 136 (11)                  ; 0                 ; 1          ; 72   ; 0            ; |top_lab3_avance                                                                                                                ; top_lab3_avance     ; work         ;
+;    |card_selector:u_sel|                  ; 53 (53)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|card_selector:u_sel                                                                                            ; card_selector       ; work         ;
 ;    |counter_15s:u_cnt|                    ; 967 (44)            ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt                                                                                              ; counter_15s         ; work         ;
 ;       |lpm_divide:Div0|                   ; 459 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt|lpm_divide:Div0                                                                              ; lpm_divide          ; work         ;
 ;          |lpm_divide_bpo:auto_generated|  ; 459 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo      ; work         ;
@@ -281,7 +282,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |abs_divider_kbg:divider|     ; 464 (8)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt|lpm_divide:Mod0|lpm_divide_eho:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg     ; work         ;
 ;                |alt_u_div_pve:divider|    ; 424 (424)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt|lpm_divide:Mod0|lpm_divide_eho:auto_generated|abs_divider_kbg:divider|alt_u_div_pve:divider  ; alt_u_div_pve       ; work         ;
 ;                |lpm_abs_4p9:my_abs_num|   ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|counter_15s:u_cnt|lpm_divide:Mod0|lpm_divide_eho:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9         ; work         ;
-;    |fsm_game:u_fsm|                       ; 10 (10)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|fsm_game:u_fsm                                                                                                 ; fsm_game            ; work         ;
+;    |fsm_game:u_fsm|                       ; 9 (9)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|fsm_game:u_fsm                                                                                                 ; fsm_game            ; work         ;
 ;    |gen_pixclk:u_pix|                     ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|gen_pixclk:u_pix                                                                                               ; gen_pixclk          ; work         ;
 ;    |hex7seg:u_hex_p1|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|hex7seg:u_hex_p1                                                                                               ; hex7seg             ; work         ;
 ;    |hex7seg:u_hex_p2|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|hex7seg:u_hex_p2                                                                                               ; hex7seg             ; work         ;
@@ -289,7 +290,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |hex7seg:u_hex_units|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|hex7seg:u_hex_units                                                                                            ; hex7seg             ; work         ;
 ;    |tick_1hz:u_tick|                      ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|tick_1hz:u_tick                                                                                                ; tick_1hz            ; work         ;
 ;    |vga_timing_640x480:u_ctrl|            ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|vga_timing_640x480:u_ctrl                                                                                      ; vga_timing_640x480  ; work         ;
-;    |videoGen:u_vid|                       ; 839 (178)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid                                                                                                 ; videoGen            ; work         ;
+;    |videoGen:u_vid|                       ; 805 (151)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid                                                                                                 ; videoGen            ; work         ;
 ;       |lpm_divide:Div0|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_hbm:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
 ;             |sign_div_unsign_nlh:divider| ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
@@ -326,7 +327,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_a2m:auto_generated|  ; 58 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod4|lpm_divide_a2m:auto_generated                                                   ; lpm_divide_a2m      ; work         ;
 ;             |sign_div_unsign_dkh:divider| ; 58 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod4|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
 ;                |alt_u_div_0te:divider|    ; 58 (58)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|lpm_divide:Mod4|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_0te:divider ; alt_u_div_0te       ; work         ;
-;       |textROM:fontROM|                   ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|textROM:fontROM                                                                                 ; textROM             ; work         ;
+;       |textROM:fontROM|                   ; 52 (52)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_lab3_avance|videoGen:u_vid|textROM:fontROM                                                                                 ; textROM             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -344,18 +345,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_lab3_avance|fsm_game:u_fsm|state                                                                  ;
-+-------------------+-----------+-----------------+------------------+-------------------+------------------+------------+
-; Name              ; state.WIN ; state.AUTO_MOVE ; state.CHECK_PAIR ; state.TURN_ACTIVE ; state.WAIT_START ; state.INIT ;
-+-------------------+-----------+-----------------+------------------+-------------------+------------------+------------+
-; state.INIT        ; 0         ; 0               ; 0                ; 0                 ; 0                ; 0          ;
-; state.WAIT_START  ; 0         ; 0               ; 0                ; 0                 ; 1                ; 1          ;
-; state.TURN_ACTIVE ; 0         ; 0               ; 0                ; 1                 ; 0                ; 1          ;
-; state.CHECK_PAIR  ; 0         ; 0               ; 1                ; 0                 ; 0                ; 1          ;
-; state.AUTO_MOVE   ; 0         ; 1               ; 0                ; 0                 ; 0                ; 1          ;
-; state.WIN         ; 1         ; 0               ; 0                ; 0                 ; 0                ; 1          ;
-+-------------------+-----------+-----------------+------------------+-------------------+------------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_lab3_avance|fsm_game:u_fsm|state                                                                                     ;
++-------------------+-----------+-----------------+------------------+------------------+-------------------+------------------+------------+
+; Name              ; state.WIN ; state.AUTO_MOVE ; state.WRONG_PAIR ; state.CHECK_PAIR ; state.TURN_ACTIVE ; state.WAIT_START ; state.INIT ;
++-------------------+-----------+-----------------+------------------+------------------+-------------------+------------------+------------+
+; state.INIT        ; 0         ; 0               ; 0                ; 0                ; 0                 ; 0                ; 0          ;
+; state.WAIT_START  ; 0         ; 0               ; 0                ; 0                ; 0                 ; 1                ; 1          ;
+; state.TURN_ACTIVE ; 0         ; 0               ; 0                ; 0                ; 1                 ; 0                ; 1          ;
+; state.CHECK_PAIR  ; 0         ; 0               ; 0                ; 1                ; 0                 ; 0                ; 1          ;
+; state.WRONG_PAIR  ; 0         ; 0               ; 1                ; 0                ; 0                 ; 0                ; 1          ;
+; state.AUTO_MOVE   ; 0         ; 1               ; 0                ; 0                ; 0                 ; 0                ; 1          ;
+; state.WIN         ; 1         ; 0               ; 0                ; 0                ; 0                 ; 0                ; 1          ;
++-------------------+-----------+-----------------+------------------+------------------+-------------------+------------------+------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -388,10 +390,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 133   ;
+; Total registers                              ; 136   ;
 ; Number of registers using Synchronous Clear  ; 76    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 110   ;
+; Number of registers using Asynchronous Clear ; 113   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 59    ;
 ; Number of registers using Preset             ; 0     ;
@@ -416,26 +418,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|hcnt[9]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[7]    ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|hcnt[3]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_bottom[7] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_bottom[6] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[5]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[4]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[3]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_bottom[5] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_bottom[4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_bottom[3] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[2]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[1]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_lab3_avance|card_selector:u_sel|stored_top[0]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_lab3_avance|gen_pixclk:u_pix|cnt[0]              ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|vcnt[9]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|g[0]                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|r                     ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top_lab3_avance|vga_timing_640x480:u_ctrl|vcnt[2]    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|r[0]                  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|r[4]                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|b[4]                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|fsm_game:u_fsm|next                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|char_code[2]          ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|card_selector:u_sel|i2               ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|r[6]                  ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|selected_now          ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |top_lab3_avance|fsm_game:u_fsm|next.WIN              ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |top_lab3_avance|fsm_game:u_fsm|next.WAIT_START       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|b[6]                  ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|char_code[4]          ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top_lab3_avance|videoGen:u_vid|stored_now            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
@@ -741,6 +742,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+--------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "videoGen:u_vid"                                                                                                                                 ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                      ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; score_p1 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; score_p2 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "fsm_game:u_fsm"                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -755,31 +766,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 133                         ;
-;     CLR               ; 35                          ;
+; arriav_ff             ; 136                         ;
+;     CLR               ; 38                          ;
 ;     CLR SCLR          ; 26                          ;
 ;     ENA CLR           ; 21                          ;
 ;     ENA CLR SCLR      ; 28                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 12                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 1985                        ;
-;     arith             ; 937                         ;
-;         0 data inputs ; 187                         ;
+; arriav_lcell_comb     ; 1946                        ;
+;     arith             ; 932                         ;
+;         0 data inputs ; 186                         ;
 ;         1 data inputs ; 187                         ;
-;         2 data inputs ; 102                         ;
+;         2 data inputs ; 98                          ;
 ;         3 data inputs ; 227                         ;
 ;         4 data inputs ; 234                         ;
 ;     extend            ; 6                           ;
 ;         7 data inputs ; 6                           ;
-;     normal            ; 973                         ;
+;     normal            ; 939                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 462                         ;
-;         3 data inputs ; 165                         ;
-;         4 data inputs ; 146                         ;
-;         5 data inputs ; 98                          ;
-;         6 data inputs ; 97                          ;
+;         2 data inputs ; 450                         ;
+;         3 data inputs ; 157                         ;
+;         4 data inputs ; 149                         ;
+;         5 data inputs ; 67                          ;
+;         6 data inputs ; 111                         ;
 ;     shared            ; 69                          ;
 ;         0 data inputs ; 10                          ;
 ;         1 data inputs ; 52                          ;
@@ -789,7 +800,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 72                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 52.30                       ;
-; Average LUT depth     ; 29.89                       ;
+; Average LUT depth     ; 30.04                       ;
 +-----------------------+-----------------------------+
 
 
@@ -808,7 +819,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Oct  8 17:22:08 2025
+    Info: Processing started: Wed Oct  8 17:51:17 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema1_Lab3 -c Problema1_Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -817,7 +828,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_tim
 Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
     Info (12023): Found entity 1: videoGen File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file top_lab3_avance.sv
-    Info (12023): Found entity 1: top_lab3_avance File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 11
+    Info (12023): Found entity 1: top_lab3_avance File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file gen_pixclk.sv
     Info (12023): Found entity 1: gen_pixclk File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tick_1hz.sv
@@ -828,12 +839,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file digit_r
     Info (12023): Found entity 1: digit_rom File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/digit_rom.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file hex7seg.sv
     Info (12023): Found entity 1: hex7seg File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
-    Info (12023): Found entity 1: fsm File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv Line: 4
+Info (12021): Found 0 design units, including 0 entities, in source file fsm.sv
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_tb.sv
     Info (12023): Found entity 1: fsm_tb File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file card_selector.sv
-    Info (12023): Found entity 1: card_selector File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv Line: 2
+    Info (12023): Found entity 1: card_selector File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file card_comparator.sv
     Info (12023): Found entity 1: card_comparator File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_comparator.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file turn_manger.sv
@@ -841,22 +851,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file turn_ma
 Info (12021): Found 1 design units, including 1 entities, in source file random_gen.sv
     Info (12023): Found entity 1: random_gen File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/random_gen.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_game.sv
-    Info (12023): Found entity 1: fsm_game File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv Line: 10
+    Info (12023): Found entity 1: fsm_game File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file textrom.sv
     Info (12023): Found entity 1: textROM File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv Line: 8
 Info (12127): Elaborating entity "top_lab3_avance" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top_lab3_avance.sv(125): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 125
-Warning (10230): Verilog HDL assignment warning at top_lab3_avance.sv(127): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 127
-Info (12128): Elaborating entity "tick_1hz" for hierarchy "tick_1hz:u_tick" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at top_lab3_avance.sv(134): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 134
+Warning (10230): Verilog HDL assignment warning at top_lab3_avance.sv(136): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 136
+Info (12128): Elaborating entity "tick_1hz" for hierarchy "tick_1hz:u_tick" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 39
 Warning (10230): Verilog HDL assignment warning at tick_1hz.sv(27): truncated value with size 32 to match size of target (26) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv Line: 27
-Info (12128): Elaborating entity "counter_15s" for hierarchy "counter_15s:u_cnt" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 56
+Info (12128): Elaborating entity "counter_15s" for hierarchy "counter_15s:u_cnt" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 57
 Warning (10230): Verilog HDL assignment warning at counter_15s.sv(33): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at counter_15s.sv(34): truncated value with size 32 to match size of target (4) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv Line: 34
-Info (12128): Elaborating entity "card_selector" for hierarchy "card_selector:u_sel" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 75
-Info (12128): Elaborating entity "fsm_game" for hierarchy "fsm_game:u_fsm" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 105
-Info (12128): Elaborating entity "gen_pixclk" for hierarchy "gen_pixclk:u_pix" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 137
-Info (12128): Elaborating entity "vga_timing_640x480" for hierarchy "vga_timing_640x480:u_ctrl" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 152
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:u_vid" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 174
+Info (12128): Elaborating entity "card_selector" for hierarchy "card_selector:u_sel" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 77
+Info (12128): Elaborating entity "fsm_game" for hierarchy "fsm_game:u_fsm" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 114
+Info (12128): Elaborating entity "gen_pixclk" for hierarchy "gen_pixclk:u_pix" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 146
+Info (12128): Elaborating entity "vga_timing_640x480" for hierarchy "vga_timing_640x480:u_ctrl" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 161
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:u_vid" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 181
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(94): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 94
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(95): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 95
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(128): truncated value with size 32 to match size of target (10) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 128
@@ -883,7 +893,7 @@ Info (10041): Inferred latch for "font_row_index[0]" at videoGen.sv(118) File: C
 Info (10041): Inferred latch for "font_row_index[1]" at videoGen.sv(118) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
 Info (10041): Inferred latch for "font_row_index[2]" at videoGen.sv(118) File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
 Info (12128): Elaborating entity "textROM" for hierarchy "videoGen:u_vid|textROM:fontROM" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 71
-Info (12128): Elaborating entity "hex7seg" for hierarchy "hex7seg:u_hex_units" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 177
+Info (12128): Elaborating entity "hex7seg" for hierarchy "hex7seg:u_hex_units" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 184
 Info (278001): Inferred 11 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod0" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 192
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:u_vid|Mod1" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 193
@@ -1002,32 +1012,33 @@ Info (12133): Instantiated megafunction "counter_15s:u_cnt|lpm_divide:Div0" with
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
     Info (12023): Found entity 1: lpm_divide_bpo File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/db/lpm_divide_bpo.tdf Line: 25
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13012): Latch videoGen:u_vid|font_row_index[0] has unsafe behavior File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
     Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_timing_640x480:u_ctrl|vcnt[9] File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 28
 Warning (13012): Latch videoGen:u_vid|font_row_index[1] has unsafe behavior File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_timing_640x480:u_ctrl|vcnt[9] File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_timing_640x480:u_ctrl|vcnt[3] File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 28
 Warning (13012): Latch videoGen:u_vid|font_row_index[2] has unsafe behavior File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv Line: 118
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_timing_640x480:u_ctrl|vcnt[9] File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal vga_timing_640x480:u_ctrl|vcnt[4] File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "vga_sync_n" is stuck at VCC File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 19
+    Warning (13410): Pin "vga_sync_n" is stuck at VCC File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/output_files/Problema1_Lab3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 13
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 14
-Info (21057): Implemented 2074 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 14
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv Line: 15
+Info (21057): Implemented 2036 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 2001 logic cells
+    Info (21061): Implemented 1963 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
     Info: Peak virtual memory: 4889 megabytes
-    Info: Processing ended: Wed Oct  8 17:22:25 2025
+    Info: Processing ended: Wed Oct  8 17:51:34 2025
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

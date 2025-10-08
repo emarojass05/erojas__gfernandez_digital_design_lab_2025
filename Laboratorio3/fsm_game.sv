@@ -3,8 +3,9 @@
 // ------------------------------------------------------------
 // Controla el flujo del juego:
 // - Turnos
-// - Reinicio de contador
-// - Reacción ante timeout o acierto
+// - Reinicio del contador
+// - Reacción ante timeout, acierto o fallo
+// - Pantalla final de victoria
 // ============================================================
 
 module fsm_game (
@@ -13,27 +14,30 @@ module fsm_game (
   input  logic start_btn,         // KEY0
   input  logic timeout,           // del contador (cuando llega a 0)
   input  logic valid_pair,        // pulso limpio al acertar
+  input  logic invalid_pair,      // 🔹 nuevo: par incorrecto
   input  logic all_pairs_done,    // fin del juego
   output logic enable_input,      // habilita switches
   output logic enable_counter,    // permite conteo
   output logic reset_counter,     // reinicia contador (a 15s)
   output logic change_turn,       // alterna jugador
-  output logic black_screen,      // pantalla apagada en reset
+  output logic black_screen,      // pantalla apagada al inicio
   output logic game_over          // fin del juego
 );
 
+  // ====== Definición de estados ======
   typedef enum logic [2:0] {
-    INIT,          // estado inicial (pantalla negra)
-    WAIT_START,    // espera inicio
-    TURN_ACTIVE,   // turno activo del jugador
-    CHECK_PAIR,    // verificar par
-    AUTO_MOVE,     // timeout o sin acción
-    WIN            // victoria
+    INIT,          // pantalla negra inicial
+    WAIT_START,    // espera botón de inicio
+    TURN_ACTIVE,   // turno activo de un jugador
+    CHECK_PAIR,    // par correcto
+    WRONG_PAIR,    // 🔹 par incorrecto
+    AUTO_MOVE,     // cambio por timeout
+    WIN            // fin del juego
   } state_t;
 
   state_t state, next;
 
-  // ====== Estado actual ======
+  // ====== Registro de estado ======
   always_ff @(posedge clk or posedge rst)
     if (rst)
       state <= INIT;
@@ -69,42 +73,49 @@ module fsm_game (
         enable_input   = 1;
         enable_counter = 1;
 
-        // ✅ Si acierta: reinicia contador, pero mantiene turno
         if (valid_pair)
-          next = CHECK_PAIR;
-        // ❌ Si llega a 0: cambia turno y reinicia
+          next = CHECK_PAIR;   // ✅ mantiene turno
+        else if (invalid_pair)
+          next = WRONG_PAIR;   // ❌ cambia turno
         else if (timeout)
-          next = AUTO_MOVE;
+          next = AUTO_MOVE;    // ⏱️ cambia turno por tiempo
       end
 
-      // ---------- CHECK PAR ----------
+      // ---------- PAR CORRECTO ----------
       CHECK_PAIR: begin
         enable_input   = 0;
-        enable_counter = 1;     // sigue contando después
-        reset_counter  = 1;     // vuelve a 15 s
-        change_turn    = 0;     // mantiene el turno
-        next = TURN_ACTIVE;     // sigue en su turno
-      end
-
-      // ---------- AUTO MOVE ----------
-      AUTO_MOVE: begin
-        enable_input   = 0;
-        reset_counter  = 1;     // reinicia contador
-        change_turn    = 1;     // cambia turno
+        enable_counter = 1;  // sigue contando
+        reset_counter  = 1;  // vuelve a 15 s
+        change_turn    = 0;  // mantiene turno
         next = TURN_ACTIVE;
       end
 
-      // ---------- WIN ----------
+      // ---------- PAR INCORRECTO ----------
+      WRONG_PAIR: begin
+        enable_input   = 0;
+        reset_counter  = 1;  // reinicia contador
+        change_turn    = 1;  // cambia jugador
+        next = TURN_ACTIVE;
+      end
+
+      // ---------- TIMEOUT ----------
+      AUTO_MOVE: begin
+        enable_input   = 0;
+        reset_counter  = 1;  // reinicia contador
+        change_turn    = 1;  // cambia jugador
+        next = TURN_ACTIVE;
+      end
+
+      // ---------- VICTORIA ----------
       WIN: begin
-        game_over = 1;
-        if (rst)
-          next = INIT;
+        game_over = 1;       // activa pantalla de fin
+        next = WIN;          // espera reset
       end
 
       default: next = INIT;
     endcase
 
-    // Si se completaron todas las cartas → victoria
+    // ---------- CONDICIÓN GLOBAL DE VICTORIA ----------
     if (all_pairs_done)
       next = WIN;
   end
