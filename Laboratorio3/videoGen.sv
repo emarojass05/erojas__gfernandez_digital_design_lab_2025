@@ -1,16 +1,17 @@
-// videoGen.sv — Renderiza tablero 4x4 con 8 patrones y efectos visuales
-// Sin inferencia de latches (100% combinacional)
-
+// videoGen.sv — Renderiza tablero con color cian en cartas auto-seleccionadas (sin latches)
 module videoGen(
     input  logic [9:0] x,
     input  logic [9:0] y,
     input  logic       visible,
-    input  logic       timeout,           // pantalla negra cuando llega a 0
-    input  logic [7:0] selected_cards,    // cartas seleccionadas
-    input  logic [7:0] stored_cards,      // cartas guardadas (pares correctos)
-    input  logic       row_sel,           // 1=arriba, 0=abajo
-    input  logic       turn,              // 0=jugador1, 1=jugador2
-    input  logic       flash,             // parpadeo verde tras acierto
+    input  logic       timeout,
+    input  logic [7:0] selected_top,
+    input  logic [7:0] selected_bottom,
+    input  logic [7:0] stored_top,
+    input  logic [7:0] stored_bottom,
+    input  logic       row_sel,
+    input  logic       turn,
+    input  logic       flash,
+    input  logic       game_over,
     output logic [7:0] r,
     output logic [7:0] g,
     output logic [7:0] b
@@ -33,14 +34,17 @@ module videoGen(
     logic [9:0] dx, dy, lx, ly;
     logic [3:0] col, row, card_id;
     logic in_board;
-    logic pattern, selected_now, stored_now;
+    logic pattern;
+    logic selected_now;
+    logic stored_now;
+    logic [23:0] color;
 
     always_comb begin
-        // =================== Valores por defecto ===================
+        // Valores por defecto (para evitar latches)
         r = 8'd0;
         g = 8'd0;
         b = 8'd0;
-
+        color = 24'h000000;
         dx = x - BOARD_X0;
         dy = y - BOARD_Y0;
         col = 4'd0;
@@ -48,71 +52,71 @@ module videoGen(
         lx  = 10'd0;
         ly  = 10'd0;
         card_id = 4'd0;
+        in_board = 1'b0;
         pattern = 1'b0;
         selected_now = 1'b0;
         stored_now = 1'b0;
+
+        // Dibujo
         in_board = (visible && !timeout && dx < TOTAL_W && dy < TOTAL_H);
 
-        // =================== Dibujo ===================
-        if (in_board) begin
+        if (game_over) begin
+            // Pantalla final según jugador
+            color = (turn) ? 24'hFF0000 : 24'h0000FF;
+        end
+        else if (in_board) begin
             col = dx / (CARD_W + GAP_X);
             row = dy / (CARD_H + GAP_Y);
             lx  = dx % (CARD_W + GAP_X);
             ly  = dy % (CARD_H + GAP_Y);
             card_id = row * GRID_COLS + col;
 
-            if (lx < CARD_W && ly < CARD_H) begin
-                // ===== Patrones =====
-                case (card_id)
-                    0, 1:    pattern = ((lx ^ ly) & 8'h08);
-                    2, 3:    pattern = ((lx + ly) % 20 < 10);
-                    4, 5:    pattern = (((lx / 10) + (ly / 10)) % 2);
-                    6, 7:    pattern = ((lx > ly) && ((lx - ly) < 20));
-                    8, 9:    pattern = (((lx * ly) % 50) < 25);
-                    10, 11:  pattern = (lx[3] ^ ly[3]);
-                    12, 13:  pattern = (((lx + 2*ly) % 30) < 15);
-                    14, 15:  pattern = (lx[2] ^ ly[4]);
-                    default: pattern = 1'b0;
-                endcase
+            // === Patrones por par ===
+            unique case (card_id)
+                0, 1:    pattern = ((lx ^ ly) & 8'h08);
+                2, 3:    pattern = ((lx + ly) % 20 < 10);
+                4, 5:    pattern = (((lx / 10) + (ly / 10)) % 2);
+                6, 7:    pattern = ((lx > ly) && ((lx - ly) < 20));
+                8, 9:    pattern = (((lx * ly) % 50) < 25);
+                10, 11:  pattern = (lx[3] ^ ly[3]);
+                12, 13:  pattern = (((lx + 2*ly) % 30) < 15);
+                14, 15:  pattern = (lx[2] ^ ly[4]);
+                default: pattern = 1'b0;
+            endcase
 
-                // ===== Selección activa =====
-                if (row_sel) begin
-                    if (row == 0 || row == 1)
-                        selected_now = selected_cards[col + 4*row];
-                end else begin
-                    if (row == 2 || row == 3)
-                        selected_now = selected_cards[col + 4*(row-2)];
-                end
-
-                // ===== Cartas guardadas =====
-                if (row_sel) begin
-                    if (row == 0 || row == 1)
-                        stored_now = stored_cards[col + 4*row];
-                end else begin
-                    if (row == 2 || row == 3)
-                        stored_now = stored_cards[col + 4*(row-2)];
-                end
-
-                // ===== Color final =====
-                if (lx < 4 || lx >= CARD_W-4 || ly < 4 || ly >= CARD_H-4)
-                    {r,g,b} = 24'h000000; // borde
-                else if (flash && stored_now)
-                    {r,g,b} = 24'h00FF00; // parpadeo verde
-                else if (stored_now)
-                    {r,g,b} = 24'h009900; // verde fijo (par correcto)
-                else if (selected_now)
-                    {r,g,b} = 24'h0000FF; // azul (seleccionada)
-                else if (pattern)
-                    {r,g,b} = 24'hFFFFFF; // patrón blanco
-                else
-                    {r,g,b} = 24'h606060; // gris oscuro
+            // === Selección y almacenado ===
+            if (row < 2) begin
+                selected_now = selected_top[col + 4*row];
+                stored_now   = stored_top[col + 4*row];
+            end else begin
+                selected_now = selected_bottom[col + 4*(row-2)];
+                stored_now   = stored_bottom[col + 4*(row-2)];
             end
-        end else begin
-            // Fondo según turno
-            if (turn == 1'b0)
-                {r,g,b} = 24'h001020; // azul tenue para jugador 1
+
+            // === Color final de la carta ===
+            if (lx < 4 || lx >= CARD_W-4 || ly < 4 || ly >= CARD_H-4)
+                color = 24'h000000; // borde
+            else if (flash && stored_now)
+                color = 24'h00FF00; // parpadeo verde
+            else if (stored_now)
+                color = 24'h009900; // verde fijo
+            else if (selected_now && timeout)
+                color = 24'h00FFFF; // cian (auto-selección)
+            else if (selected_now)
+                color = 24'h0000FF; // azul selección
+            else if (pattern)
+                color = 24'hFFFFFF; // patrón blanco
             else
-                {r,g,b} = 24'h200000; // rojo tenue para jugador 2
+                color = 24'h606060; // gris oscuro
         end
+        else begin
+            // Fondo según jugador activo
+            color = (turn) ? 24'h200000 : 24'h001020;
+        end
+
+        // Separar canales RGB finales
+        r = color[23:16];
+        g = color[15:8];
+        b = color[7:0];
     end
 endmodule

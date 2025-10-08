@@ -1,5 +1,5 @@
 Timing Analyzer report for Problema1_Lab3
-Mon Oct  6 16:41:05 2025
+Tue Oct  7 19:54:25 2025
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -102,14 +102,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.48        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.4%      ;
-;     Processor 3            ;   4.3%      ;
-;     Processor 4            ;   4.2%      ;
+;     Processor 2            ;  16.1%      ;
+;     Processor 3            ;  16.0%      ;
+;     Processor 4            ;  15.8%      ;
 +----------------------------+-------------+
 
 
@@ -128,8 +128,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+--------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
 +------------+-----------------+--------------------------+------+
-; 188.86 MHz ; 188.86 MHz      ; clk                      ;      ;
-; 297.89 MHz ; 297.89 MHz      ; gen_pixclk:u_pix|clk_pix ;      ;
+; 195.66 MHz ; 195.66 MHz      ; clk                      ;      ;
+; 276.78 MHz ; 276.78 MHz      ; gen_pixclk:u_pix|clk_pix ;      ;
 +------------+-----------------+--------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -145,8 +145,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; clk                      ; -4.458 ; -203.324      ;
-; gen_pixclk:u_pix|clk_pix ; -3.736 ; -72.902       ;
+; clk                      ; -4.172 ; -347.317      ;
+; gen_pixclk:u_pix|clk_pix ; -2.613 ; -49.849       ;
 +--------------------------+--------+---------------+
 
 
@@ -155,8 +155,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------+-------+---------------+
 ; Clock                    ; Slack ; End Point TNS ;
 +--------------------------+-------+---------------+
-; clk                      ; 0.364 ; 0.000         ;
-; gen_pixclk:u_pix|clk_pix ; 0.722 ; 0.000         ;
+; clk                      ; 0.373 ; 0.000         ;
+; gen_pixclk:u_pix|clk_pix ; 0.847 ; 0.000         ;
 +--------------------------+-------+---------------+
 
 
@@ -165,7 +165,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -0.669 ; -17.612               ;
+; clk   ; -0.745 ; -36.646               ;
 +-------+--------+-----------------------+
 
 
@@ -174,7 +174,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 0.809 ; 0.000                 ;
+; clk   ; 0.997 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -183,8 +183,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; clk                      ; -0.457 ; -66.776       ;
-; gen_pixclk:u_pix|clk_pix ; -0.394 ; -11.138       ;
+; clk                      ; -0.401 ; -87.596       ;
+; gen_pixclk:u_pix|clk_pix ; -0.394 ; -10.575       ;
 +--------------------------+--------+---------------+
 
 
@@ -200,8 +200,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+--------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
 +------------+-----------------+--------------------------+------+
-; 185.49 MHz ; 185.49 MHz      ; clk                      ;      ;
-; 300.57 MHz ; 300.57 MHz      ; gen_pixclk:u_pix|clk_pix ;      ;
+; 192.34 MHz ; 192.34 MHz      ; clk                      ;      ;
+; 283.53 MHz ; 283.53 MHz      ; gen_pixclk:u_pix|clk_pix ;      ;
 +------------+-----------------+--------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -211,8 +211,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; clk                      ; -4.391 ; -198.996      ;
-; gen_pixclk:u_pix|clk_pix ; -3.816 ; -74.371       ;
+; clk                      ; -4.199 ; -342.031      ;
+; gen_pixclk:u_pix|clk_pix ; -2.527 ; -48.998       ;
 +--------------------------+--------+---------------+
 
 
@@ -221,8 +221,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------+-------+---------------+
 ; Clock                    ; Slack ; End Point TNS ;
 +--------------------------+-------+---------------+
-; clk                      ; 0.385 ; 0.000         ;
-; gen_pixclk:u_pix|clk_pix ; 0.683 ; 0.000         ;
+; clk                      ; 0.388 ; 0.000         ;
+; gen_pixclk:u_pix|clk_pix ; 0.813 ; 0.000         ;
 +--------------------------+-------+---------------+
 
 
@@ -231,7 +231,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clk   ; -0.605 ; -15.462              ;
+; clk   ; -0.653 ; -31.881              ;
 +-------+--------+----------------------+
 
 
@@ -240,7 +240,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.758 ; 0.000                ;
+; clk   ; 0.934 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -249,8 +249,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; clk                      ; -0.458 ; -71.550       ;
-; gen_pixclk:u_pix|clk_pix ; -0.394 ; -10.857       ;
+; clk                      ; -0.437 ; -94.925       ;
+; gen_pixclk:u_pix|clk_pix ; -0.394 ; -10.530       ;
 +--------------------------+--------+---------------+
 
 
@@ -266,8 +266,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; clk                      ; -3.397 ; -81.327       ;
-; gen_pixclk:u_pix|clk_pix ; -1.821 ; -35.138       ;
+; clk                      ; -3.380 ; -144.476      ;
+; gen_pixclk:u_pix|clk_pix ; -1.178 ; -21.860       ;
 +--------------------------+--------+---------------+
 
 
@@ -276,8 +276,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------+-------+---------------+
 ; Clock                    ; Slack ; End Point TNS ;
 +--------------------------+-------+---------------+
-; clk                      ; 0.180 ; 0.000         ;
-; gen_pixclk:u_pix|clk_pix ; 0.361 ; 0.000         ;
+; clk                      ; 0.181 ; 0.000         ;
+; gen_pixclk:u_pix|clk_pix ; 0.434 ; 0.000         ;
 +--------------------------+-------+---------------+
 
 
@@ -286,7 +286,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -0.098 ; -1.049                ;
+; clk   ; -0.079 ; -3.141                ;
 +-------+--------+-----------------------+
 
 
@@ -295,7 +295,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 0.461 ; 0.000                 ;
+; clk   ; 0.573 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -304,8 +304,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; clk                      ; -0.480 ; -11.925       ;
-; gen_pixclk:u_pix|clk_pix ; 0.033  ; 0.000         ;
+; clk                      ; -0.459 ; -14.973       ;
+; gen_pixclk:u_pix|clk_pix ; 0.083  ; 0.000         ;
 +--------------------------+--------+---------------+
 
 
@@ -321,8 +321,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; clk                      ; -2.844 ; -68.026       ;
-; gen_pixclk:u_pix|clk_pix ; -1.766 ; -34.119       ;
+; clk                      ; -2.837 ; -123.358      ;
+; gen_pixclk:u_pix|clk_pix ; -1.022 ; -19.205       ;
 +--------------------------+--------+---------------+
 
 
@@ -331,18 +331,18 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------+-------+---------------+
 ; Clock                    ; Slack ; End Point TNS ;
 +--------------------------+-------+---------------+
-; clk                      ; 0.169 ; 0.000         ;
-; gen_pixclk:u_pix|clk_pix ; 0.320 ; 0.000         ;
+; clk                      ; 0.173 ; 0.000         ;
+; gen_pixclk:u_pix|clk_pix ; 0.400 ; 0.000         ;
 +--------------------------+-------+---------------+
 
 
 +---------------------------------------+
 ; Fast 1100mV 0C Model Recovery Summary ;
-+-------+--------+----------------------+
-; Clock ; Slack  ; End Point TNS        ;
-+-------+--------+----------------------+
-; clk   ; -0.013 ; -0.013               ;
-+-------+--------+----------------------+
++-------+-------+-----------------------+
+; Clock ; Slack ; End Point TNS         ;
++-------+-------+-----------------------+
+; clk   ; 0.001 ; 0.000                 ;
++-------+-------+-----------------------+
 
 
 +--------------------------------------+
@@ -350,7 +350,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.412 ; 0.000                ;
+; clk   ; 0.511 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -359,8 +359,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; clk                      ; -0.465 ; -11.669       ;
-; gen_pixclk:u_pix|clk_pix ; 0.062  ; 0.000         ;
+; clk                      ; -0.471 ; -14.869       ;
+; gen_pixclk:u_pix|clk_pix ; 0.098  ; 0.000         ;
 +--------------------------+--------+---------------+
 
 
@@ -376,12 +376,12 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                     ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack          ; -4.458   ; 0.169 ; -0.669   ; 0.412   ; -0.480              ;
-;  clk                      ; -4.458   ; 0.169 ; -0.669   ; 0.412   ; -0.480              ;
-;  gen_pixclk:u_pix|clk_pix ; -3.816   ; 0.320 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS           ; -276.226 ; 0.0   ; -17.612  ; 0.0     ; -82.407             ;
-;  clk                      ; -203.324 ; 0.000 ; -17.612  ; 0.000   ; -71.550             ;
-;  gen_pixclk:u_pix|clk_pix ; -74.371  ; 0.000 ; N/A      ; N/A     ; -11.138             ;
+; Worst-case Slack          ; -4.199   ; 0.173 ; -0.745   ; 0.511   ; -0.471              ;
+;  clk                      ; -4.199   ; 0.173 ; -0.745   ; 0.511   ; -0.471              ;
+;  gen_pixclk:u_pix|clk_pix ; -2.613   ; 0.400 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS           ; -397.166 ; 0.0   ; -36.646  ; 0.0     ; -105.455            ;
+;  clk                      ; -347.317 ; 0.000 ; -36.646  ; 0.000   ; -94.925             ;
+;  gen_pixclk:u_pix|clk_pix ; -49.849  ; 0.000 ; N/A      ; N/A     ; -10.575             ;
 +---------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -456,20 +456,20 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; Pin    ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +--------+--------------+-----------------+-----------------+
 ; SW[9]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clk    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[6]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +--------+--------------+-----------------+-----------------+
 
 
@@ -738,9 +738,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------+--------------------------+----------+----------+----------+----------+
 ; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------+--------------------------+----------+----------+----------+----------+
-; clk                      ; clk                      ; 3105     ; 0        ; 0        ; 0        ;
+; clk                      ; clk                      ; 8122     ; 0        ; 0        ; 0        ;
 ; gen_pixclk:u_pix|clk_pix ; clk                      ; 1        ; 1        ; 0        ; 0        ;
-; clk                      ; gen_pixclk:u_pix|clk_pix ; 30       ; 0        ; 0        ; 0        ;
 ; gen_pixclk:u_pix|clk_pix ; gen_pixclk:u_pix|clk_pix ; 410      ; 0        ; 0        ; 0        ;
 +--------------------------+--------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -751,9 +750,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------+--------------------------+----------+----------+----------+----------+
 ; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------+--------------------------+----------+----------+----------+----------+
-; clk                      ; clk                      ; 3105     ; 0        ; 0        ; 0        ;
+; clk                      ; clk                      ; 8122     ; 0        ; 0        ; 0        ;
 ; gen_pixclk:u_pix|clk_pix ; clk                      ; 1        ; 1        ; 0        ; 0        ;
-; clk                      ; gen_pixclk:u_pix|clk_pix ; 30       ; 0        ; 0        ; 0        ;
 ; gen_pixclk:u_pix|clk_pix ; gen_pixclk:u_pix|clk_pix ; 410      ; 0        ; 0        ; 0        ;
 +--------------------------+--------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -764,7 +762,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 31       ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 50       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -774,7 +772,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 31       ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 50       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -798,10 +796,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 12    ; 12   ;
-; Unconstrained Input Port Paths  ; 250   ; 250  ;
-; Unconstrained Output Ports      ; 53    ; 53   ;
-; Unconstrained Output Port Paths ; 1047  ; 1047 ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 471   ; 471  ;
+; Unconstrained Output Ports      ; 56    ; 56   ;
+; Unconstrained Output Port Paths ; 1800  ; 1800 ;
 +---------------------------------+-------+------+
 
 
@@ -820,7 +818,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -848,9 +845,12 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -901,7 +901,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -929,9 +928,12 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -983,7 +985,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Oct  6 16:40:47 2025
+    Info: Processing started: Tue Oct  7 19:54:19 2025
 Info: Command: quartus_sta Problema1_Lab3 -c Problema1_Lab3
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1001,29 +1003,29 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.458
+Info (332146): Worst-case setup slack is -4.172
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.458            -203.324 clk 
-    Info (332119):    -3.736             -72.902 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case hold slack is 0.364
+    Info (332119):    -4.172            -347.317 clk 
+    Info (332119):    -2.613             -49.849 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case hold slack is 0.373
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.364               0.000 clk 
-    Info (332119):     0.722               0.000 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case recovery slack is -0.669
+    Info (332119):     0.373               0.000 clk 
+    Info (332119):     0.847               0.000 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case recovery slack is -0.745
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.669             -17.612 clk 
-Info (332146): Worst-case removal slack is 0.809
+    Info (332119):    -0.745             -36.646 clk 
+Info (332146): Worst-case removal slack is 0.997
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.809               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.457
+    Info (332119):     0.997               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.401
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.457             -66.776 clk 
-    Info (332119):    -0.394             -11.138 gen_pixclk:u_pix|clk_pix 
+    Info (332119):    -0.401             -87.596 clk 
+    Info (332119):    -0.394             -10.575 gen_pixclk:u_pix|clk_pix 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -1032,29 +1034,29 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.391
+Info (332146): Worst-case setup slack is -4.199
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.391            -198.996 clk 
-    Info (332119):    -3.816             -74.371 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case hold slack is 0.385
+    Info (332119):    -4.199            -342.031 clk 
+    Info (332119):    -2.527             -48.998 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case hold slack is 0.388
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.385               0.000 clk 
-    Info (332119):     0.683               0.000 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case recovery slack is -0.605
+    Info (332119):     0.388               0.000 clk 
+    Info (332119):     0.813               0.000 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case recovery slack is -0.653
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.605             -15.462 clk 
-Info (332146): Worst-case removal slack is 0.758
+    Info (332119):    -0.653             -31.881 clk 
+Info (332146): Worst-case removal slack is 0.934
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.758               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.458
+    Info (332119):     0.934               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.437
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.458             -71.550 clk 
-    Info (332119):    -0.394             -10.857 gen_pixclk:u_pix|clk_pix 
+    Info (332119):    -0.437             -94.925 clk 
+    Info (332119):    -0.394             -10.530 gen_pixclk:u_pix|clk_pix 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -1063,66 +1065,66 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.397
+Info (332146): Worst-case setup slack is -3.380
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.397             -81.327 clk 
-    Info (332119):    -1.821             -35.138 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case hold slack is 0.180
+    Info (332119):    -3.380            -144.476 clk 
+    Info (332119):    -1.178             -21.860 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case hold slack is 0.181
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.180               0.000 clk 
-    Info (332119):     0.361               0.000 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case recovery slack is -0.098
+    Info (332119):     0.181               0.000 clk 
+    Info (332119):     0.434               0.000 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case recovery slack is -0.079
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.098              -1.049 clk 
-Info (332146): Worst-case removal slack is 0.461
+    Info (332119):    -0.079              -3.141 clk 
+Info (332146): Worst-case removal slack is 0.573
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.461               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.480
+    Info (332119):     0.573               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.459
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.480             -11.925 clk 
-    Info (332119):     0.033               0.000 gen_pixclk:u_pix|clk_pix 
+    Info (332119):    -0.459             -14.973 clk 
+    Info (332119):     0.083               0.000 gen_pixclk:u_pix|clk_pix 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.844
+Info (332146): Worst-case setup slack is -2.837
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.844             -68.026 clk 
-    Info (332119):    -1.766             -34.119 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case hold slack is 0.169
+    Info (332119):    -2.837            -123.358 clk 
+    Info (332119):    -1.022             -19.205 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case hold slack is 0.173
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.169               0.000 clk 
-    Info (332119):     0.320               0.000 gen_pixclk:u_pix|clk_pix 
-Info (332146): Worst-case recovery slack is -0.013
+    Info (332119):     0.173               0.000 clk 
+    Info (332119):     0.400               0.000 gen_pixclk:u_pix|clk_pix 
+Info (332146): Worst-case recovery slack is 0.001
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.013              -0.013 clk 
-Info (332146): Worst-case removal slack is 0.412
+    Info (332119):     0.001               0.000 clk 
+Info (332146): Worst-case removal slack is 0.511
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.412               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.465
+    Info (332119):     0.511               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.471
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.465             -11.669 clk 
-    Info (332119):     0.062               0.000 gen_pixclk:u_pix|clk_pix 
+    Info (332119):    -0.471             -14.869 clk 
+    Info (332119):     0.098               0.000 gen_pixclk:u_pix|clk_pix 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5387 megabytes
-    Info: Processing ended: Mon Oct  6 16:41:05 2025
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 5386 megabytes
+    Info: Processing ended: Tue Oct  7 19:54:25 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:09
 
 

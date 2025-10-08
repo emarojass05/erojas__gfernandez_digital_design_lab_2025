@@ -1,4 +1,13 @@
-// top_lab3_avance.sv — Juego de memoria completo con turnos, puntajes y delay visual al acertar
+// ============================================================
+// top_lab3_avance.sv
+// Juego de memoria digital completo con:
+// - Turnos alternos (15 s por jugador)
+// - Reinicio del contador si acierta (mantiene turno)
+// - Auto-selección de cartas al expirar el tiempo
+// - Puntuación automática
+// - VGA 640x480
+// ============================================================
+
 module top_lab3_avance(
   input  logic        clk,
   input  logic [9:0]  SW,
@@ -14,48 +23,77 @@ module top_lab3_avance(
   output logic [6:0]  HEX0, HEX1, HEX2, HEX3
 );
 
-  // ====== Señales ======
-  logic rst_manual, start_btn, start_d, start_pulse;
-  logic timeout;
-  assign rst_manual = ~KEY[1];
-  assign start_btn  = ~KEY[0];
+  // ========= Señales básicas =========
+  logic rst_manual, store_btn, start_btn;
+  assign rst_manual = ~KEY[1];   // reset global
+  assign store_btn  = ~KEY[2];   // guardar cartas
+  assign start_btn  = ~KEY[0];   // iniciar contador (solo una vez)
 
-  // ====== Detector de flanco en KEY0 ======
+  logic timeout;
+  logic start_d, start_pulse;
+
+  // ========= Detector de flanco en KEY0 =========
   always_ff @(posedge clk or posedge rst_manual)
     if (rst_manual) start_d <= 0;
     else            start_d <= start_btn;
 
   assign start_pulse = start_btn & ~start_d;
 
-  // ====== Tick de 1 Hz ======
+  // ========= Tick de 1 Hz =========
   logic tick_1s;
   tick_1hz #(.SYS_CLK_HZ(50_000_000)) u_tick(
     .clk(clk), .rst(rst_manual), .tick_1s(tick_1s)
   );
 
-  // ====== Contador de 15 s ======
+  // ========= Flanco de timeout =========
+  logic timeout_d, timeout_pulse;
+  always_ff @(posedge clk or posedge rst_manual)
+    if (rst_manual)
+      timeout_d <= 1'b0;
+    else
+      timeout_d <= timeout;
+
+  assign timeout_pulse = timeout & ~timeout_d;
+
+  // ========= Turnos y reinicio de contador =========
+  logic turn;
+  logic reset_counter;
+
+  always_ff @(posedge clk or posedge rst_manual) begin
+    if (rst_manual) begin
+      turn <= 1'b0;
+      reset_counter <= 1'b0;
+    end
+    else begin
+      // Reinicia contador si acierta (mantiene turno)
+      if (valid_pulse) begin
+        reset_counter <= 1'b1;
+      end
+      // Al expirar el tiempo: reinicia contador y cambia turno si NO acertó
+      else if (timeout_pulse) begin
+        reset_counter <= 1'b1;
+        if (!valid_pair)
+          turn <= ~turn;
+      end
+      else begin
+        reset_counter <= 1'b0;
+      end
+    end
+  end
+
+  // ========= Contador de 15 s (reinicia con acierto o timeout) =========
   logic [3:0] tens, units;
   counter_15s u_cnt(
-    .clk(clk), .rst(rst_manual),
+    .clk(clk),
+    .rst(rst_manual | reset_counter), // reinicia en cada acierto o timeout
     .tick_1s(tick_1s),
-    .start(start_pulse),
+    .start(1'b1),                     // siempre activo
     .timeout(timeout),
-    .tens(tens), .units(units)
+    .tens(tens),
+    .units(units)
   );
 
-  // ====== Turnos ======
-  logic turn;
-  always_ff @(posedge clk or posedge rst_manual)
-    if (rst_manual) turn <= 1'b0;
-    else if (timeout) turn <= ~turn; // alterna jugadores
-
-  // ====== Resets ======
-  logic rst_turn;
-  assign rst_turn = timeout;      // limpia tablero
-  logic rst_global;
-  assign rst_global = rst_manual; // solo KEY1 reinicia todo
-
-  // ====== VGA Clock ======
+  // ========= VGA Clock =========
   logic vgaclk;
   gen_pixclk #(.SYS_CLK_HZ(50_000_000), .PIX_CLK_HZ(25_000_000)) u_pix(
     .clk(clk), .rst(rst_manual), .clk_pix(vgaclk)
@@ -63,53 +101,121 @@ module top_lab3_avance(
   assign vga_clk = vgaclk;
   assign vga_sync_n = 1'b1;
 
-  // ====== Control VGA ======
+  // ========= Control VGA =========
   logic [9:0] x, y;
   logic visible;
   vga_timing_640x480 u_ctrl(
-    .vgaclk(vgaclk), .rst(rst_turn),
+    .vgaclk(vgaclk), .rst(rst_manual),
     .hsync(hsync), .vsync(vsync),
     .visible(visible), .x(x), .y(y)
   );
   assign vga_blank_n = visible;
 
-  // ====== FSM ======
+  // ========= FSM =========
   logic fsm_start, black_screen;
   fsm u_fsm(
-    .clk(clk), .rst(rst_turn),
+    .clk(clk), .rst(rst_manual),
     .startSW(SW[0]), .timeout(timeout),
     .fsm_start(fsm_start), .black_screen(black_screen)
   );
 
-  // ====== Selector de cartas ======
-  logic [7:0] selected_cards, stored_cards;
+  // ========= Selector de cartas =========
+  logic [7:0] selected_top_raw, selected_bottom_raw;
+  logic [7:0] stored_top, stored_bottom;
   logic row_sel, valid_pair;
+
   card_selector u_sel(
-    .clk(clk), .rst(rst_turn),
-    .store_btn(~KEY[2]),
+    .clk(clk),
+    .rst(rst_manual),
+    .store_btn(store_btn),
     .sw(SW),
-    .selected_cards(selected_cards),
-    .stored_cards(stored_cards),
+    .selected_top(selected_top_raw),
+    .selected_bottom(selected_bottom_raw),
+    .stored_top(stored_top),
+    .stored_bottom(stored_bottom),
     .row_sel(row_sel),
     .valid_pair(valid_pair)
   );
 
-  // ====== Puntajes ======
+  // ========= Generador pseudoaleatorio =========
+  logic [2:0] rand_idx, rand_idx2;
+  random_gen u_rand(
+    .clk(clk),
+    .rst(rst_manual),
+    .rand_idx(rand_idx)
+  );
+
+  random_gen u_rand2(
+    .clk(clk),
+    .rst(rst_manual),
+    .rand_idx(rand_idx2)
+  );
+
+  // ========= Auto-selección al expirar el tiempo =========
+  logic [7:0] auto_selected_top, auto_selected_bottom;
+
+  always_ff @(posedge clk or posedge rst_manual) begin
+    int idx, idx2;
+    if (rst_manual) begin
+      auto_selected_top    <= 8'd0;
+      auto_selected_bottom <= 8'd0;
+    end 
+    else begin
+      auto_selected_top    <= selected_top_raw;
+      auto_selected_bottom <= selected_bottom_raw;
+
+      if (timeout_pulse && selected_top_raw == 8'd0 && selected_bottom_raw == 8'd0) begin
+        logic [7:0] mask1, mask2;
+        mask1 = 8'd0;
+        mask2 = 8'd0;
+
+        if (stored_top != 8'hFF) begin
+          for (int i = 0; i < 8; i++) begin
+            idx = (rand_idx + i) % 8;
+            if (!stored_top[idx]) begin
+              mask1 = (8'b1 << idx);
+              break;
+            end
+          end
+        end
+
+        if (stored_bottom != 8'hFF) begin
+          for (int j = 0; j < 8; j++) begin
+            idx2 = (rand_idx2 + j) % 8;
+            if (!stored_bottom[idx2]) begin
+              mask2 = (8'b1 << idx2);
+              break;
+            end
+          end
+        end
+
+        auto_selected_top    <= mask1;
+        auto_selected_bottom <= mask2;
+      end
+
+      if (timeout_pulse) begin
+        auto_selected_top    <= 8'd0;
+        auto_selected_bottom <= 8'd0;
+      end
+    end
+  end
+
+  // ========= Puntajes =========
   logic [3:0] score_p1, score_p2;
   logic valid_d, valid_pulse;
 
-  // Flanco de valid_pair (solo un pulso por acierto)
   always_ff @(posedge clk or posedge rst_manual)
-    if (rst_manual) valid_d <= 1'b0;
-    else            valid_d <= valid_pair;
+    if (rst_manual)
+      valid_d <= 1'b0;
+    else
+      valid_d <= valid_pair;
 
   assign valid_pulse = valid_pair & ~valid_d;
 
-  // Puntajes
   always_ff @(posedge clk or posedge rst_manual) begin
     if (rst_manual) begin
-      score_p1 <= 4'd0;
-      score_p2 <= 4'd0;
+      score_p1 <= 0;
+      score_p2 <= 0;
     end else if (valid_pulse) begin
       if (turn == 1'b0 && score_p1 < 9)
         score_p1 <= score_p1 + 1;
@@ -118,44 +224,33 @@ module top_lab3_avance(
     end
   end
 
-  // ====== Delay visual (flash de 0.5 s al acertar) ======
-  logic [25:0] flash_cnt;
-  logic flash_active;
+  // ========= Fin del juego =========
+  logic game_over;
+  assign game_over = (&stored_top) && (&stored_bottom);
 
-  always_ff @(posedge clk or posedge rst_manual) begin
-    if (rst_manual) begin
-      flash_cnt    <= 0;
-      flash_active <= 0;
-    end else if (valid_pulse) begin
-      flash_cnt    <= 25_000_000; // 0.5 s a 50 MHz
-      flash_active <= 1'b1;
-    end else if (flash_cnt > 0) begin
-      flash_cnt <= flash_cnt - 1;
-      if (flash_cnt == 1)
-        flash_active <= 0;
-    end
-  end
-
-  // ====== Video Generator ======
+  // ========= Video =========
   videoGen u_vid(
     .x(x),
     .y(y),
     .visible(visible),
-    .timeout(black_screen | rst_turn),
-    .selected_cards(selected_cards),
-    .stored_cards(stored_cards),
+    .timeout(black_screen),
+    .selected_top(auto_selected_top),
+    .selected_bottom(auto_selected_bottom),
+    .stored_top(stored_top),
+    .stored_bottom(stored_bottom),
     .row_sel(row_sel),
     .turn(turn),
-    .flash(flash_active),      // nuevo: parpadeo visual
+    .flash(valid_pulse),
+    .game_over(game_over),
     .r(vga_r),
     .g(vga_g),
     .b(vga_b)
   );
 
-  // ====== Displays ======
-  hex7seg u_hex_units(.bcd(units), .seg(HEX0));
-  hex7seg u_hex_tens (.bcd(tens), .seg(HEX1));
-  hex7seg u_hex_p1   (.bcd(score_p1), .seg(HEX2));
-  hex7seg u_hex_p2   (.bcd(score_p2), .seg(HEX3));
+  // ========= Displays HEX =========
+  hex7seg u_hex_units (.bcd(units), .seg(HEX0));
+  hex7seg u_hex_tens  (.bcd(tens),  .seg(HEX1));
+  hex7seg u_hex_p1    (.bcd(score_p1), .seg(HEX2));
+  hex7seg u_hex_p2    (.bcd(score_p2), .seg(HEX3));
 
 endmodule
