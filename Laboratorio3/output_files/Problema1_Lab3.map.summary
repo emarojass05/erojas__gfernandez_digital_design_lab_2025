@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Oct  7 19:53:32 2025
+Analysis & Synthesis Status : Successful - Wed Oct  8 16:13:21 2025
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Problema1_Lab3
 Top-level Entity Name : top_lab3_avance
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 161
+Total registers : 133
 Total pins : 72
 Total virtual pins : 0
 Total block memory bits : 0

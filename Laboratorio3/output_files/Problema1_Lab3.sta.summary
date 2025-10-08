@@ -3,131 +3,131 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -4.172
-TNS   : -347.317
+Slack : -4.366
+TNS   : -277.822
 
 Type  : Slow 1100mV 85C Model Setup 'gen_pixclk:u_pix|clk_pix'
-Slack : -2.613
-TNS   : -49.849
+Slack : -2.380
+TNS   : -44.550
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.373
+Slack : 0.375
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.847
+Slack : 0.707
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'clk'
-Slack : -0.745
-TNS   : -36.646
+Slack : -1.030
+TNS   : -40.241
 
 Type  : Slow 1100mV 85C Model Removal 'clk'
-Slack : 0.997
+Slack : 0.754
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.401
-TNS   : -87.596
+Slack : -0.394
+TNS   : -70.902
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'gen_pixclk:u_pix|clk_pix'
 Slack : -0.394
-TNS   : -10.575
+TNS   : -10.675
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -4.199
-TNS   : -342.031
+Slack : -4.236
+TNS   : -271.086
 
 Type  : Slow 1100mV 0C Model Setup 'gen_pixclk:u_pix|clk_pix'
-Slack : -2.527
-TNS   : -48.998
+Slack : -2.374
+TNS   : -43.681
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.388
+Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.813
+Slack : 0.703
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'clk'
-Slack : -0.653
-TNS   : -31.881
+Slack : -0.955
+TNS   : -36.703
 
 Type  : Slow 1100mV 0C Model Removal 'clk'
-Slack : 0.934
+Slack : 0.707
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.437
-TNS   : -94.925
+Slack : -0.394
+TNS   : -75.591
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'gen_pixclk:u_pix|clk_pix'
 Slack : -0.394
-TNS   : -10.530
+TNS   : -10.570
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.380
-TNS   : -144.476
+Slack : -3.470
+TNS   : -117.474
 
 Type  : Fast 1100mV 85C Model Setup 'gen_pixclk:u_pix|clk_pix'
-Slack : -1.178
-TNS   : -21.860
+Slack : -1.035
+TNS   : -19.553
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
 Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.434
+Slack : 0.362
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'clk'
-Slack : -0.079
-TNS   : -3.141
+Slack : -0.271
+TNS   : -7.530
 
 Type  : Fast 1100mV 85C Model Removal 'clk'
-Slack : 0.573
+Slack : 0.420
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.459
-TNS   : -14.973
+Slack : -0.401
+TNS   : -12.408
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.083
+Slack : 0.087
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -2.837
-TNS   : -123.358
+Slack : -2.939
+TNS   : -99.845
 
 Type  : Fast 1100mV 0C Model Setup 'gen_pixclk:u_pix|clk_pix'
-Slack : -1.022
-TNS   : -19.205
+Slack : -0.931
+TNS   : -17.234
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.173
+Slack : 0.172
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.400
+Slack : 0.327
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'clk'
-Slack : 0.001
-TNS   : 0.000
+Slack : -0.173
+TNS   : -4.139
 
 Type  : Fast 1100mV 0C Model Removal 'clk'
-Slack : 0.511
+Slack : 0.382
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.471
-TNS   : -14.869
+Slack : -0.421
+TNS   : -12.277
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'gen_pixclk:u_pix|clk_pix'
-Slack : 0.098
+Slack : 0.104
 TNS   : 0.000
 
 ------------------------------------------------------------
