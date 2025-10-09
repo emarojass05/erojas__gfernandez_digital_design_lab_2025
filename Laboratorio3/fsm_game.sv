@@ -3,9 +3,9 @@
 // ------------------------------------------------------------
 // Controla el flujo del juego:
 // - Turnos
-// - Reinicio del contador
-// - Reacción ante timeout, acierto o fallo
-// - Pantalla final de victoria
+// - Reinicio de contador
+// - Reacción ante timeout o acierto
+// - Muestra carta automática 1 s antes de cambiar turno
 // ============================================================
 
 module fsm_game (
@@ -14,39 +14,48 @@ module fsm_game (
   input  logic start_btn,         // KEY0
   input  logic timeout,           // del contador (cuando llega a 0)
   input  logic valid_pair,        // pulso limpio al acertar
-  input  logic invalid_pair,      // 🔹 nuevo: par incorrecto
+  input  logic invalid_pair,      // pulso limpio al fallar
   input  logic all_pairs_done,    // fin del juego
   output logic enable_input,      // habilita switches
   output logic enable_counter,    // permite conteo
   output logic reset_counter,     // reinicia contador (a 15s)
   output logic change_turn,       // alterna jugador
-  output logic black_screen,      // pantalla apagada al inicio
+  output logic black_screen,      // pantalla apagada en reset
   output logic game_over          // fin del juego
 );
 
-  // ====== Definición de estados ======
+  // ===== Definición de estados =====
   typedef enum logic [2:0] {
-    INIT,          // pantalla negra inicial
-    WAIT_START,    // espera botón de inicio
-    TURN_ACTIVE,   // turno activo de un jugador
-    CHECK_PAIR,    // par correcto
-    WRONG_PAIR,    // 🔹 par incorrecto
-    AUTO_MOVE,     // cambio por timeout
-    WIN            // fin del juego
+    INIT, WAIT_START, TURN_ACTIVE, CHECK_PAIR,
+    AUTO_SHOW, AUTO_MOVE, WIN
   } state_t;
 
   state_t state, next;
 
-  // ====== Registro de estado ======
-  always_ff @(posedge clk or posedge rst)
+  // Contador simple para mantener la carta automática visible
+  logic [25:0] auto_timer; // ≈1 s a 50 MHz
+
+  // ===== Registro de estado =====
+  always_ff @(posedge clk or posedge rst) begin
     if (rst)
       state <= INIT;
     else
       state <= next;
+  end
 
-  // ====== Lógica de transición y salidas ======
+  // ===== Temporizador visual (mantiene carta 1 s) =====
+  always_ff @(posedge clk or posedge rst) begin
+    if (rst)
+      auto_timer <= 0;
+    else if (state == AUTO_SHOW)
+      auto_timer <= auto_timer + 1;
+    else
+      auto_timer <= 0;
+  end
+
+  // ===== Lógica de transición y salidas =====
   always_comb begin
-    // Valores por defecto
+    // valores por defecto
     next = state;
     enable_input   = 0;
     enable_counter = 0;
@@ -56,66 +65,63 @@ module fsm_game (
     game_over      = 0;
 
     case (state)
-      // ---------- INICIO ----------
+      // ----- INICIO -----
       INIT: begin
         black_screen = 1;
         next = WAIT_START;
       end
 
-      // ---------- ESPERA INICIO ----------
+      // ----- ESPERA DE INICIO -----
       WAIT_START: begin
         if (start_btn)
           next = TURN_ACTIVE;
       end
 
-      // ---------- TURNO ACTIVO ----------
+      // ----- TURNO ACTIVO -----
       TURN_ACTIVE: begin
         enable_input   = 1;
         enable_counter = 1;
 
         if (valid_pair)
-          next = CHECK_PAIR;   // ✅ mantiene turno
+          next = CHECK_PAIR;
         else if (invalid_pair)
-          next = WRONG_PAIR;   // ❌ cambia turno
+          next = AUTO_MOVE;  // si falla cambia turno
         else if (timeout)
-          next = AUTO_MOVE;    // ⏱️ cambia turno por tiempo
+          next = AUTO_SHOW;  // tiempo agotado → muestra carta automática
       end
 
-      // ---------- PAR CORRECTO ----------
+      // ----- CHECK PAIR -----
       CHECK_PAIR: begin
-        enable_input   = 0;
-        enable_counter = 1;  // sigue contando
-        reset_counter  = 1;  // vuelve a 15 s
-        change_turn    = 0;  // mantiene turno
-        next = TURN_ACTIVE;
+        reset_counter = 1;
+        next = TURN_ACTIVE; // sigue el mismo jugador
       end
 
-      // ---------- PAR INCORRECTO ----------
-      WRONG_PAIR: begin
+      // ----- AUTO SHOW -----
+      AUTO_SHOW: begin
         enable_input   = 0;
-        reset_counter  = 1;  // reinicia contador
-        change_turn    = 1;  // cambia jugador
-        next = TURN_ACTIVE;
+        enable_counter = 0;
+        if (auto_timer > 50_000_000) // ≈1 s a 50 MHz
+          next = AUTO_MOVE;
       end
 
-      // ---------- TIMEOUT ----------
+      // ----- AUTO MOVE -----
       AUTO_MOVE: begin
-        enable_input   = 0;
-        reset_counter  = 1;  // reinicia contador
-        change_turn    = 1;  // cambia jugador
+        change_turn   = 1;
+        reset_counter = 1;
         next = TURN_ACTIVE;
       end
 
-      // ---------- VICTORIA ----------
+      // ----- WIN -----
       WIN: begin
-        game_over = 1;       // activa pantalla de fin
-        next = WIN;          // espera reset
+        game_over = 1;
+        if (rst)
+          next = INIT;
       end
 
       default: next = INIT;
     endcase
 
-    // ---------- CONDICIÓN GLOBAL DE VICTORIA ----------
+    // Si se completaron todas las cartas → victoria
     if (all_pairs_done)
       next = WIN;
   end

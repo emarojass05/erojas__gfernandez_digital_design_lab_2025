@@ -7,6 +7,7 @@
 // - Mantiene turno al acertar
 // - Cambia turno al fallar o por timeout
 // - Pantalla final con ganador y su puntaje real
+// - Timeout selecciona carta aleatoria visible 1 s antes de cambiar turno
 // ============================================================
 
 module top_lab3_avance(
@@ -24,13 +25,19 @@ module top_lab3_avance(
   output logic [6:0]  HEX0, HEX1, HEX2, HEX3
 );
 
-  // ====== Entradas básicas ======
-  logic rst_manual, store_btn, start_btn;
-  assign rst_manual = ~KEY[1];
-  assign store_btn  = ~KEY[2];
-  assign start_btn  = ~KEY[0];
+  // ===== Entradas básicas =====
+  logic rst_manual, start_btn;
+  logic store_btn, store_btn_manual;
 
-  // ====== Tick 1Hz ======
+  assign rst_manual      = ~KEY[1];
+  assign start_btn       = ~KEY[0];
+  assign store_btn_manual = ~KEY[2];
+
+  // Simula botón automático al terminar el tiempo
+  logic timeout;
+  assign store_btn = store_btn_manual | timeout;
+
+  // ===== Tick 1Hz =====
   logic tick_1s;
   tick_1hz #(.SYS_CLK_HZ(50_000_000)) u_tick(
     .clk(clk),
@@ -38,14 +45,12 @@ module top_lab3_avance(
     .tick_1s(tick_1s)
   );
 
-  // ====== Señales FSM ======
+  // ===== Señales FSM =====
   logic enable_input, enable_counter, reset_counter;
   logic change_turn, black_screen, game_over;
 
-  // ====== Señales del contador ======
-  logic timeout;
+  // ===== Contador 15s =====
   logic [3:0] tens, units;
-
   counter_15s u_cnt(
     .clk(clk),
     .rst(rst_manual | reset_counter),
@@ -55,18 +60,34 @@ module top_lab3_avance(
     .tens(tens),
     .units(units)
   );
-
-  // ====== Selector de cartas ======
+  // ===== Selector de cartas =====
   logic [7:0] selected_top, selected_bottom;
   logic [7:0] stored_top, stored_bottom;
   logic row_sel;
   logic valid_pair_raw, invalid_pair_raw;
 
+  // Auto-selección (sin SW[8])
+  logic [9:0] sw_auto;    
+  logic [9:0] sw_final;   
+  auto_selector u_auto_sel (
+    .clk(clk),
+    .rst(rst_manual),
+    .enable_auto(timeout),
+    .stored_top(stored_top),
+    .stored_bottom(stored_bottom),
+    .sw_auto(sw_auto)
+  );
+
+  // Combinar switches reales + automáticos
+  assign sw_final[8]   = SW[8];             // fila manual
+  assign sw_final[7:0] = SW[7:0] | sw_auto[7:0];
+  assign sw_final[9]   = 1'b0;              // no usado
+
   card_selector u_sel(
     .clk(clk),
     .rst(rst_manual),
     .store_btn(store_btn),
-    .sw(SW),
+    .sw(sw_final),
     .selected_top(selected_top),
     .selected_bottom(selected_bottom),
     .stored_top(stored_top),
@@ -76,7 +97,7 @@ module top_lab3_avance(
     .invalid_pair(invalid_pair_raw)
   );
 
-  // ====== Sincronización de pulsos ======
+  // ===== Sincronización de pulsos =====
   logic valid_d, invalid_d;
   logic valid_pulse, invalid_pulse;
 
@@ -93,7 +114,7 @@ module top_lab3_avance(
   assign valid_pulse   = valid_pair_raw & ~valid_d;
   assign invalid_pulse = invalid_pair_raw & ~invalid_d;
 
-  // ====== FSM principal ======
+  // ===== FSM principal =====
   logic all_pairs_done;
   assign all_pairs_done = (&stored_top) && (&stored_bottom);
 
@@ -113,7 +134,7 @@ module top_lab3_avance(
     .game_over(game_over)
   );
 
-  // ====== Turnos ======
+  // ===== Turnos =====
   logic turn;
   always_ff @(posedge clk or posedge rst_manual)
     if (rst_manual)
@@ -121,15 +142,13 @@ module top_lab3_avance(
     else if (change_turn)
       turn <= ~turn;
 
-  // ====== Puntajes ======
+  // ===== Puntajes =====
   logic [3:0] score_p1, score_p2;
-
   always_ff @(posedge clk or posedge rst_manual) begin
     if (rst_manual) begin
       score_p1 <= 0;
       score_p2 <= 0;
-    end 
-    else if (valid_pulse) begin
+    end else if (valid_pulse) begin
       if (turn == 1'b0 && score_p1 < 9)
         score_p1 <= score_p1 + 1;
       else if (turn == 1'b1 && score_p2 < 9)
@@ -137,26 +156,7 @@ module top_lab3_avance(
     end
   end
 
-  // ====== Determinar el ganador ======
-  logic [1:0] winner;       // 01 = J1, 10 = J2, 00 = empate
-  logic [3:0] winner_score; // Puntaje del ganador
-
-  always_comb begin
-    if (score_p1 > score_p2) begin
-      winner = 2'b01;
-      winner_score = score_p1;
-    end
-    else if (score_p2 > score_p1) begin
-      winner = 2'b10;
-      winner_score = score_p2;
-    end
-    else begin
-      winner = 2'b00;
-      winner_score = 0;
-    end
-  end
-
-  // ====== VGA clock ======
+  // ===== VGA clock =====
   logic vgaclk;
   gen_pixclk #(.SYS_CLK_HZ(50_000_000), .PIX_CLK_HZ(25_000_000)) u_pix(
     .clk(clk),
@@ -166,7 +166,7 @@ module top_lab3_avance(
   assign vga_clk = vgaclk;
   assign vga_sync_n = 1'b1;
 
-  // ====== Control VGA ======
+  // ===== Control VGA =====
   logic [9:0] x, y;
   logic visible;
   vga_timing_640x480 u_ctrl(
@@ -180,7 +180,7 @@ module top_lab3_avance(
   );
   assign vga_blank_n = visible;
 
-  // ====== Video Generator ======
+  // ===== Video Generator =====
   videoGen u_vid(
     .x(x),
     .y(y),
@@ -194,17 +194,17 @@ module top_lab3_avance(
     .turn(turn),
     .flash(valid_pulse),
     .game_over(game_over),
-	.score_p1(score_p1),       // ✅ NUEVO
-    .score_p2(score_p2), 	 // 🔹 NUEVO
+    .score_p1(score_p1),
+    .score_p2(score_p2),
     .r(vga_r),
     .g(vga_g),
     .b(vga_b)
   );
 
-  // ====== Displays 7 segmentos ======
-  hex7seg u_hex_units (.bcd(units), .seg(HEX0));    // segundos unidades
-  hex7seg u_hex_tens  (.bcd(tens),  .seg(HEX1));    // segundos decenas
-  hex7seg u_hex_p1    (.bcd(score_p1), .seg(HEX2)); // puntaje jugador 1
-  hex7seg u_hex_p2    (.bcd(score_p2), .seg(HEX3)); // puntaje jugador 2
+  // ===== Displays 7 segmentos =====
+  hex7seg u_hex_units (.bcd(units), .seg(HEX0));
+  hex7seg u_hex_tens  (.bcd(tens),  .seg(HEX1));
+  hex7seg u_hex_p1    (.bcd(score_p1), .seg(HEX2));
+  hex7seg u_hex_p2    (.bcd(score_p2), .seg(HEX3));
 
 endmodule
