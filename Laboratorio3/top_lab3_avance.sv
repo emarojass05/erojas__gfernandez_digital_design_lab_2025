@@ -6,7 +6,7 @@
 // - Contador 15s controlado por FSM
 // - Mantiene turno al acertar
 // - Cambia turno al fallar o por timeout
-// - Pantalla final con ganador
+// - Pantalla final con ganador y su puntaje real
 // ============================================================
 
 module top_lab3_avance(
@@ -137,6 +137,25 @@ module top_lab3_avance(
     end
   end
 
+  // ====== Determinar el ganador ======
+  logic [1:0] winner;       // 01 = J1, 10 = J2, 00 = empate
+  logic [3:0] winner_score; // Puntaje del ganador
+
+  always_comb begin
+    if (score_p1 > score_p2) begin
+      winner = 2'b01;
+      winner_score = score_p1;
+    end
+    else if (score_p2 > score_p1) begin
+      winner = 2'b10;
+      winner_score = score_p2;
+    end
+    else begin
+      winner = 2'b00;
+      winner_score = 0;
+    end
+  end
+
   // ====== VGA clock ======
   logic vgaclk;
   gen_pixclk #(.SYS_CLK_HZ(50_000_000), .PIX_CLK_HZ(25_000_000)) u_pix(
@@ -175,12 +194,14 @@ module top_lab3_avance(
     .turn(turn),
     .flash(valid_pulse),
     .game_over(game_over),
+	.score_p1(score_p1),       // ✅ NUEVO
+    .score_p2(score_p2), 	 // 🔹 NUEVO
     .r(vga_r),
     .g(vga_g),
     .b(vga_b)
   );
 
-  // ====== Displays de 7 segmentos ======
+  // ====== Displays 7 segmentos ======
   hex7seg u_hex_units (.bcd(units), .seg(HEX0));    // segundos unidades
   hex7seg u_hex_tens  (.bcd(tens),  .seg(HEX1));    // segundos decenas
   hex7seg u_hex_p1    (.bcd(score_p1), .seg(HEX2)); // puntaje jugador 1

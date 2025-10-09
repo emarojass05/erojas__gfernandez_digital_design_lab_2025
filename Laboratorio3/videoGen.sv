@@ -24,7 +24,7 @@ module videoGen(
 );
 
     // ============================================================
-    // Parámetros
+    // Parámetros del tablero
     // ============================================================
     localparam CARD_W = 80;
     localparam CARD_H = 100;
@@ -37,6 +37,9 @@ module videoGen(
     localparam BOARD_X0 = (640 - TOTAL_W) / 2;
     localparam BOARD_Y0 = (480 - TOTAL_H) / 2;
 
+    // ============================================================
+    // Parámetros del texto
+    // ============================================================
     localparam SCALE = 4;
     localparam CHAR_W = 8 * SCALE;
     localparam CHAR_H = 8 * SCALE;
@@ -52,7 +55,7 @@ module videoGen(
     logic [9:0] dx, dy, lx, ly;
     logic [3:0] col, row, card_id;
     logic in_board, pattern, selected_now, stored_now;
-    logic [7:0] total_pairs;
+    logic [7:0] total_pairs; // mostrará puntaje del ganador
     logic [2:0] font_row_index;
     logic [7:0] char_code, font_row;
     logic pixel_on;
@@ -62,7 +65,7 @@ module videoGen(
     integer idx, idx2;
 
     // ============================================================
-    // Fuente VGA 8×8 del usuario
+    // Fuente de texto 8×8
     // ============================================================
     textROM fontROM(
         .char_code(char_code),
@@ -71,7 +74,7 @@ module videoGen(
     );
 
     // ============================================================
-    // Mensajes
+    // Mensajes predefinidos
     // ============================================================
     logic [7:0] msg_j1 [0:6];
     logic [7:0] msg_j2 [0:6];
@@ -86,28 +89,39 @@ module videoGen(
     end
 
     // ============================================================
-    // Lógica VGA
+    // Lógica VGA combinacional
     // ============================================================
-    always @(*) begin
-        // ===== Inicializaciones =====
-        r = 8'd0; g = 8'd0; b = 8'd0;
-        dx = x - BOARD_X0;
-        dy = y - BOARD_Y0;
-        in_board = 1'b0;
-        pattern = 1'b0;
-        selected_now = 1'b0;
-        stored_now = 1'b0;
-        pixel_on = 1'b0;
-        char_code = 8'd32;
-        total_pairs = score_p1 + score_p2;
-        rel_x = 0;
-        rel_y = 0;
-        rel_x2 = 0;
-        y_scaled = 0;
-        x_scaled = 0;
-        x2_scaled = 0;
-        idx = 0;
-        idx2 = 0;
+    always_comb begin
+        // ===== Inicialización total (evita latches) =====
+        {r,g,b}        = 24'h000000;
+        dx             = x - BOARD_X0;
+        dy             = y - BOARD_Y0;
+        lx             = 0;
+        ly             = 0;
+        col            = 0;
+        row            = 0;
+        card_id        = 0;
+        pattern        = 1'b0;
+        in_board       = 1'b0;
+        selected_now   = 1'b0;
+        stored_now     = 1'b0;
+        pixel_on       = 1'b0;
+        char_code      = 8'd32;
+        total_pairs    = 8'd0;
+        rel_x          = 10'd0;
+        rel_y          = 10'd0;
+        rel_x2         = 10'd0;
+        y_scaled       = 0;
+        x_scaled       = 0;
+        x2_scaled      = 0;
+        idx            = 0;
+        idx2           = 0;
+        font_row_index = 3'd0;
+        bit_index      = 3'd0;
+
+        // ====================================================
+        // Comienzo de la lógica VGA
+        // ====================================================
 
         // ===== Pantalla negra =====
         if (!visible || timeout) begin
@@ -116,30 +130,33 @@ module videoGen(
 
         // ===== Pantalla final =====
         else if (game_over) begin
-            if (score_p1 > score_p2)
-                {r,g,b} = 24'h000070;
-            else if (score_p2 > score_p1)
-                {r,g,b} = 24'h700000;
-            else
-                {r,g,b} = 24'h007000;
+            // Fondo y puntaje según ganador
+            if (score_p1 > score_p2) begin
+                {r,g,b} = 24'h000070;   // Azul
+                total_pairs = score_p1;
+            end else if (score_p2 > score_p1) begin
+                {r,g,b} = 24'h700000;   // Rojo
+                total_pairs = score_p2;
+            end else begin
+                {r,g,b} = 24'h007000;   // Verde (empate)
+                total_pairs = 0;
+            end
 
-            // ---- Línea 1 ----
+            // ---- Línea 1: “J1 GANA”, “J2 GANA” o “EMPATE” ----
             if (y >= BASE_Y1 && y < BASE_Y1 + CHAR_H) begin
                 rel_x = x - BASE_X1;
                 rel_y = y - BASE_Y1;
 
                 if (rel_x < (MSG_LEN * CHAR_W)) begin
                     idx = rel_x / CHAR_W;
-                    case (idx)
-                        0: char_code = (score_p1>score_p2) ? msg_j1[0] : (score_p2>score_p1) ? msg_j2[0] : msg_empate[0];
-                        1: char_code = (score_p1>score_p2) ? msg_j1[1] : (score_p2>score_p1) ? msg_j2[1] : msg_empate[1];
-                        2: char_code = (score_p1>score_p2) ? msg_j1[2] : (score_p2>score_p1) ? msg_j2[2] : msg_empate[2];
-                        3: char_code = (score_p1>score_p2) ? msg_j1[3] : (score_p2>score_p1) ? msg_j2[3] : msg_empate[3];
-                        4: char_code = (score_p1>score_p2) ? msg_j1[4] : (score_p2>score_p1) ? msg_j2[4] : msg_empate[4];
-                        5: char_code = (score_p1>score_p2) ? msg_j1[5] : (score_p2>score_p1) ? msg_j2[5] : msg_empate[5];
-                        6: char_code = (score_p1>score_p2) ? msg_j1[6] : (score_p2>score_p1) ? msg_j2[6] : msg_empate[6];
-                        default: char_code = 8'd32;
-                    endcase
+                    if (idx < MSG_LEN) begin
+                        if (score_p1 > score_p2)
+                            char_code = msg_j1[idx];
+                        else if (score_p2 > score_p1)
+                            char_code = msg_j2[idx];
+                        else
+                            char_code = msg_empate[idx];
+                    end
                 end
 
                 y_scaled = rel_y / SCALE;
@@ -147,28 +164,21 @@ module videoGen(
                 font_row_index = y_scaled[2:0];
                 bit_index = 7 - x_scaled[2:0];
                 pixel_on = font_row[bit_index];
-
                 if (pixel_on)
                     {r,g,b} = 24'hFFFFFF;
             end
 
-            // ---- Línea 2 ----
+            // ---- Línea 2: “CON PS X” ----
             else if (y >= BASE_Y2 && y < BASE_Y2 + CHAR_H) begin
                 rel_x2 = x - BASE_X2;
                 rel_y  = y - BASE_Y2;
 
                 if (rel_x2 < (MSG_LEN * CHAR_W)) begin
                     idx2 = rel_x2 / CHAR_W;
-                    case (idx2)
-                        0: char_code = msg_pares[0];
-                        1: char_code = msg_pares[1];
-                        2: char_code = msg_pares[2];
-                        3: char_code = msg_pares[3];
-                        4: char_code = msg_pares[4];
-                        5: char_code = msg_pares[5];
-                        6: char_code = 8'd48 + total_pairs;
-                        default: char_code = 8'd32;
-                    endcase
+                    if (idx2 < 6)
+                        char_code = msg_pares[idx2];
+                    else if (idx2 == 6)
+                        char_code = 8'd48 + total_pairs;
                 end
 
                 y_scaled = rel_y / SCALE;
@@ -176,16 +186,14 @@ module videoGen(
                 font_row_index = y_scaled[2:0];
                 bit_index = 7 - x2_scaled[2:0];
                 pixel_on = font_row[bit_index];
-
                 if (pixel_on)
                     {r,g,b} = 24'hFFFFFF;
             end
         end
 
-        // ===== Tablero normal =====
+        // ===== Tablero de juego =====
         else begin
             in_board = (dx < TOTAL_W) && (dy < TOTAL_H);
-
             if (in_board) begin
                 col = dx / (CARD_W + GAP_X);
                 row = dy / (CARD_H + GAP_Y);
@@ -193,7 +201,7 @@ module videoGen(
                 ly  = dy % (CARD_H + GAP_Y);
                 card_id = row * GRID_COLS + col;
 
-                // === PATRONES ORIGINALES ===
+                // Patrones iniciales
                 pattern = 1'b0;
                 if (card_id < 2)        pattern = ((lx ^ ly) & 8'h08);
                 else if (card_id < 4)   pattern = ((lx + ly) % 20 < 10);
@@ -204,6 +212,7 @@ module videoGen(
                 else if (card_id < 14)  pattern = (((lx + 2*ly) % 30) < 15);
                 else                    pattern = (lx[2] ^ ly[4]);
 
+                // Estado de carta actual
                 if (row < 2) begin
                     selected_now = selected_top[col + 4*row];
                     stored_now   = stored_top[col + 4*row];
@@ -212,6 +221,7 @@ module videoGen(
                     stored_now   = stored_bottom[col + 4*(row-2)];
                 end
 
+                // Colores finales
                 if (lx < 4 || lx >= CARD_W-4 || ly < 4 || ly >= CARD_H-4)
                     {r,g,b} = 24'h000000;
                 else if (flash && stored_now)
@@ -226,6 +236,7 @@ module videoGen(
                     {r,g,b} = 24'h404040;
             end
             else begin
+                // Fondo según turno
                 {r,g,b} = (turn==0) ? 24'h000030 : 24'h300000;
             end
         end
