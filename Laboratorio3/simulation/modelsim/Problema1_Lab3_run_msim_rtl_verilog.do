@@ -45,18 +45,20 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv}
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv}
 
-vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv}
+vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  fsm_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  fsm_game_tb
 
 add wave *
 view structure

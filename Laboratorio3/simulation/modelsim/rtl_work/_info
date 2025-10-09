@@ -8,239 +8,292 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/simulation/modelsim
-vcounter_15s
+Z0 dC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/simulation/modelsim
+vcard_selector
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1759458149
+Z2 !s110 1759971199
 !i10b 1
-!s100 gY0HCdNQz7?M^d6B:mbB`0
+!s100 l^@@A55U130=?JcU4AcQi1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IE5U4X1cMheeQdfA:f1Umc1
+I_5dH4faQ1V?lfKALGEQ6R0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1759188470
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv
-!i122 5
-L0 4 37
-Z6 OV;L;2020.1;71
-r1
-!s85 0
-31
-Z7 !s108 1759458149.000000
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv|
-!i113 1
-Z8 o-sv -work work
-Z9 !s92 -sv -work work {+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3}
-Z10 tCvgOpt 0
-vfsm
-R1
-R2
-!i10b 1
-!s100 daNEl=Pjo<RLeWkRX52Xg0
-R3
-I<LQKe<2XE]99mS^R2InBA1
-R4
-S1
-R0
-w1759457975
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv
+w1759967378
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv
 !i122 7
-L0 3 102
-R6
+L0 10 73
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv|
+Z6 !s108 1759971198.000000
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv|
 !i113 1
-R8
-R9
-R10
-vfsm_tb
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3
+Z9 tCvgOpt 0
+vcounter_15s
 R1
-R2
+Z10 !s110 1759971198
 !i10b 1
-!s100 @zd<S`C`nQ5^dd]?O9?7=3
+!s100 g=>iABlGB^l6KFU:dEDaR3
 R3
-Idkz46J9E3OFNiHCi3_^2G3
+IHQ3n3Q=c3il68EaL^]SUd2
 R4
 S1
 R0
-w1759458089
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv
-!i122 8
-L0 3 77
-R6
+w1759951540
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv
+!i122 5
+L0 4 33
+R5
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv|
+R6
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv|
 !i113 1
+R7
 R8
 R9
-R10
+vfsm_game
+R1
+R2
+!i10b 1
+!s100 j9YKV9nA^998aNKNOgbn`3
+R3
+IG`FJG:4Znk98@Z]<Z<cA^0
+R4
+S1
+R0
+w1759967458
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv
+!i122 8
+L0 11 113
+R5
+r1
+!s85 0
+31
+Z11 !s108 1759971199.000000
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv|
+!i113 1
+R7
+R8
+R9
+vfsm_game_tb
+R1
+!s110 1759971200
+!i10b 1
+!s100 lYGS8mW6N[A]Pm8X1jFKN0
+R3
+I7U?lQ:O_ZMVhT0dHUDI]j1
+R4
+S1
+R0
+w1759971024
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv
+!i122 10
+L0 8 146
+R5
+r1
+!s85 0
+31
+!s108 1759971200.000000
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv|
+!i113 1
+R7
+R8
+R9
 vgen_pixclk
 R1
-Z11 !s110 1759458148
+Z12 !s110 1759971197
 !i10b 1
 !s100 [KUePM73TP7e=<K;GB>`E0
 R3
-INET[QWS:;5hj[_C=CiHDP3
+IjW;^l_zUEWGo2DjJjFoXd2
 R4
 S1
 R0
-R5
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv
+w1759971103
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv
 !i122 3
 L0 1 23
-R6
+R5
 r1
 !s85 0
 31
-Z12 !s108 1759458148.000000
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv|
+Z13 !s108 1759971197.000000
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv|
 !i113 1
+R7
 R8
 R9
-R10
 vhex7seg
 R1
-R2
+R10
 !i10b 1
 !s100 IP@nS8<YeohiG^jfQjVU?2
 R3
-I1X5@HFUB=2fCGUTRkTO;80
+IJGjRL]<I^Y?P11Eb0DlbJ0
 R4
 S1
 R0
-R5
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv
+w1759176924
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv
 !i122 6
 L0 4 20
-R6
+R5
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv|
+R6
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv|
 !i113 1
+R7
 R8
 R9
-R10
+vtextROM
+R1
+R2
+!i10b 1
+!s100 WoCc6OE7=mC3F03J;85zc3
+R3
+I9ZMLCBNZTffnD>YRAeime3
+R4
+S1
+R0
+w1759964867
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv
+!i122 9
+L0 8 232
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv|
+!i113 1
+R7
+R8
+R9
+ntext@r@o@m
 vtick_1hz
 R1
-R11
+R12
 !i10b 1
-!s100 XZ33PQf2SclzUBK;U2ekD3
+!s100 DJh8Bo4VBBH[lnaU9TQG?1
 R3
-I2bQRFP0Y1Bn[[`DZBX;e[2
+I7ISdAZ?^Rzb2E:DifB3e83
 R4
 S1
 R0
-R5
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv
+w1759729865
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv
 !i122 4
-L0 2 24
-R6
+L0 4 29
+R5
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv|
+R13
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv|
 !i113 1
+R7
 R8
 R9
-R10
 vtop_lab3_avance
 R1
-R11
+Z14 !s110 1759971196
 !i10b 1
-!s100 [>?MUNcZ:nK5V3<da=f:l2
+!s100 LUII2M:=D;ja[@Y`RVWNW3
 R3
-IIDe]:PaWfLX9hN`0mnngS2
+IgTNI6A7X0k?;[KXY<C6_H3
 R4
 S1
 R0
-w1759458039
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv
+w1759968395
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv
 !i122 2
-L0 3 117
-R6
+L0 12 199
+R5
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv|
+Z15 !s108 1759971196.000000
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv|
 !i113 1
+R7
 R8
 R9
-R10
 vvga_timing_640x480
 R1
-!s110 1759458147
+R14
 !i10b 1
 !s100 aR914;>AfH_`4=dY7D1[Y3
 R3
-I<4i>kel8W9i37MG7O44UR3
+IHWoeGg>gBeB1d4e^bC6Ge1
 R4
 S1
 R0
-R5
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv
+w1759016777
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv
 !i122 0
 L0 4 50
-R6
+R5
 r1
 !s85 0
 31
-!s108 1759458147.000000
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv|
+!s108 1759971195.000000
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv|
 !i113 1
+R7
 R8
 R9
-R10
 vvideoGen
 R1
-R11
+R14
 !i10b 1
-!s100 F9XIAWUlT>^A?RNg<@K0I2
+!s100 ]:bIcZWSc9c[<zHY7CLO[0
 R3
-I>^3_i@:_6LGBS0dVBRP9B2
+ID2]6S4I[@EQZ;MYBE`jXC3
 R4
 S1
 R0
-R5
-8C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv
-FC:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv
+w1759968824
+8C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv
+FC:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv
 !i122 1
-L0 3 70
-R6
+L0 6 239
+R5
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv|
+R15
+!s107 C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3|C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv|
 !i113 1
+R7
 R8
 R9
-R10
 nvideo@gen

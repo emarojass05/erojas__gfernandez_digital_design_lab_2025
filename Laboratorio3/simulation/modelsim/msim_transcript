@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:06 on Oct 02,2025
+# Start time: 18:52:42 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 20:22:07 on Oct 02,2025, Elapsed time: 0:00:01
+# End time: 18:52:43 on Oct 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:08 on Oct 02,2025
+# Start time: 18:52:44 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 20:22:08 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:52:45 on Oct 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:09 on Oct 02,2025
+# Start time: 18:52:45 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 20:22:09 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:52:46 on Oct 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:10 on Oct 02,2025
+# Start time: 18:52:47 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 20:22:11 on Oct 02,2025, Elapsed time: 0:00:01
+# End time: 18:52:49 on Oct 08,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:12 on Oct 02,2025
+# Start time: 18:52:50 on Oct 08,2025
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 20:22:13 on Oct 02,2025, Elapsed time: 0:00:01
+# End time: 18:52:51 on Oct 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:13 on Oct 02,2025
+# Start time: 18:52:53 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 20:22:16 on Oct 02,2025, Elapsed time: 0:00:03
+# End time: 18:52:56 on Oct 08,2025, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:16 on Oct 02,2025
+# Start time: 18:52:56 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 20:22:18 on Oct 02,2025, Elapsed time: 0:00:02
+# End time: 18:53:04 on Oct 08,2025, Elapsed time: 0:00:08
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:18 on Oct 02,2025
+# Start time: 18:53:05 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 20:22:19 on Oct 02,2025, Elapsed time: 0:00:01
+# End time: 18:53:06 on Oct 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:20 on Oct 02,2025
+# Start time: 18:53:07 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 20:22:22 on Oct 02,2025, Elapsed time: 0:00:02
+# End time: 18:53:09 on Oct 08,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:22 on Oct 02,2025
+# Start time: 18:53:09 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 20:22:23 on Oct 02,2025, Elapsed time: 0:00:01
+# End time: 18:53:10 on Oct 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:24 on Oct 02,2025
+# Start time: 18:53:11 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 20:22:26 on Oct 02,2025, Elapsed time: 0:00:02
+# End time: 18:53:13 on Oct 08,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:27 on Oct 02,2025
+# Start time: 18:53:14 on Oct 08,2025
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 20:22:27 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:53:14 on Oct 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -798,106 +798,127 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:27 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv 
+# Start time: 18:53:15 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/vga_timing_640x480.sv 
 # -- Compiling module vga_timing_640x480
 # 
 # Top level modules:
 # 	vga_timing_640x480
-# End time: 20:22:27 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:53:16 on Oct 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:28 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv 
+# Start time: 18:53:16 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/videoGen.sv 
 # -- Compiling module videoGen
 # 
 # Top level modules:
 # 	videoGen
-# End time: 20:22:28 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:53:16 on Oct 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:28 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv 
+# Start time: 18:53:16 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/top_lab3_avance.sv 
 # -- Compiling module top_lab3_avance
 # 
 # Top level modules:
 # 	top_lab3_avance
-# End time: 20:22:28 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:53:16 on Oct 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:28 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv 
+# Start time: 18:53:17 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/gen_pixclk.sv 
 # -- Compiling module gen_pixclk
 # 
 # Top level modules:
 # 	gen_pixclk
-# End time: 20:22:28 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:53:17 on Oct 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:28 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv 
+# Start time: 18:53:17 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/tick_1hz.sv 
 # -- Compiling module tick_1hz
 # 
 # Top level modules:
 # 	tick_1hz
-# End time: 20:22:28 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:53:17 on Oct 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:29 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv 
+# Start time: 18:53:18 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/counter_15s.sv 
 # -- Compiling module counter_15s
 # 
 # Top level modules:
 # 	counter_15s
-# End time: 20:22:29 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:53:18 on Oct 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:29 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv 
+# Start time: 18:53:18 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/hex7seg.sv 
 # -- Compiling module hex7seg
 # 
 # Top level modules:
 # 	hex7seg
-# End time: 20:22:29 on Oct 02,2025, Elapsed time: 0:00:00
+# End time: 18:53:18 on Oct 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:29 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm.sv 
-# -- Compiling module fsm
+# Start time: 18:53:18 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/card_selector.sv 
+# -- Compiling module card_selector
 # 
 # Top level modules:
-# 	fsm
-# End time: 20:22:29 on Oct 02,2025, Elapsed time: 0:00:00
+# 	card_selector
+# End time: 18:53:19 on Oct 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/ema08/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Taller\ de\ diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:22:29 on Oct 02,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv 
-# -- Compiling module fsm_tb
+# Start time: 18:53:19 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv 
+# -- Compiling module fsm_game
 # 
 # Top level modules:
-# 	fsm_tb
-# End time: 20:22:29 on Oct 02,2025, Elapsed time: 0:00:00
+# 	fsm_game
+# End time: 18:53:19 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:53:19 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv 
+# -- Compiling module textROM
+# 
+# Top level modules:
+# 	textROM
+# End time: 18:53:19 on Oct 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  fsm_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" fsm_tb 
-# Start time: 20:22:29 on Oct 02,2025
+# vlog -sv -work work +incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3 {C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:53:20 on Oct 08,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3" C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv 
+# -- Compiling module fsm_game_tb
+# 
+# Top level modules:
+# 	fsm_game_tb
+# End time: 18:53:20 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  fsm_game_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" fsm_game_tb 
+# Start time: 18:53:20 on Oct 08,2025
 # Loading sv_std.std
-# Loading work.fsm_tb
-# Loading work.fsm
-# Loading work.tick_1hz
-# Loading work.counter_15s
+# Loading work.fsm_game_tb
+# Loading work.fsm_game
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 13, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /fsm_game_tb/dut File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv Line: 25
+# ** Warning: (vsim-3722) C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv(25): [TFMPC] - Missing connection for port 'invalid_pair'.
 # 
 # add wave *
 # view structure
@@ -905,28 +926,45 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ==== INICIO DE SIMULACION ====
-# t=0 | rst=1 startSW=0 | FSM state=0 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=50000 | rst=0 startSW=0 | FSM state=0 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=100000 | rst=0 startSW=1 | FSM state=0 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=110000 | rst=0 startSW=1 | FSM state=1 fsm_start=1 black_screen=0 | contador=1 5 timeout=0
-# t=130000 | rst=0 startSW=1 | FSM state=2 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=150000 | rst=0 startSW=1 | FSM state=3 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=170000 | rst=0 startSW=1 | FSM state=4 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=190000 | rst=0 startSW=1 | FSM state=5 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=200000 | rst=0 startSW=0 | FSM state=5 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=210000 | rst=0 startSW=0 | FSM state=13 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=230000 | rst=0 startSW=0 | FSM state=6 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=250000 | rst=0 startSW=0 | FSM state=7 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=270000 | rst=0 startSW=0 | FSM state=8 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=290000 | rst=0 startSW=0 | FSM state=9 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=310000 | rst=0 startSW=0 | FSM state=10 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=330000 | rst=0 startSW=0 | FSM state=11 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# t=350000 | rst=0 startSW=0 | FSM state=14 fsm_start=0 black_screen=1 | contador=1 5 timeout=0
-# t=370000 | rst=0 startSW=0 | FSM state=0 fsm_start=0 black_screen=0 | contador=1 5 timeout=0
-# ==== FIN DE SIMULACION ====
-# ** Note: $stop    : C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv(76)
-#    Time: 3200 ns  Iteration: 0  Instance: /fsm_tb
-# Break in Module fsm_tb at C:/Users/ema08/OneDrive - Estudiantes ITCR/Escritorio/Taller de diseno/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_tb.sv line 76
-# End time: 20:22:44 on Oct 02,2025, Elapsed time: 0:00:15
-# Errors: 0, Warnings: 0
+# =======================================================
+#  TESTBENCH FSM GAME — AUTOCHEQUEO 
+# =======================================================
+# [5000 ns] EN:input=0 EN:counter=0 RSTcnt=0 CHturn=0 BLK=1 OVER=0
+# [15000 ns] EN:input=0 EN:counter=0 RSTcnt=0 CHturn=0 BLK=1 OVER=0
+# [25000 ns] EN:input=0 EN:counter=0 RSTcnt=0 CHturn=0 BLK=1 OVER=0
+# [35000 ns] EN:input=0 EN:counter=0 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# ** Error: ❌ Error: no se activó pantalla negra en INIT
+#    Time: 40 ns  Scope: fsm_game_tb File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv Line: 122
+# 🟦 Iniciando juego...
+# [45000 ns] EN:input=0 EN:counter=0 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [55000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [65000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [75000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [85000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [95000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [105000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# 🟩 Jugador acierta par -> contador se reinicia y mantiene turno
+# [115000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [125000 ns] EN:input=0 EN:counter=1 RSTcnt=1 CHturn=0 BLK=0 OVER=0
+# [135000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [145000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# ** Error: ❌ Error: contador no se reinició tras acierto
+#    Time: 150 ns  Scope: fsm_game_tb File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv Line: 136
+# 🟥 Timeout -> cambia de turno
+# [155000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [165000 ns] EN:input=0 EN:counter=0 RSTcnt=1 CHturn=1 BLK=0 OVER=0
+# [175000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [185000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# ** Error: ❌ Error: no cambió turno en timeout
+#    Time: 190 ns  Scope: fsm_game_tb File: C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv Line: 141
+# 🏁 Fin del juego (todas las parejas encontradas)
+# [195000 ns] EN:input=1 EN:counter=1 RSTcnt=0 CHturn=0 BLK=0 OVER=0
+# [205000 ns] EN:input=0 EN:counter=0 RSTcnt=0 CHturn=0 BLK=0 OVER=1
+# [215000 ns] EN:input=0 EN:counter=0 RSTcnt=0 CHturn=0 BLK=0 OVER=1
+# ✅ Todas las pruebas completadas correctamente.
+# ** Note: $finish    : C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv(150)
+#    Time: 220 ns  Iteration: 0  Instance: /fsm_game_tb
+# 1
+# Break in Module fsm_game_tb at C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv line 150
+# End time: 18:53:39 on Oct 08,2025, Elapsed time: 0:00:19
+# Errors: 3, Warnings: 2

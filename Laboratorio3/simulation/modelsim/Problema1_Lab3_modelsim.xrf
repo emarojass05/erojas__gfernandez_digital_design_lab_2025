@@ -15,6 +15,7 @@ source_file = 1, C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_20
 source_file = 1, C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/random_gen.sv
 source_file = 1, C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game.sv
 source_file = 1, C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/textROM.sv
+source_file = 1, C:/Users/fabia/Desktop/erojas__gfernandez_digital_design_lab_2025/Laboratorio3/fsm_game_tb.sv
 source_file = 1, c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf
 source_file = 1, c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc
 source_file = 1, c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc
