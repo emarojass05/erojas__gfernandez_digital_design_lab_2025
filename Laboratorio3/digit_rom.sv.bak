@@ -1,0 +1,32 @@
+// ROM de 8x8 para dígitos 0–9
+module digit_rom(
+    input  logic [3:0] digit,   // 0–9
+    input  logic [2:0] row,     // fila 0–7
+    output logic [7:0] bits     // columnas (1=pixel encendido)
+);
+    always_comb begin
+        case (digit)
+            4'd0: case(row)
+                0: bits=8'b00111100;
+                1: bits=8'b01100110;
+                2: bits=8'b01101110;
+                3: bits=8'b01110110;
+                4: bits=8'b01100110;
+                5: bits=8'b01100110;
+                6: bits=8'b00111100;
+                7: bits=8'b00000000;
+            endcase
+            4'd1: case(row)
+                0: bits=8'b00011000;
+                1: bits=8'b00111000;
+                2: bits=8'b00011000;
+                3: bits=8'b00011000;
+                4: bits=8'b00011000;
+                5: bits=8'b00011000;
+                6: bits=8'b00111100;
+                7: bits=8'b00000000;
+            endcase
+            default: bits=8'b00000000;
+        endcase
+    end
+endmodule
