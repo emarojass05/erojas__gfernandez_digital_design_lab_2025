@@ -1,5 +1,4 @@
-// counter_15s.sv — Contador descendente de 15 segundos
-// Reinicia a 15 al recibir un reset, baja cada tick_1s
+
 
 module counter_15s(
   input  logic clk,

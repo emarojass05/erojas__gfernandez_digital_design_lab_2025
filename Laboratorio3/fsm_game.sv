@@ -1,12 +1,4 @@
-// ============================================================
-// fsm_game.sv — FSM principal del juego de memoria digital
-// ------------------------------------------------------------
-// Controla el flujo del juego:
-// - Turnos
-// - Reinicio de contador
-// - Reacción ante timeout o acierto
-// - Muestra carta automática 1 s antes de cambiar turno
-// ============================================================
+
 
 module fsm_game (
   input  logic clk,

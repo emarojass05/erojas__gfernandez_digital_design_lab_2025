@@ -1,4 +1,7 @@
-
+// ============================================================
+// fsm_game_tb.sv — Testbench de autochequeo para FSM del juego
+// Autor: Emanuel Rojas Fernández
+// ============================================================
 
 `timescale 1ns/1ps
 

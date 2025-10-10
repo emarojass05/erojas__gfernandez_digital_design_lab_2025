@@ -1,8 +1,3 @@
-// ============================================================
-// videoGen.sv — Tablero VGA + texto 8×8 escalado x4 (nítido)
-// Compatible con textROM 8×8 del usuario y Quartus
-// ============================================================
-
 module videoGen(
     input  logic [9:0] x,
     input  logic [9:0] y,
@@ -48,6 +43,34 @@ module videoGen(
     localparam BASE_Y1 = 180;
     localparam BASE_X2 = 320 - (MSG_LEN * CHAR_W / 2);
     localparam BASE_Y2 = 230;
+
+    // ============================================================
+    //  Mapa de mezcla de patrones (no altera lógica)
+    // ============================================================
+    logic [3:0] card_map [0:15];
+    initial begin
+         card_map[0]  = 3'd0;
+			card_map[1]  = 3'd1;
+			card_map[2]  = 3'd2;
+			card_map[3]  = 3'd3;
+			card_map[4]  = 3'd3;
+			card_map[5]  = 3'd0;
+			card_map[6]  = 3'd1;
+			card_map[7]  = 3'd2;
+			
+			
+			card_map[8]  = 3'd4;
+			card_map[9]  = 3'd5;
+			card_map[10] = 3'd6;
+			card_map[11] = 3'd4;
+			card_map[12] = 3'd5;
+			card_map[13] = 3'd6;
+			card_map[14] = 3'd7;
+			card_map[15] = 3'd7;
+			
+			
+			
+    end
 
     // ============================================================
     // Señales internas
@@ -201,16 +224,21 @@ module videoGen(
                 ly  = dy % (CARD_H + GAP_Y);
                 card_id = row * GRID_COLS + col;
 
-                // Patrones iniciales
+                // ====================================================
+                // 🔀 Patrones con mezcla visual de cartas
+                // ====================================================
                 pattern = 1'b0;
-                if (card_id < 2)        pattern = ((lx ^ ly) & 8'h08);
-                else if (card_id < 4)   pattern = ((lx + ly) % 20 < 10);
-                else if (card_id < 6)   pattern = (((lx / 10) + (ly / 10)) % 2);
-                else if (card_id < 8)   pattern = ((lx > ly) && ((lx - ly) < 20));
-                else if (card_id < 10)  pattern = (((lx * ly) % 50) < 25);
-                else if (card_id < 12)  pattern = (lx[3] ^ ly[3]);
-                else if (card_id < 14)  pattern = (((lx + 2*ly) % 30) < 15);
-                else                    pattern = (lx[2] ^ ly[4]);
+                unique case (card_map[card_id])
+                    0: pattern = ((lx ^ ly) & 8'h08);
+                    1: pattern = ((lx + ly) % 20 < 10);
+                    2: pattern = (((lx / 10) + (ly / 10)) % 2);
+                    3: pattern = ((lx > ly) && ((lx - ly) < 20));
+                    4: pattern = (((lx * ly) % 50) < 25);
+                    5: pattern = (lx[3] ^ ly[3]);
+                    6: pattern = (((lx + 2*ly) % 30) < 15);
+                    7: pattern = (lx[2] ^ ly[4]);
+                endcase
+                // ====================================================
 
                 // Estado de carta actual
                 if (row < 2) begin

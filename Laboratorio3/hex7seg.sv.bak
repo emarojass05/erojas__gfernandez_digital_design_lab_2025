@@ -1,4 +1,5 @@
-
+// hex7seg.sv — decodificador BCD (0–9) a display de 7 segmentos
+// segmentos activos en bajo (común en la DE1-SoC)
 
 module hex7seg(
     input  logic [3:0] bcd,   // entrada BCD (0–9)

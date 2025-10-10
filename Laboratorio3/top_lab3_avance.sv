@@ -1,14 +1,4 @@
-// ============================================================
-// top_lab3_avance.sv — Juego de memoria digital completo con FSM
-// ------------------------------------------------------------
-// Funcionalidades:
-// - FSM controla el flujo del juego
-// - Contador 15s controlado por FSM
-// - Mantiene turno al acertar
-// - Cambia turno al fallar o por timeout
-// - Pantalla final con ganador y su puntaje real
-// - Timeout selecciona carta aleatoria visible 1 s antes de cambiar turno
-// ============================================================
+
 
 module top_lab3_avance(
   input  logic        clk,
@@ -60,19 +50,22 @@ module top_lab3_avance(
     .tens(tens),
     .units(units)
   );
+
   // ===== Selector de cartas =====
   logic [7:0] selected_top, selected_bottom;
   logic [7:0] stored_top, stored_bottom;
   logic row_sel;
   logic valid_pair_raw, invalid_pair_raw;
 
-  // Auto-selección (sin SW[8])
+  // ===== Auto-selección =====
   logic [9:0] sw_auto;    
   logic [9:0] sw_final;   
+
   auto_selector u_auto_sel (
     .clk(clk),
     .rst(rst_manual),
     .enable_auto(timeout),
+    .valid_pair(valid_pulse),
     .stored_top(stored_top),
     .stored_bottom(stored_bottom),
     .sw_auto(sw_auto)

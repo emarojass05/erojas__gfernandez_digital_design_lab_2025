@@ -1,9 +1,3 @@
-// ============================================================
-// textROM.sv — ROM de fuente 8x8 para texto VGA
-// ------------------------------------------------------------
-// Entrada: código ASCII (char_code) y fila (row 0–7)
-// Salida: bits[7:0] = píxeles de la fila (1=blanco, 0=fondo)
-// ============================================================
 
 module textROM(
     input  logic [7:0] char_code,  // código ASCII

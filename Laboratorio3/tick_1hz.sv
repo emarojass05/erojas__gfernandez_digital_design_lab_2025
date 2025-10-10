@@ -1,6 +1,4 @@
-// ===========================================================
-// tick_1hz.sv — Generador de pulso de 1 Hz (exacto)
-// ===========================================================
+
 module tick_1hz #(
     parameter SYS_CLK_HZ = 50_000_000   // reloj del sistema (50 MHz)
 )(

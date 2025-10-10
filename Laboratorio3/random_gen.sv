@@ -1,7 +1,4 @@
-// ============================================================
-// random_gen.sv
-// Generador pseudoaleatorio simple (LFSR de 3 bits)
-// ============================================================
+
 module random_gen(
   input  logic clk,
   input  logic rst,
