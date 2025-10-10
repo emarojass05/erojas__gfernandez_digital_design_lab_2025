@@ -1,0 +1,57 @@
+// ============================================================
+// textROM.sv — Fuente 8x8 para texto VGA
+// ------------------------------------------------------------
+// Entrada: código ASCII (char_code) y fila (row 0–7)
+// Salida: 8 bits, 1 por píxel en la fila correspondiente
+// ============================================================
+
+module textROM(
+    input  logic [7:0] char_code,
+    input  logic [2:0] row,
+    output logic [7:0] bits
+);
+
+    always_comb begin
+        case (char_code)
+            8'd32: bits = 8'b00000000; // espacio
+            8'd33: bits = 8'b00100000; // !
+            8'd48: bits = 8'b00111110; // 0
+            8'd49: bits = 8'b00001000; // 1
+            8'd50: bits = 8'b00110110; // 2
+            8'd51: bits = 8'b00111100; // 3
+            8'd52: bits = 8'b00101010; // 4
+            8'd53: bits = 8'b00101100; // 5
+            8'd54: bits = 8'b00111110; // 6
+            8'd55: bits = 8'b00000110; // 7
+            8'd56: bits = 8'b00111110; // 8
+            8'd57: bits = 8'b00111100; // 9
+            8'd65: bits = 8'b01110111; // A
+            8'd66: bits = 8'b01111111; // B
+            8'd67: bits = 8'b00111101; // C
+            8'd68: bits = 8'b01111101; // D
+            8'd69: bits = 8'b01111111; // E
+            8'd70: bits = 8'b01110111; // F
+            8'd71: bits = 8'b00111111; // G
+            8'd72: bits = 8'b01110111; // H
+            8'd73: bits = 8'b01111111; // I
+            8'd74: bits = 8'b00011111; // J
+            8'd75: bits = 8'b01110111; // K
+            8'd76: bits = 8'b01111100; // L
+            8'd77: bits = 8'b01110111; // M
+            8'd78: bits = 8'b01111110; // N
+            8'd79: bits = 8'b00111111; // O
+            8'd80: bits = 8'b01111111; // P
+            8'd81: bits = 8'b00111111; // Q
+            8'd82: bits = 8'b01111111; // R
+            8'd83: bits = 8'b00101101; // S
+            8'd84: bits = 8'b01111110; // T
+            8'd85: bits = 8'b00111111; // U
+            8'd86: bits = 8'b01110111; // V
+            8'd87: bits = 8'b01110111; // W
+            8'd88: bits = 8'b01110111; // X
+            8'd89: bits = 8'b01111110; // Y
+            8'd90: bits = 8'b00111101; // Z
+            default: bits = 8'b00000000;
+        endcase
+    end
+endmodule

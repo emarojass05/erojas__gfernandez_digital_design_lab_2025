@@ -1,0 +1,46 @@
+// fsm.sv — Máquina de estados para control del juego
+module fsm (
+    input  logic clk,       // reloj
+    input  logic rst,       // reset síncrono, activo en alto
+    input  logic start,     // SW0: inicio de la jugada
+    input  logic timeout,   // viene del contador 15s
+    output logic [1:0] state // para debug / control
+);
+
+    // === Definición de estados ===
+    typedef enum logic [1:0] {
+        IDLE    = 2'b00,   // esperando
+        RUN     = 2'b01,   // juego en progreso
+        TIMEOUT = 2'b10    // tiempo agotado
+    } state_t;
+
+    state_t current, next;
+
+    // === Registro de estado ===
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            current <= IDLE;
+        else
+            current <= next;
+    end
+
+    // === Lógica de transición ===
+    always_comb begin
+        next = current;
+        case (current)
+            IDLE: begin
+                if (start) next = RUN;
+            end
+            RUN: begin
+                if (timeout) next = TIMEOUT;
+            end
+            TIMEOUT: begin
+                if (rst) next = IDLE; // reset vuelve a IDLE
+            end
+        endcase
+    end
+
+    // === salida del estado ===
+    assign state = current;
+
+endmodule

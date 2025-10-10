@@ -1,0 +1,24 @@
+module videoGen (
+    input  logic [9:0] x,
+    input  logic [9:0] y,
+    input  logic visible,
+    output logic [7:0] r,
+    output logic [7:0] g,
+    output logic [7:0] b
+);
+
+    always_comb begin
+        if (visible && (x > 200 && x < 440 && y > 160 && y < 320)) begin
+            // Rectángulo rojo
+            r = 8'hFF;
+            g = 8'h00;
+            b = 8'h00;
+        end else begin
+            // Fondo negro
+            r = 8'h00;
+            g = 8'h00;
+            b = 8'h00;
+        end
+    end
+
+endmodule

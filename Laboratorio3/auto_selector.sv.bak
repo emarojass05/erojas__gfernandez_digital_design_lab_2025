@@ -1,0 +1,46 @@
+// ============================================================
+// auto_selector.sv — Selección automática tras timeout (15 s)
+// ------------------------------------------------------------
+// Genera una posición aleatoria y la marca como seleccionada
+// ============================================================
+
+module auto_selector (
+    input  logic        clk,
+    input  logic        rst,
+    input  logic        enable_auto,       // se activa al timeout
+    input  logic [7:0]  stored_cards,      // cartas ya guardadas
+    output logic [7:0]  auto_selection,    // carta elegida aleatoriamente (1 bit activo)
+    output logic [2:0]  random_idx         // índice elegido
+);
+
+    // ========= Generador pseudoaleatorio (LFSR 3 bits) =========
+    logic [2:0] lfsr;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            lfsr <= 3'b101; // semilla no nula
+        else
+            // retroalimentación (XOR de bits 2 y 0)
+            lfsr <= {lfsr[1:0], lfsr[2] ^ lfsr[0]};
+    end
+
+    // ========= Lógica de selección =========
+    always_comb begin
+        auto_selection = 8'b00000000;
+        random_idx = lfsr;
+
+        // Solo activa si enable_auto está en alto
+        if (enable_auto) begin
+            // Si la carta aleatoria está libre → seleccionarla
+            if (!stored_cards[random_idx])
+                auto_selection[random_idx] = 1'b1;
+            else begin
+                // Buscar siguiente carta libre si esa ya está guardada
+                for (int i = 0; i < 8; i++) begin
+                    if (!stored_cards[i] && auto_selection == 8'b0)
+                        auto_selection[i] = 1'b1;
+                end
+            end
+        end
+    end
+endmodule

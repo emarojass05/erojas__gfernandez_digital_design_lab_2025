@@ -1,0 +1,104 @@
+// ============================================================
+// fsm_game.sv — FSM principal del juego de memoria
+// Versión sin "case": lógica secuencial con if/else
+// ============================================================
+
+module fsm_game (
+  input  logic clk,
+  input  logic rst,
+  input  logic start_btn,        // KEY0 = iniciar
+  input  logic valid_pair,       // viene del card_selector
+  input  logic timeout,          // viene del contador
+  input  logic all_matched,      // todas las cartas descubiertas
+  output logic turn,             // 0 = jugador 1, 1 = jugador 2
+  output logic reset_counter,    // reinicia el contador de 15 s
+  output logic enable_counter,   // habilita cuenta regresiva
+  output logic game_over,        // indica fin del juego
+  output logic black_screen      // pantalla negra al inicio
+);
+
+  // ---- Codificación de estados ----
+  localparam INIT      = 3'd0;
+  localparam TURN_P1   = 3'd1;
+  localparam CHECK_P1  = 3'd2;
+  localparam TURN_P2   = 3'd3;
+  localparam CHECK_P2  = 3'd4;
+  localparam GAME_OVER = 3'd5;
+
+  logic [2:0] state, next_state;
+
+  // ---- Registro de estado ----
+  always_ff @(posedge clk or posedge rst) begin
+    if (rst) begin
+      state <= INIT;
+      turn  <= 1'b0;
+    end else begin
+      state <= next_state;
+
+      // Cambia el jugador solo en transiciones específicas
+      if (state == CHECK_P1 && next_state == TURN_P2)
+        turn <= 1'b1; // pasa al jugador 2
+      else if (state == CHECK_P2 && next_state == TURN_P1)
+        turn <= 1'b0; // vuelve al jugador 1
+    end
+  end
+
+  // ---- Lógica de transición (sin case) ----
+  always_comb begin
+    // valores por defecto
+    next_state        = state;
+    reset_counter     = 1'b0;
+    enable_counter    = 1'b1;
+    game_over         = 1'b0;
+    black_screen      = 1'b0;
+
+    // FSM sin case
+    if (state == INIT) begin
+      black_screen = 1'b1;
+      if (start_btn)
+        next_state = TURN_P1;
+    end
+
+    else if (state == TURN_P1) begin
+      if (all_matched)
+        next_state = GAME_OVER;
+      else if (valid_pair)
+        next_state = CHECK_P1;
+      else if (timeout)
+        next_state = CHECK_P1;
+    end
+
+    else if (state == CHECK_P1) begin
+      reset_counter = 1'b1;
+      if (valid_pair)
+        next_state = TURN_P1; // mantiene turno
+      else
+        next_state = TURN_P2; // cambia jugador
+    end
+
+    else if (state == TURN_P2) begin
+      if (all_matched)
+        next_state = GAME_OVER;
+      else if (valid_pair)
+        next_state = CHECK_P2;
+      else if (timeout)
+        next_state = CHECK_P2;
+    end
+
+    else if (state == CHECK_P2) begin
+      reset_counter = 1'b1;
+      if (valid_pair)
+        next_state = TURN_P2;
+      else
+        next_state = TURN_P1;
+    end
+
+    else if (state == GAME_OVER) begin
+      enable_counter = 1'b0;
+      game_over      = 1'b1;
+      if (rst)
+        next_state = INIT;
+    end
+  end
+
+endmodule

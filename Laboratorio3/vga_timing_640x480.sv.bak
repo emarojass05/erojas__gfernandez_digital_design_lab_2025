@@ -1,0 +1,61 @@
+module vga_timing_640x480 (
+    input  logic clk_pix,
+    input  logic reset,
+    output logic hsync,
+    output logic vsync,
+    output logic visible,
+    output logic [9:0] x,  // 0..639
+    output logic [9:0] y   // 0..479
+);
+
+    // Parámetros VGA 640x480 @60Hz
+    localparam H_VISIBLE = 640;
+    localparam H_FRONT   = 16;
+    localparam H_SYNC    = 96;
+    localparam H_BACK    = 48;
+    localparam H_TOTAL   = H_VISIBLE + H_FRONT + H_SYNC + H_BACK;
+
+    localparam V_VISIBLE = 480;
+    localparam V_FRONT   = 10;
+    localparam V_SYNC    = 2;
+    localparam V_BACK    = 33;
+    localparam V_TOTAL   = V_VISIBLE + V_FRONT + V_SYNC + V_BACK;
+
+    logic [9:0] hcount;
+    logic [9:0] vcount;
+
+    // Contador horizontal
+    always_ff @(posedge clk_pix or posedge reset) begin
+        if (reset)
+            hcount <= 0;
+        else if (hcount == H_TOTAL-1)
+            hcount <= 0;
+        else
+            hcount <= hcount + 1;
+    end
+
+    // Contador vertical
+    always_ff @(posedge clk_pix or posedge reset) begin
+        if (reset)
+            vcount <= 0;
+        else if (hcount == H_TOTAL-1) begin
+            if (vcount == V_TOTAL-1)
+                vcount <= 0;
+            else
+                vcount <= vcount + 1;
+        end
+    end
+
+    // Señales de sincronización
+    assign hsync = ~(hcount >= H_VISIBLE + H_FRONT &&
+                     hcount <  H_VISIBLE + H_FRONT + H_SYNC);
+
+    assign vsync = ~(vcount >= V_VISIBLE + V_FRONT &&
+                     vcount <  V_VISIBLE + V_FRONT + V_SYNC);
+
+    // Zona visible
+    assign visible = (hcount < H_VISIBLE) && (vcount < V_VISIBLE);
+    assign x = hcount;
+    assign y = vcount;
+
+endmodule

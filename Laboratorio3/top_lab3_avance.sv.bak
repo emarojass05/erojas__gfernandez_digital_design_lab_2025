@@ -1,0 +1,47 @@
+module top_lab3_avance (
+    input  logic CLOCK_50,
+    input  logic RESET_N,
+    output logic VGA_HS,
+    output logic VGA_VS,
+    output logic [7:0] VGA_R,
+    output logic [7:0] VGA_G,
+    output logic [7:0] VGA_B
+);
+
+    // Señales internas
+    logic clk_pix;
+    logic visible;
+    logic [9:0] x, y;
+
+    // Generador de reloj de píxel (divide 50MHz -> 25MHz)
+    logic clk_div;
+    always_ff @(posedge CLOCK_50 or negedge RESET_N) begin
+        if (!RESET_N)
+            clk_div <= 0;
+        else
+            clk_div <= ~clk_div;
+    end
+    assign clk_pix = clk_div;
+
+    // Controlador VGA
+    vga_timing_640x480 timing_inst (
+        .clk_pix (clk_pix),
+        .reset   (~RESET_N),
+        .hsync   (VGA_HS),
+        .vsync   (VGA_VS),
+        .visible (visible),
+        .x       (x),
+        .y       (y)
+    );
+
+    // Generador de video
+    videoGen video_inst (
+        .x  (x),
+        .y  (y),
+        .visible (visible),
+        .r  (VGA_R),
+        .g  (VGA_G),
+        .b  (VGA_B)
+    );
+
+endmodule
